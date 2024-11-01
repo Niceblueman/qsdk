@@ -7,3 +7,4 @@ version.date
 bin/
 build
 scripts/
+build_dir/

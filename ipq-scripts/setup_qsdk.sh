@@ -47,7 +47,7 @@ apt-get -y install ocaml-findlib ocaml-base-nox ocaml-base libfindlib-ocaml-dev 
 apt-get -y install libssl1.0-dev
 
 #For open profile, coccienlle 1.1.1 needs to be installed from source code
-if [[ $(lsb_release -rs) != "22.04" ]]; then
+if [ $(lsb_release -rs) != "22.04" ]; then
 	apt-get -y remove --purge libparmap-ocaml
 	echo ""
 	echo "Installing and setting up coccienlle 1.1.1 from source code"
@@ -68,7 +68,7 @@ else
 	apt-get -y install coccinelle
 fi
 
-if [[ $(lsb_release -rs) == "20.04" || $(lsb_release -rs) == "22.04" ]]; then
+if [ $(lsb_release -rs) == "20.04" || $(lsb_release -rs) == "22.04" ]; then
 wget http://archive.ubuntu.com/ubuntu/pool/main/m/make-dfsg/make_4.1-9.1ubuntu1_amd64.deb
 sudo dpkg -i make_4.1-9.1ubuntu1_amd64.deb
 #After installation of make, remove the downloaded code
