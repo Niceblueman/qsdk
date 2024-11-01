@@ -8,3 +8,4 @@ bin/
 build
 scripts/
 build_dir/
+logs/
