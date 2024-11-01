@@ -1,6 +1,6 @@
 {
   "name": "QSDK Dev Container",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/vscode/devcontainers/base:dev-ubuntu22.04",
   "features": {},
   "postCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
