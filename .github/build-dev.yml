@@ -7,7 +7,7 @@ on:
       - 12.5.2783.2994
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Build on ubuntu
     strategy:
       fail-fast: false
