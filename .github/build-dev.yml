@@ -3,8 +3,8 @@ name: Build OpenWrt/IsoHorns images
 on:
   push:
     branches:
-      - 'main'
-      - '12.5.2783.2994'
+      - main
+      - 12.5.2783.2994
 jobs:
   build:
     runs-on: ubuntu-latest
