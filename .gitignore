@@ -1,0 +1,9 @@
+feeds/
+dl/
+staging_dir/
+tmp/
+.config
+version.date
+bin/
+build
+scripts/
