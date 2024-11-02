@@ -44,7 +44,10 @@ echo "Found $(lsb_release -d | awk -F: '{print $2}') OS installed on this system
 
 # Log current package list
 dpkg --list > "${logdir}/pkgs_found_before.log" 2>&1
-
+apt-get update
+apt-get install -y software-properties-common
+DEBIAN_FRONTEND=noninteractive add-apt-repository universe -y
+apt-get update
 # Install packages needed for building QSDK code
 DEBIAN_FRONTEND=noninteractive apt-get -y install \
     build-essential \
@@ -93,7 +96,9 @@ DEBIAN_FRONTEND=noninteractive apt-get -y install \
     libpcre-ocaml-dev \
     libpycaml-ocaml-dev \
     lzop \
-    cproto
+    cproto \
+    libunistring-dev \
+    libxml2-dev
 
 # Additional packages for Ubuntu 18.04
 if [[ $(lsb_release -rs) == "18.04" ]]; then
