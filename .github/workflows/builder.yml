@@ -1,0 +1,98 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Build OpenWrt images
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "12.5.2783.2994" branch
+  push:
+    branches: [ "12.5.2783.2994" ]
+  pull_request:
+    branches: [ "12.5.2783.2994" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    name: Build on ubuntu
+    strategy:
+      fail-fast: false
+      matrix:
+        target: ['enterprise','open','premium']
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup envirement
+      env:
+        DEBIAN_FRONTEND: noninteractive  # Disable interactive prompts
+      run: |
+        yes | .devcontainer/setup.sh || true
+        yes | ./ipq-scripts/setup_qsdk.sh || true
+      continue-on-error: true
+    - name: ReInstall OpenWrt requirements
+      env:
+        DEBIAN_FRONTEND: noninteractive  # Disable interactive prompts
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y \
+          build-essential \
+          libncurses5-dev \
+          gawk \
+          git \
+          subversion \
+          libssl-dev \
+          python3 \
+          python3-distutils \
+          zlib1g-dev \
+          file \
+          wget \
+          unzip \
+          python3-pip \
+          rsync
+      continue-on-error: true
+    - name: Build image for ${{ matrix.target }}
+      id: build
+      run: |
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
+        source qca/configs/qsdk/setup-environment -t ipq53xx -a 64 -p open -d y -i Debug && make -j1 V=s
+    
+    - name: Pack image for ${{ matrix.target }}
+      id: build_image
+      run: |
+        LOWERCASE_TARGET=`echo ${{ matrix.target }} | tr '[:upper:]' '[:lower:]'`
+        HASH=$(git rev-parse --short HEAD)
+
+        BASENAME="$(date +%Y%m%d)-$LOWERCASE_TARGET-main-$HASH"
+        TAR_NAME="$BASENAME.tar.gz"
+        IMG_NAME="$BASENAME-upgrade.bin"
+
+        echo "IMG_NAME=$IMG_NAME" >> $GITHUB_ENV  # Export IMG_NAME as an environment variable
+        echo "::set-output name=IMG_NAME::$IMG_NAME"  # Set output for use in next steps
+
+        # Package the files
+        tar cfz "openwrt/tmp/$TAR_NAME" -C openwrt/bin/targets/ipq53xx* .
+
+        echo "::set-output name=TAR_NAME::$TAR_NAME"  # Set output for use in next steps
+
+    - name: Create Release.txt for reference
+      run: echo ${{ github.sha }} > Release.txt
+
+    - name: List all .ipk and .bin files in ./
+      run: |
+        echo "Listing all .ipk and .bin files in openwrt/bin/:"
+        find . -type f \( -name "*.bin" -o -name "*.img" \)
+    - name: Push to the latest release
+      uses: softprops/action-gh-release@v2
+      with:
+        tag_name: ${{ matrix.target }}
+        name: latest
+        make_latest: true
+        files: |
+          Release.txt
+          openwrt/tmp/${{ steps.build_image.outputs.TAR_NAME }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
