@@ -29,8 +29,8 @@ jobs:
       env:
         DEBIAN_FRONTEND: noninteractive  # Disable interactive prompts
       run: |
-        yes | .devcontainer/setup.sh || true
-        yes | ./ipq-scripts/setup_qsdk.sh || true
+        sudo .devcontainer/setup.sh
+        sudo ./ipq-scripts/setup_qsdk.sh
       continue-on-error: true
     - name: ReInstall OpenWrt requirements
       env:
