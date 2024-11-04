@@ -23,10 +23,10 @@
 #include <linux/module.h>
 #include <linux/skbuff.h>
 
-#ifdef ECM_WIFI_PLUGIN_OPEN_PROFILE_ENABLE
-#include <ath_sawf.h>
-#include <ath_fse.h>
-#else
+// #ifdef ECM_WIFI_PLUGIN_OPEN_PROFILE_ENABLE
+// #include <ath_sawf.h>
+// #include <ath_fse.h>
+// #else
 #include <qca_mscs_if.h>
 #include <qca_mesh_latency_if.h>
 #include <qca_fse_if.h>
@@ -34,7 +34,7 @@
 #ifdef ECM_CLASSIFIER_MSCS_SCS_ENABLE
 #include <qca_scs_if.h>
 #endif
-#endif
+// #endif
 
 #include <ecm_classifier_mscs_public.h>
 #include <ecm_classifier_emesh_public.h>
