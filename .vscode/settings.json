@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "netstandby.h": "c",
+        "netstandby_nl.h": "c",
+        "netstandby_nl_cmn.h": "c"
+    }
+}

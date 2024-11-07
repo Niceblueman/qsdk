@@ -439,21 +439,21 @@ enum netstandby_nl_ret netstandby_init_msg_send(struct netstandby_nl_msg *nl_msg
 
 		}
 #ifdef RM_QCA_PROP
-		else if (i == NETSTANDBY_IFACE_TYPE_WIFI) {
-			info = &gbl_ctx->info[NETSTANDBY_SUBSYSTEM_TYPE_WIFI];
-			info->init_info.enter_cmp_cb = netstandby_enter_completion_event;
-			info->init_info.exit_cmp_cb = netstandby_exit_completion_event;
-			info->init_info.trigger_cb = netstandby_trigger_completion_event;
-			info->type = NETSTANDBY_IFACE_TYPE_WIFI;
-			info->nl_sock = nl_sock;
-			info->pid = rule->msg.init.pid;
+		// else if (i == NETSTANDBY_IFACE_TYPE_WIFI) {
+		// 	info = &gbl_ctx->info[NETSTANDBY_SUBSYSTEM_TYPE_WIFI];
+		// 	info->init_info.enter_cmp_cb = netstandby_enter_completion_event;
+		// 	info->init_info.exit_cmp_cb = netstandby_exit_completion_event;
+		// 	info->init_info.trigger_cb = netstandby_trigger_completion_event;
+		// 	info->type = NETSTANDBY_IFACE_TYPE_WIFI;
+		// 	info->nl_sock = nl_sock;
+		// 	info->pid = rule->msg.init.pid;
 
-			status = netstandby_wifi_get_and_register_cb(&info->init_info);
-			if (status != NETSTANDBY_SUCCESS) {
-				netstandby_warn("WIFI network callback register callback failed\n");
-				return NETSTANDBY_NL_RET_FAIL;
-			}
-		}
+		// 	status = netstandby_wifi_get_and_register_cb(&info->init_info);
+		// 	if (status != NETSTANDBY_SUCCESS) {
+		// 		netstandby_warn("WIFI network callback register callback failed\n");
+		// 		return NETSTANDBY_NL_RET_FAIL;
+		// 	}
+		// }
 #endif
 
 		else if (i == NETSTANDBY_IFACE_TYPE_PLATFORM) {
@@ -474,18 +474,18 @@ enum netstandby_nl_ret netstandby_init_msg_send(struct netstandby_nl_msg *nl_msg
 	}
 
 #ifdef RM_QCA_PROP
-	if (rule->msg.init.nss_sampling_timer)  {
-		gbl_ctx->nss_sample.sampling_time_millisec = (SECS_TO_MILLI_SECS * rule->msg.init.nss_sampling_timer);
-		schedule_delayed_work(&gbl_ctx->nss_sample.sampling_work,
-				      msecs_to_jiffies(gbl_ctx->nss_sample.sampling_time_millisec));
+	// if (rule->msg.init.nss_sampling_timer)  {
+	// 	gbl_ctx->nss_sample.sampling_time_millisec = (SECS_TO_MILLI_SECS * rule->msg.init.nss_sampling_timer);
+	// 	schedule_delayed_work(&gbl_ctx->nss_sample.sampling_work,
+	// 			      msecs_to_jiffies(gbl_ctx->nss_sample.sampling_time_millisec));
 
-		for(i = 0; i < rule->msg.init.wan_iface_cnt; i++) {
-			memcpy(&gbl_ctx->wan_intf[i], &rule->msg.init.wan_intf[i], sizeof(gbl_ctx->wan_intf[i]));
-		}
+	// 	for(i = 0; i < rule->msg.init.wan_iface_cnt; i++) {
+	// 		memcpy(&gbl_ctx->wan_intf[i], &rule->msg.init.wan_intf[i], sizeof(gbl_ctx->wan_intf[i]));
+	// 	}
 
-		gbl_ctx->wan_iface_cnt = rule->msg.init.wan_iface_cnt;
-		netstandby_info("ERP service is enabled with sample timer as %d\n", rule->msg.init.nss_sampling_timer);
-	}
+	// 	gbl_ctx->wan_iface_cnt = rule->msg.init.wan_iface_cnt;
+	// 	netstandby_info("ERP service is enabled with sample timer as %d\n", rule->msg.init.nss_sampling_timer);
+	// }
 #endif
 
 	nl_msg->ret = NETSTANDBY_NL_RET_SUCCESS;
@@ -521,9 +521,9 @@ enum netstandby_nl_ret netstandby_enter_msg_send(struct netstandby_nl_msg *nl_ms
 
 			case NETSTANDBY_IFACE_TYPE_WIFI:
 #ifdef RM_QCA_PROP
-				info = &gbl_ctx->info[NETSTANDBY_SUBSYSTEM_TYPE_WIFI];
-				info->enter_info.dev[i] = return_dev;
-				info->enter_info.iface_cnt++;
+				// info = &gbl_ctx->info[NETSTANDBY_SUBSYSTEM_TYPE_WIFI];
+				// info->enter_info.dev[i] = return_dev;
+				// info->enter_info.iface_cnt++;
 #endif
 				break;
 			case NETSTANDBY_IFACE_TYPE_PLATFORM:
@@ -578,9 +578,9 @@ enum netstandby_nl_ret netstandby_enter_msg_send(struct netstandby_nl_msg *nl_ms
 		}
 	}
 #ifdef RM_QCA_PROP
-	else if (nl_msg->type == NETSTANDBY_SUBSYSTEM_TYPE_WIFI) {
-		info = &gbl_ctx->info[NETSTANDBY_SUBSYSTEM_TYPE_WIFI];
-	}
+	// else if (nl_msg->type == NETSTANDBY_SUBSYSTEM_TYPE_WIFI) {
+	// 	info = &gbl_ctx->info[NETSTANDBY_SUBSYSTEM_TYPE_WIFI];
+	// }
 #endif
 	else if (nl_msg->type == NETSTANDBY_SUBSYSTEM_TYPE_PLATFORM) {
 		info = &gbl_ctx->info[NETSTANDBY_SUBSYSTEM_TYPE_PLATFORM];
