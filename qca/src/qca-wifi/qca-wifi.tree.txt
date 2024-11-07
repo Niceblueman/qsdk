@@ -1,0 +1,3900 @@
+qca/src/qca-wifi
+├── cmn_dev
+│   ├── cfg
+│   │   ├── inc
+│   │   │   ├── cfg_converged.h
+│   │   │   ├── cfg_define.h
+│   │   │   ├── cfg_dispatcher.h
+│   │   │   ├── cfg_ucfg_api.h
+│   │   │   ├── i_cfg.h
+│   │   │   └── i_cfg_objmgr.h
+│   │   └── src
+│   │       └── cfg.c
+│   ├── coex
+│   │   └── dispatcher
+│   │       └── inc
+│   │           └── wlan_coex_public_structs.h
+│   ├── dp
+│   │   ├── cmn_dp_api
+│   │   │   ├── dp_cal_client_api.c
+│   │   │   ├── dp_ratetable.c
+│   │   │   └── dp_ratetable.h
+│   │   ├── inc
+│   │   │   ├── cdp_txrx_bus.h
+│   │   │   ├── cdp_txrx_cfg.h
+│   │   │   ├── cdp_txrx_cmn.h
+│   │   │   ├── cdp_txrx_cmn_reg.h
+│   │   │   ├── cdp_txrx_cmn_struct.h
+│   │   │   ├── cdp_txrx_ctrl_def.h
+│   │   │   ├── cdp_txrx_ctrl.h
+│   │   │   ├── cdp_txrx_flow_ctrl_legacy.h
+│   │   │   ├── cdp_txrx_flow_ctrl_v2.h
+│   │   │   ├── cdp_txrx_fse.h
+│   │   │   ├── cdp_txrx_handle.h
+│   │   │   ├── cdp_txrx_hist_struct.h
+│   │   │   ├── cdp_txrx_host_stats.h
+│   │   │   ├── cdp_txrx_ipa.h
+│   │   │   ├── cdp_txrx_me.h
+│   │   │   ├── cdp_txrx_mesh_latency.h
+│   │   │   ├── cdp_txrx_misc.h
+│   │   │   ├── cdp_txrx_mlo.h
+│   │   │   ├── cdp_txrx_mob_def.h
+│   │   │   ├── cdp_txrx_mon.h
+│   │   │   ├── cdp_txrx_mon_struct.h
+│   │   │   ├── cdp_txrx_mscs.h
+│   │   │   ├── cdp_txrx_ocb.h
+│   │   │   ├── cdp_txrx_ops.h
+│   │   │   ├── cdp_txrx_peer_ops.h
+│   │   │   ├── cdp_txrx_pflow.h
+│   │   │   ├── cdp_txrx_pmf.h
+│   │   │   ├── cdp_txrx_ppe.h
+│   │   │   ├── cdp_txrx_raw.h
+│   │   │   ├── cdp_txrx_sawf.h
+│   │   │   ├── cdp_txrx_scs.h
+│   │   │   ├── cdp_txrx_stats.h
+│   │   │   ├── cdp_txrx_stats_struct.h
+│   │   │   ├── cdp_txrx_tx_delay.h
+│   │   │   ├── cdp_txrx_tx_throttle.h
+│   │   │   └── cdp_txrx_wds.h
+│   │   └── wifi3.0
+│   │       ├── be
+│   │       │   ├── dp_be.c
+│   │       │   ├── dp_be.h
+│   │       │   ├── dp_be_rx.c
+│   │       │   ├── dp_be_rx.h
+│   │       │   ├── dp_be_tx.c
+│   │       │   ├── dp_be_tx.h
+│   │       │   └── mlo
+│   │       │       ├── dp_mlo.c
+│   │       │       └── dp_mlo.h
+│   │       ├── dp_arch_ops.c
+│   │       ├── dp_cal_client_api.h
+│   │       ├── dp_hist.c
+│   │       ├── dp_hist.h
+│   │       ├── dp_htt.c
+│   │       ├── dp_htt.h
+│   │       ├── dp_internal.h
+│   │       ├── dp_ipa.c
+│   │       ├── dp_ipa.h
+│   │       ├── dp_main.c
+│   │       ├── dp_peer.c
+│   │       ├── dp_peer.h
+│   │       ├── dp_reo.c
+│   │       ├── dp_rings.h
+│   │       ├── dp_rings_main.c
+│   │       ├── dp_rx_buffer_pool.c
+│   │       ├── dp_rx_buffer_pool.h
+│   │       ├── dp_rx.c
+│   │       ├── dp_rx_defrag.c
+│   │       ├── dp_rx_defrag.h
+│   │       ├── dp_rx_desc.c
+│   │       ├── dp_rx_err.c
+│   │       ├── dp_rx.h
+│   │       ├── dp_rx_tid.c
+│   │       ├── dp_rx_tid.h
+│   │       ├── dp_stats.c
+│   │       ├── dp_tx.c
+│   │       ├── dp_tx_desc.c
+│   │       ├── dp_tx_desc.h
+│   │       ├── dp_tx_flow_control.c
+│   │       ├── dp_tx.h
+│   │       ├── dp_txrx_wds.c
+│   │       ├── dp_txrx_wds.h
+│   │       ├── dp_types.h
+│   │       ├── dp_umac_reset.c
+│   │       ├── dp_umac_reset.h
+│   │       ├── dp_wdi_event.c
+│   │       ├── li
+│   │       │   ├── dp_li.c
+│   │       │   ├── dp_li.h
+│   │       │   ├── dp_li_rx.c
+│   │       │   ├── dp_li_rx.h
+│   │       │   ├── dp_li_tx.c
+│   │       │   └── dp_li_tx.h
+│   │       ├── monitor
+│   │       │   ├── 1.0
+│   │       │   │   ├── dp_mon_1.0.c
+│   │       │   │   ├── dp_mon_1.0.h
+│   │       │   │   ├── dp_mon_filter_1.0.c
+│   │       │   │   ├── dp_mon_filter_1.0.h
+│   │       │   │   ├── dp_rx_mon_1.0.h
+│   │       │   │   ├── dp_rx_mon_dest_1.0.c
+│   │       │   │   └── dp_rx_mon_status_1.0.c
+│   │       │   ├── 2.0
+│   │       │   │   ├── dp_mon_2.0.c
+│   │       │   │   ├── dp_mon_2.0.h
+│   │       │   │   ├── dp_mon_filter_2.0.c
+│   │       │   │   ├── dp_mon_filter_2.0.h
+│   │       │   │   ├── dp_rx_mon_2.0.c
+│   │       │   │   ├── dp_rx_mon_2.0.h
+│   │       │   │   ├── dp_rx_mon_status_2.0.c
+│   │       │   │   ├── dp_tx_mon_2.0.c
+│   │       │   │   ├── dp_tx_mon_2.0.h
+│   │       │   │   └── dp_tx_mon_status_2.0.c
+│   │       │   ├── dp_mon.c
+│   │       │   ├── dp_mon_filter.c
+│   │       │   ├── dp_mon_filter.h
+│   │       │   ├── dp_mon.h
+│   │       │   ├── dp_rx_mon.c
+│   │       │   └── dp_rx_mon.h
+│   │       └── rh
+│   │           ├── dp_rh.c
+│   │           ├── dp_rh.h
+│   │           ├── dp_rh_htt.c
+│   │           ├── dp_rh_htt.h
+│   │           ├── dp_rh_rx.c
+│   │           ├── dp_rh_rx.h
+│   │           ├── dp_rh_tx.c
+│   │           └── dp_rh_tx.h
+│   ├── ftm
+│   │   ├── core
+│   │   │   └── src
+│   │   │       ├── wlan_ftm_svc.c
+│   │   │       └── wlan_ftm_svc_i.h
+│   │   └── dispatcher
+│   │       ├── inc
+│   │       │   ├── wlan_ftm_init_deinit_api.h
+│   │       │   └── wlan_ftm_ucfg_api.h
+│   │       └── src
+│   │           ├── wlan_ftm_init_deinit.c
+│   │           └── wlan_ftm_ucfg_api.c
+│   ├── fw_hdr
+│   │   ├── fw
+│   │   │   ├── a_osapi.h
+│   │   │   ├── apb_athr_wlan_map.h
+│   │   │   ├── athdefs.h
+│   │   │   ├── athendpack.h
+│   │   │   ├── a_usb_defs.h
+│   │   │   ├── bin_sig.h
+│   │   │   ├── bmi_msg.h
+│   │   │   ├── cepci.h
+│   │   │   ├── dbglog.h
+│   │   │   ├── dbglog_id.h
+│   │   │   ├── efuse_reg.h
+│   │   │   ├── enet.h
+│   │   │   ├── epping_test.h
+│   │   │   ├── htc.h
+│   │   │   ├── htc_services.h
+│   │   │   ├── htt_common.h
+│   │   │   ├── htt_deps.h
+│   │   │   ├── htt.h
+│   │   │   ├── htt_isoc.h
+│   │   │   ├── htt_ppdu_stats.h
+│   │   │   ├── htt_stats.h
+│   │   │   ├── ip_prot.h
+│   │   │   ├── ipv4.h
+│   │   │   ├── ol_fw_tx_dbg.h
+│   │   │   ├── rtc_soc_reg.h
+│   │   │   ├── targaddrs.h
+│   │   │   ├── targcfg.h
+│   │   │   ├── txmon_tlvs.h
+│   │   │   ├── wal_rx_desc.h
+│   │   │   ├── wdi_ipa.h
+│   │   │   ├── wlan_defs.h
+│   │   │   ├── wlanfw_health_mon.h
+│   │   │   ├── wlan_module_ids.h
+│   │   │   ├── wlan_nan_msg_common_v2.h
+│   │   │   ├── wlan_nan_msg.h
+│   │   │   ├── wlan_nan_platform.h
+│   │   │   ├── wmi.h
+│   │   │   ├── wmi_services.h
+│   │   │   ├── wmi_tlv_defs.h
+│   │   │   ├── wmi_tlv_helper.h
+│   │   │   ├── wmi_unified.h
+│   │   │   ├── wmi_unified_vendor.h
+│   │   │   ├── wmi_version.h
+│   │   │   └── wmix.h
+│   │   └── hw
+│   │       ├── qca5018
+│   │       │   ├── buffer_addr_info.h
+│   │       │   ├── ce_src_desc.h
+│   │       │   ├── ce_stat_desc.h
+│   │       │   ├── com_dtypes.h
+│   │       │   ├── HALcomdef.h
+│   │       │   ├── HALhwio.h
+│   │       │   ├── he_sig_a_mu_dl_info.h
+│   │       │   ├── he_sig_a_mu_ul_info.h
+│   │       │   ├── he_sig_a_su_info.h
+│   │       │   ├── he_sig_b1_mu_info.h
+│   │       │   ├── he_sig_b2_mu_info.h
+│   │       │   ├── he_sig_b2_ofdma_info.h
+│   │       │   ├── ht_sig_info.h
+│   │       │   ├── l_sig_a_info.h
+│   │       │   ├── l_sig_b_info.h
+│   │       │   ├── macrx_abort_request_info.h
+│   │       │   ├── mac_tcl_reg_seq_hwiobase.h
+│   │       │   ├── mac_tcl_reg_seq_hwioreg.h
+│   │       │   ├── phyrx_abort_request_info.h
+│   │       │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   ├── phyrx_he_sig_a_mu_ul.h
+│   │       │   ├── phyrx_he_sig_a_su.h
+│   │       │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   ├── phyrx_ht_sig.h
+│   │       │   ├── phyrx_l_sig_a.h
+│   │       │   ├── phyrx_l_sig_b.h
+│   │       │   ├── phyrx_pkt_end.h
+│   │       │   ├── phyrx_pkt_end_info.h
+│   │       │   ├── phyrx_rssi_legacy.h
+│   │       │   ├── phyrx_vht_sig_a.h
+│   │       │   ├── receive_rssi_info.h
+│   │       │   ├── receive_user_info.h
+│   │       │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   ├── reo_destination_ring.h
+│   │       │   ├── reo_entrance_ring.h
+│   │       │   ├── reo_flush_cache.h
+│   │       │   ├── reo_flush_cache_status.h
+│   │       │   ├── reo_flush_queue.h
+│   │       │   ├── reo_flush_queue_status.h
+│   │       │   ├── reo_flush_timeout_list.h
+│   │       │   ├── reo_flush_timeout_list_status.h
+│   │       │   ├── reo_get_queue_stats.h
+│   │       │   ├── reo_get_queue_stats_status.h
+│   │       │   ├── reo_reg_seq_hwiobase.h
+│   │       │   ├── reo_reg_seq_hwioreg.h
+│   │       │   ├── reo_unblock_cache.h
+│   │       │   ├── reo_unblock_cache_status.h
+│   │       │   ├── reo_update_rx_reo_queue.h
+│   │       │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   ├── rfa_from_wsi_seq_hwiobase.h
+│   │       │   ├── rx_attention.h
+│   │       │   ├── rx_flow_search_entry.h
+│   │       │   ├── rx_location_info.h
+│   │       │   ├── rx_mpdu_desc_info.h
+│   │       │   ├── rx_mpdu_details.h
+│   │       │   ├── rx_mpdu_end.h
+│   │       │   ├── rx_mpdu_info.h
+│   │       │   ├── rx_mpdu_link_ptr.h
+│   │       │   ├── rx_mpdu_start.h
+│   │       │   ├── rx_msdu_desc_info.h
+│   │       │   ├── rx_msdu_details.h
+│   │       │   ├── rx_msdu_end.h
+│   │       │   ├── rx_msdu_link.h
+│   │       │   ├── rx_msdu_start.h
+│   │       │   ├── rxpcu_ppdu_end_info.h
+│   │       │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   ├── rx_ppdu_end_user_stats.h
+│   │       │   ├── rx_ppdu_start.h
+│   │       │   ├── rx_ppdu_start_user_info.h
+│   │       │   ├── rxpt_classify_info.h
+│   │       │   ├── rx_reo_queue_ext.h
+│   │       │   ├── rx_reo_queue.h
+│   │       │   ├── rx_rxpcu_classification_overview.h
+│   │       │   ├── rx_timing_offset_info.h
+│   │       │   ├── seq_hwio.h
+│   │       │   ├── sw_xml_headers.h
+│   │       │   ├── tcl_data_cmd.h
+│   │       │   ├── tcl_gse_cmd.h
+│   │       │   ├── tcl_status_ring.h
+│   │       │   ├── tlv_hdr.h
+│   │       │   ├── tlv_tag_def.h
+│   │       │   ├── tx_msdu_extension.h
+│   │       │   ├── tx_rate_stats_info.h
+│   │       │   ├── uniform_descriptor_header.h
+│   │       │   ├── uniform_reo_cmd_header.h
+│   │       │   ├── uniform_reo_status_header.h
+│   │       │   ├── vht_sig_a_info.h
+│   │       │   ├── wbm_buffer_ring.h
+│   │       │   ├── wbm_link_descriptor_ring.h
+│   │       │   ├── wbm_reg_seq_hwiobase.h
+│   │       │   ├── wbm_reg_seq_hwioreg.h
+│   │       │   ├── wbm_release_ring.h
+│   │       │   ├── wcss_seq_hwiobase_ext.h
+│   │       │   ├── wcss_seq_hwiobase.h
+│   │       │   ├── wcss_version.h
+│   │       │   ├── wfss_ce_reg_seq_hwioreg.h
+│   │       │   └── wfss_pmm_base_struct.h
+│   │       ├── qca5332
+│   │       │   ├── ack_report.h
+│   │       │   ├── buffer_addr_info.h
+│   │       │   ├── ce_src_desc.h
+│   │       │   ├── ce_stat_desc.h
+│   │       │   ├── coex_rx_status.h
+│   │       │   ├── coex_tx_req.h
+│   │       │   ├── coex_tx_status.h
+│   │       │   ├── com_dtypes.h
+│   │       │   ├── eht_sig_usr_mu_mimo_info.h
+│   │       │   ├── eht_sig_usr_ofdma_info.h
+│   │       │   ├── eht_sig_usr_su_info.h
+│   │       │   ├── expected_response.h
+│   │       │   ├── HALcomdef.h
+│   │       │   ├── HALhwio.h
+│   │       │   ├── he_sig_a_mu_dl_info.h
+│   │       │   ├── he_sig_a_mu_ul_info.h
+│   │       │   ├── he_sig_a_su_info.h
+│   │       │   ├── he_sig_b1_mu_info.h
+│   │       │   ├── he_sig_b2_mu_info.h
+│   │       │   ├── he_sig_b2_ofdma_info.h
+│   │       │   ├── ht_sig_info.h
+│   │       │   ├── l_sig_a_info.h
+│   │       │   ├── l_sig_b_info.h
+│   │       │   ├── macrx_abort_request_info.h
+│   │       │   ├── mactx_eht_sig_usr_mu_mimo.h
+│   │       │   ├── mactx_eht_sig_usr_ofdma.h
+│   │       │   ├── mactx_eht_sig_usr_su.h
+│   │       │   ├── mactx_he_sig_a_mu_dl.h
+│   │       │   ├── mactx_he_sig_a_mu_ul.h
+│   │       │   ├── mactx_he_sig_a_su.h
+│   │       │   ├── mactx_he_sig_b1_mu.h
+│   │       │   ├── mactx_he_sig_b2_mu.h
+│   │       │   ├── mactx_he_sig_b2_ofdma.h
+│   │       │   ├── mactx_ht_sig.h
+│   │       │   ├── mactx_l_sig_a.h
+│   │       │   ├── mactx_l_sig_b.h
+│   │       │   ├── mactx_phy_desc.h
+│   │       │   ├── mactx_service.h
+│   │       │   ├── mactx_user_desc_common.h
+│   │       │   ├── mactx_user_desc_per_user.h
+│   │       │   ├── mactx_u_sig_eht_su_mu.h
+│   │       │   ├── mactx_u_sig_eht_tb.h
+│   │       │   ├── mactx_vht_sig_a.h
+│   │       │   ├── mactx_vht_sig_b_mu160.h
+│   │       │   ├── mactx_vht_sig_b_mu20.h
+│   │       │   ├── mactx_vht_sig_b_mu40.h
+│   │       │   ├── mactx_vht_sig_b_mu80.h
+│   │       │   ├── mactx_vht_sig_b_su160.h
+│   │       │   ├── mactx_vht_sig_b_su20.h
+│   │       │   ├── mactx_vht_sig_b_su40.h
+│   │       │   ├── mactx_vht_sig_b_su80.h
+│   │       │   ├── mlo_sta_id_details.h
+│   │       │   ├── mon_buffer_addr.h
+│   │       │   ├── mon_destination_ring.h
+│   │       │   ├── mon_destination_ring_with_drop.h
+│   │       │   ├── mon_drop.h
+│   │       │   ├── mon_ingress_ring.h
+│   │       │   ├── no_ack_report.h
+│   │       │   ├── ofdma_trigger_details.h
+│   │       │   ├── pcu_ppdu_setup_init.h
+│   │       │   ├── pdg_response.h
+│   │       │   ├── pdg_response_rate_setting.h
+│   │       │   ├── pdg_tx_req.h
+│   │       │   ├── phyrx_abort_request_info.h
+│   │       │   ├── phyrx_common_user_info.h
+│   │       │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   ├── phyrx_he_sig_a_su.h
+│   │       │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   ├── phyrx_ht_sig.h
+│   │       │   ├── phyrx_location.h
+│   │       │   ├── phyrx_l_sig_a.h
+│   │       │   ├── phyrx_l_sig_b.h
+│   │       │   ├── phyrx_other_receive_info_ru_details.h
+│   │       │   ├── phyrx_pkt_end.h
+│   │       │   ├── phyrx_pkt_end_info.h
+│   │       │   ├── phyrx_rssi_legacy.h
+│   │       │   ├── phyrx_vht_sig_a.h
+│   │       │   ├── phytx_abort_request_info.h
+│   │       │   ├── phytx_ppdu_header_info_request.h
+│   │       │   ├── received_response_user_15_8.h
+│   │       │   ├── received_response_user_23_16.h
+│   │       │   ├── received_response_user_31_24.h
+│   │       │   ├── received_response_user_36_32.h
+│   │       │   ├── received_response_user_7_0.h
+│   │       │   ├── received_response_user_info.h
+│   │       │   ├── received_trigger_info_details.h
+│   │       │   ├── received_trigger_info.h
+│   │       │   ├── receive_rssi_info.h
+│   │       │   ├── receive_user_info.h
+│   │       │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   ├── reo_destination_ring.h
+│   │       │   ├── reo_entrance_ring.h
+│   │       │   ├── reo_flush_cache.h
+│   │       │   ├── reo_flush_cache_status.h
+│   │       │   ├── reo_flush_queue.h
+│   │       │   ├── reo_flush_queue_status.h
+│   │       │   ├── reo_flush_timeout_list.h
+│   │       │   ├── reo_flush_timeout_list_status.h
+│   │       │   ├── reo_get_queue_stats.h
+│   │       │   ├── reo_get_queue_stats_status.h
+│   │       │   ├── reo_unblock_cache.h
+│   │       │   ├── reo_unblock_cache_status.h
+│   │       │   ├── reo_update_rx_reo_queue.h
+│   │       │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   ├── response_end_status.h
+│   │       │   ├── response_start_status.h
+│   │       │   ├── ru_allocation_160_info.h
+│   │       │   ├── rx_attention.h
+│   │       │   ├── rx_flow_search_entry.h
+│   │       │   ├── rx_frame_1k_bitmap_ack.h
+│   │       │   ├── rx_frame_bitmap_ack.h
+│   │       │   ├── rx_frame_bitmap_req.h
+│   │       │   ├── rx_location_info.h
+│   │       │   ├── rx_mpdu_desc_info.h
+│   │       │   ├── rx_mpdu_details.h
+│   │       │   ├── rx_mpdu_end.h
+│   │       │   ├── rx_mpdu_info.h
+│   │       │   ├── rx_mpdu_link_ptr.h
+│   │       │   ├── rx_mpdu_start.h
+│   │       │   ├── rx_msdu_desc_info.h
+│   │       │   ├── rx_msdu_details.h
+│   │       │   ├── rx_msdu_end.h
+│   │       │   ├── rx_msdu_ext_desc_info.h
+│   │       │   ├── rx_msdu_link.h
+│   │       │   ├── rx_msdu_start.h
+│   │       │   ├── rxpcu_early_rx_indication.h
+│   │       │   ├── rxpcu_ppdu_end_info.h
+│   │       │   ├── rxpcu_ppdu_end_layout_info.h
+│   │       │   ├── rx_ppdu_ack_report.h
+│   │       │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   ├── rx_ppdu_end_user_stats.h
+│   │       │   ├── rx_ppdu_no_ack_report.h
+│   │       │   ├── rx_ppdu_start.h
+│   │       │   ├── rx_ppdu_start_user_info.h
+│   │       │   ├── rx_preamble.h
+│   │       │   ├── rxpt_classify_info.h
+│   │       │   ├── rx_reo_queue_1k.h
+│   │       │   ├── rx_reo_queue_ext.h
+│   │       │   ├── rx_reo_queue.h
+│   │       │   ├── rx_reo_queue_reference.h
+│   │       │   ├── rx_response_required_info.h
+│   │       │   ├── rx_rxpcu_classification_overview.h
+│   │       │   ├── rx_start_param.h
+│   │       │   ├── rx_timing_offset_info.h
+│   │       │   ├── rx_trig_info.h
+│   │       │   ├── seq_hwio.h
+│   │       │   ├── service_info.h
+│   │       │   ├── sw_monitor_ring.h
+│   │       │   ├── tcl_data_cmd.h
+│   │       │   ├── tcl_entrance_from_ppe_ring.h
+│   │       │   ├── tcl_gse_cmd.h
+│   │       │   ├── tcl_status_ring.h
+│   │       │   ├── tlv_hdr.h
+│   │       │   ├── tlv_tag_def.h
+│   │       │   ├── tx_cbf_info.h
+│   │       │   ├── tx_fes_setup.h
+│   │       │   ├── tx_fes_status_1k_ba.h
+│   │       │   ├── tx_fes_status_ack_or_ba.h
+│   │       │   ├── tx_fes_status_end.h
+│   │       │   ├── tx_fes_status_prot.h
+│   │       │   ├── tx_fes_status_start.h
+│   │       │   ├── tx_fes_status_start_ppdu.h
+│   │       │   ├── tx_fes_status_start_prot.h
+│   │       │   ├── tx_fes_status_user_ppdu.h
+│   │       │   ├── tx_fes_status_user_response.h
+│   │       │   ├── tx_flush_req.h
+│   │       │   ├── tx_mpdu_start.h
+│   │       │   ├── tx_msdu_extension.h
+│   │       │   ├── tx_msdu_start.h
+│   │       │   ├── txpcu_buffer_basics.h
+│   │       │   ├── txpcu_buffer_status.h
+│   │       │   ├── txpcu_user_buffer_status.h
+│   │       │   ├── tx_peer_entry.h
+│   │       │   ├── tx_queue_extension.h
+│   │       │   ├── tx_rate_stats_info.h
+│   │       │   ├── tx_raw_or_native_frame_setup.h
+│   │       │   ├── unallocated_ru_160_info.h
+│   │       │   ├── uniform_descriptor_header.h
+│   │       │   ├── uniform_reo_cmd_header.h
+│   │       │   ├── uniform_reo_status_header.h
+│   │       │   ├── u_sig_eht_su_mu_info.h
+│   │       │   ├── u_sig_eht_tb_info.h
+│   │       │   ├── vht_sig_a_info.h
+│   │       │   ├── vht_sig_b_mu160_info.h
+│   │       │   ├── vht_sig_b_mu20_info.h
+│   │       │   ├── vht_sig_b_mu40_info.h
+│   │       │   ├── vht_sig_b_mu80_info.h
+│   │       │   ├── vht_sig_b_su160_info.h
+│   │       │   ├── vht_sig_b_su20_info.h
+│   │       │   ├── vht_sig_b_su40_info.h
+│   │       │   ├── vht_sig_b_su80_info.h
+│   │       │   ├── wbm2sw_completion_ring_rx.h
+│   │       │   ├── wbm2sw_completion_ring_tx.h
+│   │       │   ├── wbm_buffer_ring.h
+│   │       │   ├── wbm_link_descriptor_ring.h
+│   │       │   ├── wbm_release_ring.h
+│   │       │   ├── wbm_release_ring_rx.h
+│   │       │   ├── wbm_release_ring_tx.h
+│   │       │   ├── wcss_seq_hwiobase.h
+│   │       │   ├── wcss_seq_hwioreg_umac.h
+│   │       │   ├── wcss_version.h
+│   │       │   └── wfss_ce_reg_seq_hwioreg.h
+│   │       ├── qca5424
+│   │       │   ├── ack_report.h
+│   │       │   ├── buffer_addr_info.h
+│   │       │   ├── ce_src_desc.h
+│   │       │   ├── ce_stat_desc.h
+│   │       │   ├── coex_rx_status.h
+│   │       │   ├── coex_tx_req.h
+│   │       │   ├── coex_tx_status.h
+│   │       │   ├── com_dtypes.h
+│   │       │   ├── eht_sig_usr_mu_mimo_info.h
+│   │       │   ├── eht_sig_usr_ofdma_info.h
+│   │       │   ├── eht_sig_usr_su_info.h
+│   │       │   ├── expected_response.h
+│   │       │   ├── HALcomdef.h
+│   │       │   ├── HALhwio.h
+│   │       │   ├── he_sig_a_mu_dl_info.h
+│   │       │   ├── he_sig_a_mu_ul_info.h
+│   │       │   ├── he_sig_a_su_info.h
+│   │       │   ├── he_sig_b1_mu_info.h
+│   │       │   ├── he_sig_b2_mu_info.h
+│   │       │   ├── he_sig_b2_ofdma_info.h
+│   │       │   ├── ht_sig_info.h
+│   │       │   ├── l_sig_a_info.h
+│   │       │   ├── l_sig_b_info.h
+│   │       │   ├── macrx_abort_request_info.h
+│   │       │   ├── mactx_eht_sig_usr_mu_mimo.h
+│   │       │   ├── mactx_eht_sig_usr_ofdma.h
+│   │       │   ├── mactx_eht_sig_usr_su.h
+│   │       │   ├── mactx_he_sig_a_mu_dl.h
+│   │       │   ├── mactx_he_sig_a_mu_ul.h
+│   │       │   ├── mactx_he_sig_a_su.h
+│   │       │   ├── mactx_he_sig_b1_mu.h
+│   │       │   ├── mactx_he_sig_b2_mu.h
+│   │       │   ├── mactx_he_sig_b2_ofdma.h
+│   │       │   ├── mactx_ht_sig.h
+│   │       │   ├── mactx_l_sig_a.h
+│   │       │   ├── mactx_l_sig_b.h
+│   │       │   ├── mactx_phy_desc.h
+│   │       │   ├── mactx_service.h
+│   │       │   ├── mactx_user_desc_common.h
+│   │       │   ├── mactx_user_desc_per_user.h
+│   │       │   ├── mactx_u_sig_eht_su_mu.h
+│   │       │   ├── mactx_u_sig_eht_tb.h
+│   │       │   ├── mactx_vht_sig_a.h
+│   │       │   ├── mactx_vht_sig_b_mu160.h
+│   │       │   ├── mactx_vht_sig_b_mu20.h
+│   │       │   ├── mactx_vht_sig_b_mu40.h
+│   │       │   ├── mactx_vht_sig_b_mu80.h
+│   │       │   ├── mactx_vht_sig_b_su160.h
+│   │       │   ├── mactx_vht_sig_b_su20.h
+│   │       │   ├── mactx_vht_sig_b_su40.h
+│   │       │   ├── mactx_vht_sig_b_su80.h
+│   │       │   ├── mlo_sta_id_details.h
+│   │       │   ├── mon_buffer_addr.h
+│   │       │   ├── mon_destination_ring.h
+│   │       │   ├── mon_destination_ring_with_drop.h
+│   │       │   ├── mon_drop.h
+│   │       │   ├── mon_ingress_ring.h
+│   │       │   ├── no_ack_report.h
+│   │       │   ├── ofdma_trigger_details.h
+│   │       │   ├── pcu_ppdu_setup_init.h
+│   │       │   ├── pdg_response.h
+│   │       │   ├── pdg_response_rate_setting.h
+│   │       │   ├── pdg_tx_req.h
+│   │       │   ├── phyrx_abort_request_info.h
+│   │       │   ├── phyrx_common_user_info.h
+│   │       │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   ├── phyrx_he_sig_a_su.h
+│   │       │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   ├── phyrx_ht_sig.h
+│   │       │   ├── phyrx_location.h
+│   │       │   ├── phyrx_l_sig_a.h
+│   │       │   ├── phyrx_l_sig_b.h
+│   │       │   ├── phyrx_other_receive_info_evm_details.h
+│   │       │   ├── phyrx_other_receive_info_ru_details.h
+│   │       │   ├── phyrx_pkt_end.h
+│   │       │   ├── phyrx_pkt_end_info.h
+│   │       │   ├── phyrx_rssi_legacy.h
+│   │       │   ├── phyrx_vht_sig_a.h
+│   │       │   ├── phytx_abort_request_info.h
+│   │       │   ├── phytx_ppdu_header_info_request.h
+│   │       │   ├── received_response_user_15_8.h
+│   │       │   ├── received_response_user_23_16.h
+│   │       │   ├── received_response_user_31_24.h
+│   │       │   ├── received_response_user_36_32.h
+│   │       │   ├── received_response_user_7_0.h
+│   │       │   ├── received_response_user_info.h
+│   │       │   ├── received_trigger_info_details.h
+│   │       │   ├── received_trigger_info.h
+│   │       │   ├── receive_rssi_info.h
+│   │       │   ├── receive_user_info.h
+│   │       │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   ├── reo_destination_ring.h
+│   │       │   ├── reo_entrance_ring.h
+│   │       │   ├── reo_flush_cache.h
+│   │       │   ├── reo_flush_cache_status.h
+│   │       │   ├── reo_flush_queue.h
+│   │       │   ├── reo_flush_queue_status.h
+│   │       │   ├── reo_flush_timeout_list.h
+│   │       │   ├── reo_flush_timeout_list_status.h
+│   │       │   ├── reo_get_queue_stats.h
+│   │       │   ├── reo_get_queue_stats_status.h
+│   │       │   ├── reo_unblock_cache.h
+│   │       │   ├── reo_unblock_cache_status.h
+│   │       │   ├── reo_update_rx_reo_queue.h
+│   │       │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   ├── response_end_status.h
+│   │       │   ├── response_start_status.h
+│   │       │   ├── ru_allocation_160_info.h
+│   │       │   ├── rx_attention.h
+│   │       │   ├── rx_flow_search_entry.h
+│   │       │   ├── rx_frame_1k_bitmap_ack.h
+│   │       │   ├── rx_frame_bitmap_ack.h
+│   │       │   ├── rx_frame_bitmap_req.h
+│   │       │   ├── rx_location_info.h
+│   │       │   ├── rx_mpdu_desc_info.h
+│   │       │   ├── rx_mpdu_details.h
+│   │       │   ├── rx_mpdu_end.h
+│   │       │   ├── rx_mpdu_info.h
+│   │       │   ├── rx_mpdu_link_ptr.h
+│   │       │   ├── rx_mpdu_start.h
+│   │       │   ├── rx_msdu_desc_info.h
+│   │       │   ├── rx_msdu_details.h
+│   │       │   ├── rx_msdu_end.h
+│   │       │   ├── rx_msdu_ext_desc_info.h
+│   │       │   ├── rx_msdu_link.h
+│   │       │   ├── rx_msdu_start.h
+│   │       │   ├── rxpcu_early_rx_indication.h
+│   │       │   ├── rxpcu_ppdu_end_info.h
+│   │       │   ├── rxpcu_ppdu_end_layout_info.h
+│   │       │   ├── rx_ppdu_ack_report.h
+│   │       │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   ├── rx_ppdu_end_user_stats.h
+│   │       │   ├── rx_ppdu_no_ack_report.h
+│   │       │   ├── rx_ppdu_start.h
+│   │       │   ├── rx_ppdu_start_user_info.h
+│   │       │   ├── rx_preamble.h
+│   │       │   ├── rxpt_classify_info.h
+│   │       │   ├── rx_reo_queue_1k.h
+│   │       │   ├── rx_reo_queue_ext.h
+│   │       │   ├── rx_reo_queue.h
+│   │       │   ├── rx_reo_queue_reference.h
+│   │       │   ├── rx_response_required_info.h
+│   │       │   ├── rx_rxpcu_classification_overview.h
+│   │       │   ├── rx_start_param.h
+│   │       │   ├── rx_timing_offset_info.h
+│   │       │   ├── rx_trig_info.h
+│   │       │   ├── seq_hwio.h
+│   │       │   ├── service_info.h
+│   │       │   ├── sw_monitor_ring.h
+│   │       │   ├── tcl_data_cmd.h
+│   │       │   ├── tcl_entrance_from_ppe_ring.h
+│   │       │   ├── tcl_gse_cmd.h
+│   │       │   ├── tcl_status_ring.h
+│   │       │   ├── tlv_hdr.h
+│   │       │   ├── tlv_tag_def.h
+│   │       │   ├── tx_cbf_info.h
+│   │       │   ├── tx_fes_setup.h
+│   │       │   ├── tx_fes_status_1k_ba.h
+│   │       │   ├── tx_fes_status_ack_or_ba.h
+│   │       │   ├── tx_fes_status_end.h
+│   │       │   ├── tx_fes_status_prot.h
+│   │       │   ├── tx_fes_status_start.h
+│   │       │   ├── tx_fes_status_start_ppdu.h
+│   │       │   ├── tx_fes_status_start_prot.h
+│   │       │   ├── tx_fes_status_user_ppdu.h
+│   │       │   ├── tx_fes_status_user_response.h
+│   │       │   ├── tx_flush_req.h
+│   │       │   ├── tx_mpdu_start.h
+│   │       │   ├── tx_msdu_extension.h
+│   │       │   ├── tx_msdu_start.h
+│   │       │   ├── txpcu_buffer_basics.h
+│   │       │   ├── txpcu_buffer_status.h
+│   │       │   ├── txpcu_user_buffer_status.h
+│   │       │   ├── tx_peer_entry.h
+│   │       │   ├── tx_queue_extension.h
+│   │       │   ├── tx_rate_stats_info.h
+│   │       │   ├── tx_raw_or_native_frame_setup.h
+│   │       │   ├── unallocated_ru_160_info.h
+│   │       │   ├── uniform_descriptor_header.h
+│   │       │   ├── uniform_reo_cmd_header.h
+│   │       │   ├── uniform_reo_status_header.h
+│   │       │   ├── u_sig_eht_su_mu_info.h
+│   │       │   ├── u_sig_eht_tb_info.h
+│   │       │   ├── vht_sig_a_info.h
+│   │       │   ├── vht_sig_b_mu160_info.h
+│   │       │   ├── vht_sig_b_mu20_info.h
+│   │       │   ├── vht_sig_b_mu40_info.h
+│   │       │   ├── vht_sig_b_mu80_info.h
+│   │       │   ├── vht_sig_b_su160_info.h
+│   │       │   ├── vht_sig_b_su20_info.h
+│   │       │   ├── vht_sig_b_su40_info.h
+│   │       │   ├── vht_sig_b_su80_info.h
+│   │       │   ├── wbm2sw_completion_ring_rx.h
+│   │       │   ├── wbm2sw_completion_ring_tx.h
+│   │       │   ├── wbm_buffer_ring.h
+│   │       │   ├── wbm_link_descriptor_ring.h
+│   │       │   ├── wbm_release_ring.h
+│   │       │   ├── wbm_release_ring_rx.h
+│   │       │   ├── wbm_release_ring_tx.h
+│   │       │   ├── wcss_seq_hwiobase.h
+│   │       │   ├── wcss_seq_hwioreg_umac.h
+│   │       │   ├── wcss_version.h
+│   │       │   └── wfss_ce_reg_seq_hwioreg.h
+│   │       ├── qca6750
+│   │       │   └── v1
+│   │       │       ├── buffer_addr_info.h
+│   │       │       ├── ce_src_desc.h
+│   │       │       ├── ce_stat_desc.h
+│   │       │       ├── com_dtypes.h
+│   │       │       ├── HALcomdef.h
+│   │       │       ├── HALhwio.h
+│   │       │       ├── he_sig_a_mu_dl_info.h
+│   │       │       ├── he_sig_a_mu_ul_info.h
+│   │       │       ├── he_sig_a_su_info.h
+│   │       │       ├── he_sig_b1_mu_info.h
+│   │       │       ├── he_sig_b2_mu_info.h
+│   │       │       ├── he_sig_b2_ofdma_info.h
+│   │       │       ├── ht_sig_info.h
+│   │       │       ├── hwio.h
+│   │       │       ├── lithium_top_reg.h
+│   │       │       ├── l_sig_a_info.h
+│   │       │       ├── l_sig_b_info.h
+│   │       │       ├── macrx_abort_request_info.h
+│   │       │       ├── mac_tcl_reg_seq_hwiobase.h
+│   │       │       ├── mac_tcl_reg_seq_hwioreg.h
+│   │       │       ├── phyrx_abort_request_info.h
+│   │       │       ├── phyrx_common_user_info.h
+│   │       │       ├── phyrx_he_sig_a_mu_dl.h
+│   │       │       ├── phyrx_he_sig_a_mu_ul.h
+│   │       │       ├── phyrx_he_sig_a_su.h
+│   │       │       ├── phyrx_he_sig_b1_mu.h
+│   │       │       ├── phyrx_he_sig_b2_mu.h
+│   │       │       ├── phyrx_he_sig_b2_ofdma.h
+│   │       │       ├── phyrx_ht_sig.h
+│   │       │       ├── phyrx_l_sig_a.h
+│   │       │       ├── phyrx_l_sig_b.h
+│   │       │       ├── phyrx_other_receive_info_ru_details.h
+│   │       │       ├── phyrx_pkt_end.h
+│   │       │       ├── phyrx_pkt_end_info.h
+│   │       │       ├── phyrx_rssi_legacy.h
+│   │       │       ├── phyrx_user_info.h
+│   │       │       ├── phyrx_vht_sig_a.h
+│   │       │       ├── receive_rssi_info.h
+│   │       │       ├── receive_user_info.h
+│   │       │       ├── reo_descriptor_threshold_reached_status.h
+│   │       │       ├── reo_destination_ring.h
+│   │       │       ├── reo_entrance_ring.h
+│   │       │       ├── reo_flush_cache.h
+│   │       │       ├── reo_flush_cache_status.h
+│   │       │       ├── reo_flush_queue.h
+│   │       │       ├── reo_flush_queue_status.h
+│   │       │       ├── reo_flush_timeout_list.h
+│   │       │       ├── reo_flush_timeout_list_status.h
+│   │       │       ├── reo_get_queue_stats.h
+│   │       │       ├── reo_get_queue_stats_status.h
+│   │       │       ├── reo_reg_seq_hwiobase.h
+│   │       │       ├── reo_reg_seq_hwioreg.h
+│   │       │       ├── reo_unblock_cache.h
+│   │       │       ├── reo_unblock_cache_status.h
+│   │       │       ├── reo_update_rx_reo_queue.h
+│   │       │       ├── reo_update_rx_reo_queue_status.h
+│   │       │       ├── rx_attention.h
+│   │       │       ├── rx_flow_search_entry.h
+│   │       │       ├── rx_location_info.h
+│   │       │       ├── rx_mpdu_desc_info.h
+│   │       │       ├── rx_mpdu_details.h
+│   │       │       ├── rx_mpdu_end.h
+│   │       │       ├── rx_mpdu_info.h
+│   │       │       ├── rx_mpdu_link_ptr.h
+│   │       │       ├── rx_mpdu_start.h
+│   │       │       ├── rx_msdu_desc_info.h
+│   │       │       ├── rx_msdu_details.h
+│   │       │       ├── rx_msdu_end.h
+│   │       │       ├── rx_msdu_link.h
+│   │       │       ├── rx_msdu_start.h
+│   │       │       ├── rxpcu_ppdu_end_info.h
+│   │       │       ├── rx_ppdu_end_user_stats_ext.h
+│   │       │       ├── rx_ppdu_end_user_stats.h
+│   │       │       ├── rx_ppdu_start.h
+│   │       │       ├── rx_ppdu_start_user_info.h
+│   │       │       ├── rxpt_classify_info.h
+│   │       │       ├── rx_reo_queue_ext.h
+│   │       │       ├── rx_reo_queue.h
+│   │       │       ├── rx_rxpcu_classification_overview.h
+│   │       │       ├── rx_timing_offset_info.h
+│   │       │       ├── seq_hwio.h
+│   │       │       ├── tcl_data_cmd.h
+│   │       │       ├── tcl_gse_cmd.h
+│   │       │       ├── tcl_status_ring.h
+│   │       │       ├── tlv_hdr.h
+│   │       │       ├── tlv_tag_def.h
+│   │       │       ├── tx_msdu_extension.h
+│   │       │       ├── tx_rate_stats_info.h
+│   │       │       ├── uniform_descriptor_header.h
+│   │       │       ├── uniform_reo_cmd_header.h
+│   │       │       ├── uniform_reo_status_header.h
+│   │       │       ├── vht_sig_a_info.h
+│   │       │       ├── wbm_buffer_ring.h
+│   │       │       ├── wbm_link_descriptor_ring.h
+│   │       │       ├── wbm_reg_seq_hwiobase.h
+│   │       │       ├── wbm_reg_seq_hwioreg.h
+│   │       │       ├── wbm_release_ring.h
+│   │       │       ├── wcss_seq_hwiobase.h
+│   │       │       ├── wcss_version.h
+│   │       │       └── wfss_ce_reg_seq_hwioreg.h
+│   │       ├── qca8074
+│   │       │   ├── v1
+│   │       │   │   ├── buffer_addr_info.h
+│   │       │   │   ├── ce_src_desc.h
+│   │       │   │   ├── ce_stat_desc.h
+│   │       │   │   ├── com_dtypes.h
+│   │       │   │   ├── HALcomdef.h
+│   │       │   │   ├── HALhwio.h
+│   │       │   │   ├── he_sig_a_mu_dl_info.h
+│   │       │   │   ├── he_sig_a_mu_ul_info.h
+│   │       │   │   ├── he_sig_a_su_info.h
+│   │       │   │   ├── he_sig_b1_mu_info.h
+│   │       │   │   ├── he_sig_b2_mu_info.h
+│   │       │   │   ├── he_sig_b2_ofdma_info.h
+│   │       │   │   ├── ht_sig_info.h
+│   │       │   │   ├── lithium_top_reg.h
+│   │       │   │   ├── l_sig_a_info.h
+│   │       │   │   ├── l_sig_b_info.h
+│   │       │   │   ├── macrx_abort_request_info.h
+│   │       │   │   ├── mac_tcl_reg_seq_hwiobase.h
+│   │       │   │   ├── mac_tcl_reg_seq_hwioreg.h
+│   │       │   │   ├── msmhwio.h
+│   │       │   │   ├── phyrx_abort_request_info.h
+│   │       │   │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   │   ├── phyrx_he_sig_a_mu_ul.h
+│   │       │   │   ├── phyrx_he_sig_a_su.h
+│   │       │   │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   │   ├── phyrx_ht_sig.h
+│   │       │   │   ├── phyrx_l_sig_a.h
+│   │       │   │   ├── phyrx_l_sig_b.h
+│   │       │   │   ├── phyrx_pkt_end.h
+│   │       │   │   ├── phyrx_rssi_legacy.h
+│   │       │   │   ├── phyrx_vht_sig_a.h
+│   │       │   │   ├── receive_rssi_info.h
+│   │       │   │   ├── receive_user_info.h
+│   │       │   │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   │   ├── reo_destination_ring.h
+│   │       │   │   ├── reo_entrance_ring.h
+│   │       │   │   ├── reo_flush_cache.h
+│   │       │   │   ├── reo_flush_cache_status.h
+│   │       │   │   ├── reo_flush_queue.h
+│   │       │   │   ├── reo_flush_queue_status.h
+│   │       │   │   ├── reo_flush_timeout_list.h
+│   │       │   │   ├── reo_flush_timeout_list_status.h
+│   │       │   │   ├── reo_get_queue_stats.h
+│   │       │   │   ├── reo_get_queue_stats_status.h
+│   │       │   │   ├── reo_reg_seq_hwiobase.h
+│   │       │   │   ├── reo_reg_seq_hwioreg.h
+│   │       │   │   ├── reo_unblock_cache.h
+│   │       │   │   ├── reo_unblock_cache_status.h
+│   │       │   │   ├── reo_update_rx_reo_queue.h
+│   │       │   │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   │   ├── rx_attention.h
+│   │       │   │   ├── rx_flow_search_entry.h
+│   │       │   │   ├── rx_location_info.h
+│   │       │   │   ├── rx_mpdu_desc_info.h
+│   │       │   │   ├── rx_mpdu_details.h
+│   │       │   │   ├── rx_mpdu_end.h
+│   │       │   │   ├── rx_mpdu_info.h
+│   │       │   │   ├── rx_mpdu_link_ptr.h
+│   │       │   │   ├── rx_mpdu_start.h
+│   │       │   │   ├── rx_msdu_desc_info.h
+│   │       │   │   ├── rx_msdu_details.h
+│   │       │   │   ├── rx_msdu_end.h
+│   │       │   │   ├── rx_msdu_link.h
+│   │       │   │   ├── rx_msdu_start.h
+│   │       │   │   ├── rxpcu_ppdu_end_info.h
+│   │       │   │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   │   ├── rx_ppdu_end_user_stats.h
+│   │       │   │   ├── rx_ppdu_start.h
+│   │       │   │   ├── rx_ppdu_start_user_info.h
+│   │       │   │   ├── rxpt_classify_info.h
+│   │       │   │   ├── rx_reo_queue_ext.h
+│   │       │   │   ├── rx_reo_queue.h
+│   │       │   │   ├── rx_rxpcu_classification_overview.h
+│   │       │   │   ├── rx_timing_offset_info.h
+│   │       │   │   ├── seq_hwio.h
+│   │       │   │   ├── sw_xml_headers.h
+│   │       │   │   ├── tcl_data_cmd.h
+│   │       │   │   ├── tcl_gse_cmd.h
+│   │       │   │   ├── tcl_status_ring.h
+│   │       │   │   ├── tlv_hdr.h
+│   │       │   │   ├── tlv_tag_def.h
+│   │       │   │   ├── tx_msdu_extension.h
+│   │       │   │   ├── tx_rate_stats_info.h
+│   │       │   │   ├── uniform_descriptor_header.h
+│   │       │   │   ├── uniform_reo_cmd_header.h
+│   │       │   │   ├── uniform_reo_status_header.h
+│   │       │   │   ├── vht_sig_a_info.h
+│   │       │   │   ├── wbm_buffer_ring.h
+│   │       │   │   ├── wbm_link_descriptor_ring.h
+│   │       │   │   ├── wbm_reg_seq_hwiobase.h
+│   │       │   │   ├── wbm_reg_seq_hwioreg.h
+│   │       │   │   ├── wbm_release_ring.h
+│   │       │   │   ├── wcss_seq_hwiobase.h
+│   │       │   │   ├── wcss_version.h
+│   │       │   │   ├── wfss_ce_reg_seq_hwiobase.h
+│   │       │   │   ├── wfss_ce_reg_seq_hwioreg.h
+│   │       │   │   └── wfss_pmm_base_struct.h
+│   │       │   └── v2
+│   │       │       ├── buffer_addr_info.h
+│   │       │       ├── ce_src_desc.h
+│   │       │       ├── ce_stat_desc.h
+│   │       │       ├── com_dtypes.h
+│   │       │       ├── HALcomdef.h
+│   │       │       ├── HALhwio.h
+│   │       │       ├── he_sig_a_mu_dl_info.h
+│   │       │       ├── he_sig_a_mu_ul_info.h
+│   │       │       ├── he_sig_a_su_info.h
+│   │       │       ├── he_sig_b1_mu_info.h
+│   │       │       ├── he_sig_b2_mu_info.h
+│   │       │       ├── he_sig_b2_ofdma_info.h
+│   │       │       ├── ht_sig_info.h
+│   │       │       ├── l_sig_a_info.h
+│   │       │       ├── l_sig_b_info.h
+│   │       │       ├── macrx_abort_request_info.h
+│   │       │       ├── mac_tcl_reg_seq_hwiobase.h
+│   │       │       ├── mac_tcl_reg_seq_hwioreg.h
+│   │       │       ├── mex_receive_user_info.h
+│   │       │       ├── phyrx_abort_request_info.h
+│   │       │       ├── phyrx_he_sig_a_mu_dl.h
+│   │       │       ├── phyrx_he_sig_a_mu_ul.h
+│   │       │       ├── phyrx_he_sig_a_su.h
+│   │       │       ├── phyrx_he_sig_b1_mu.h
+│   │       │       ├── phyrx_he_sig_b2_mu.h
+│   │       │       ├── phyrx_he_sig_b2_ofdma.h
+│   │       │       ├── phyrx_ht_sig.h
+│   │       │       ├── phyrx_l_sig_a.h
+│   │       │       ├── phyrx_l_sig_b.h
+│   │       │       ├── phyrx_other_receive_info_su_evm_details.h
+│   │       │       ├── phyrx_pkt_end.h
+│   │       │       ├── phyrx_pkt_end_info.h
+│   │       │       ├── phyrx_rssi_legacy.h
+│   │       │       ├── phyrx_vht_sig_a.h
+│   │       │       ├── receive_rssi_info.h
+│   │       │       ├── receive_user_info.h
+│   │       │       ├── reo_descriptor_threshold_reached_status.h
+│   │       │       ├── reo_destination_ring.h
+│   │       │       ├── reo_entrance_ring.h
+│   │       │       ├── reo_flush_cache.h
+│   │       │       ├── reo_flush_cache_status.h
+│   │       │       ├── reo_flush_queue.h
+│   │       │       ├── reo_flush_queue_status.h
+│   │       │       ├── reo_flush_timeout_list.h
+│   │       │       ├── reo_flush_timeout_list_status.h
+│   │       │       ├── reo_get_queue_stats.h
+│   │       │       ├── reo_get_queue_stats_status.h
+│   │       │       ├── reo_reg_seq_hwiobase.h
+│   │       │       ├── reo_reg_seq_hwioreg.h
+│   │       │       ├── reo_unblock_cache.h
+│   │       │       ├── reo_unblock_cache_status.h
+│   │       │       ├── reo_update_rx_reo_queue.h
+│   │       │       ├── reo_update_rx_reo_queue_status.h
+│   │       │       ├── rx_attention.h
+│   │       │       ├── rx_flow_search_entry.h
+│   │       │       ├── rx_location_info.h
+│   │       │       ├── rx_mpdu_desc_info.h
+│   │       │       ├── rx_mpdu_details.h
+│   │       │       ├── rx_mpdu_end.h
+│   │       │       ├── rx_mpdu_info.h
+│   │       │       ├── rx_mpdu_link_ptr.h
+│   │       │       ├── rx_mpdu_start.h
+│   │       │       ├── rx_msdu_desc_info.h
+│   │       │       ├── rx_msdu_details.h
+│   │       │       ├── rx_msdu_end.h
+│   │       │       ├── rx_msdu_link.h
+│   │       │       ├── rx_msdu_start.h
+│   │       │       ├── rxpcu_ppdu_end_info.h
+│   │       │       ├── rx_ppdu_end_user_stats_ext.h
+│   │       │       ├── rx_ppdu_end_user_stats.h
+│   │       │       ├── rx_ppdu_start.h
+│   │       │       ├── rx_ppdu_start_user_info.h
+│   │       │       ├── rxpt_classify_info.h
+│   │       │       ├── rx_reo_queue_ext.h
+│   │       │       ├── rx_reo_queue.h
+│   │       │       ├── rx_rxpcu_classification_overview.h
+│   │       │       ├── rx_timing_offset_info.h
+│   │       │       ├── seq_hwio.h
+│   │       │       ├── sw_xml_headers.h
+│   │       │       ├── tcl_data_cmd.h
+│   │       │       ├── tcl_gse_cmd.h
+│   │       │       ├── tcl_status_ring.h
+│   │       │       ├── tlv_hdr.h
+│   │       │       ├── tlv_tag_def.h
+│   │       │       ├── tx_msdu_extension.h
+│   │       │       ├── tx_rate_stats_info.h
+│   │       │       ├── uniform_descriptor_header.h
+│   │       │       ├── uniform_reo_cmd_header.h
+│   │       │       ├── uniform_reo_status_header.h
+│   │       │       ├── vht_sig_a_info.h
+│   │       │       ├── wbm_buffer_ring.h
+│   │       │       ├── wbm_link_descriptor_ring.h
+│   │       │       ├── wbm_reg_seq_hwiobase.h
+│   │       │       ├── wbm_reg_seq_hwioreg.h
+│   │       │       ├── wbm_release_ring.h
+│   │       │       ├── wcss_seq_hwiobase.h
+│   │       │       ├── wcss_version.h
+│   │       │       ├── wfss_ce_reg_seq_hwiobase.h
+│   │       │       ├── wfss_ce_reg_seq_hwioreg.h
+│   │       │       └── wfss_pmm_base_struct.h
+│   │       ├── qca9574
+│   │       │   ├── buffer_addr_info.h
+│   │       │   ├── ce_src_desc.h
+│   │       │   ├── ce_stat_desc.h
+│   │       │   ├── com_dtypes.h
+│   │       │   ├── HALcomdef.h
+│   │       │   ├── HALhwio.h
+│   │       │   ├── he_sig_a_mu_dl_info.h
+│   │       │   ├── he_sig_a_mu_ul_info.h
+│   │       │   ├── he_sig_a_su_info.h
+│   │       │   ├── he_sig_b1_mu_info.h
+│   │       │   ├── he_sig_b2_mu_info.h
+│   │       │   ├── he_sig_b2_ofdma_info.h
+│   │       │   ├── ht_sig_info.h
+│   │       │   ├── l_sig_a_info.h
+│   │       │   ├── l_sig_b_info.h
+│   │       │   ├── macrx_abort_request_info.h
+│   │       │   ├── mac_tcl_reg_seq_hwiobase.h
+│   │       │   ├── mac_tcl_reg_seq_hwioreg.h
+│   │       │   ├── phyrx_abort_request_info.h
+│   │       │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   ├── phyrx_he_sig_a_mu_ul.h
+│   │       │   ├── phyrx_he_sig_a_su.h
+│   │       │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   ├── phyrx_ht_sig.h
+│   │       │   ├── phyrx_l_sig_a.h
+│   │       │   ├── phyrx_l_sig_b.h
+│   │       │   ├── phyrx_other_receive_info_su_evm_details.h
+│   │       │   ├── phyrx_pkt_end.h
+│   │       │   ├── phyrx_pkt_end_info.h
+│   │       │   ├── phyrx_rssi_legacy.h
+│   │       │   ├── phyrx_vht_sig_a.h
+│   │       │   ├── receive_rssi_info.h
+│   │       │   ├── receive_user_info.h
+│   │       │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   ├── reo_destination_ring.h
+│   │       │   ├── reo_entrance_ring.h
+│   │       │   ├── reo_flush_cache.h
+│   │       │   ├── reo_flush_cache_status.h
+│   │       │   ├── reo_flush_queue.h
+│   │       │   ├── reo_flush_queue_status.h
+│   │       │   ├── reo_flush_timeout_list.h
+│   │       │   ├── reo_flush_timeout_list_status.h
+│   │       │   ├── reo_get_queue_stats.h
+│   │       │   ├── reo_get_queue_stats_status.h
+│   │       │   ├── reo_reg_seq_hwiobase.h
+│   │       │   ├── reo_reg_seq_hwioreg.h
+│   │       │   ├── reo_unblock_cache.h
+│   │       │   ├── reo_unblock_cache_status.h
+│   │       │   ├── reo_update_rx_reo_queue.h
+│   │       │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   ├── rx_attention.h
+│   │       │   ├── rx_flow_search_entry.h
+│   │       │   ├── rx_location_info.h
+│   │       │   ├── rx_mpdu_desc_info.h
+│   │       │   ├── rx_mpdu_details.h
+│   │       │   ├── rx_mpdu_end.h
+│   │       │   ├── rx_mpdu_info.h
+│   │       │   ├── rx_mpdu_link_ptr.h
+│   │       │   ├── rx_mpdu_start.h
+│   │       │   ├── rx_msdu_desc_info.h
+│   │       │   ├── rx_msdu_details.h
+│   │       │   ├── rx_msdu_end.h
+│   │       │   ├── rx_msdu_link.h
+│   │       │   ├── rx_msdu_start.h
+│   │       │   ├── rxpcu_ppdu_end_info.h
+│   │       │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   ├── rx_ppdu_end_user_stats.h
+│   │       │   ├── rx_ppdu_start.h
+│   │       │   ├── rx_ppdu_start_user_info.h
+│   │       │   ├── rxpt_classify_info.h
+│   │       │   ├── rx_reo_queue_ext.h
+│   │       │   ├── rx_reo_queue.h
+│   │       │   ├── rx_rxpcu_classification_overview.h
+│   │       │   ├── rx_timing_offset_info.h
+│   │       │   ├── seq_hwio.h
+│   │       │   ├── sw_xml_headers.h
+│   │       │   ├── tcl_data_cmd.h
+│   │       │   ├── tcl_gse_cmd.h
+│   │       │   ├── tcl_status_ring.h
+│   │       │   ├── tlv_hdr.h
+│   │       │   ├── tlv_tag_def.h
+│   │       │   ├── tx_msdu_extension.h
+│   │       │   ├── tx_rate_stats_info.h
+│   │       │   ├── uniform_descriptor_header.h
+│   │       │   ├── uniform_reo_cmd_header.h
+│   │       │   ├── uniform_reo_status_header.h
+│   │       │   ├── vht_sig_a_info.h
+│   │       │   ├── wbm_buffer_ring.h
+│   │       │   ├── wbm_link_descriptor_ring.h
+│   │       │   ├── wbm_reg_seq_hwiobase.h
+│   │       │   ├── wbm_reg_seq_hwioreg.h
+│   │       │   ├── wbm_release_ring.h
+│   │       │   ├── wcss_seq_hwiobase.h
+│   │       │   ├── wcss_version.h
+│   │       │   ├── wfss_ce_reg_seq_hwiobase.h
+│   │       │   ├── wfss_ce_reg_seq_hwioreg.h
+│   │       │   └── wfss_pmm_base_struct.h
+│   │       ├── qcc2072
+│   │       │   └── v1
+│   │       │       ├── beryllium_top_reg.h
+│   │       │       ├── buffer_addr_info.h
+│   │       │       ├── ce_src_desc.h
+│   │       │       ├── ce_stat_desc.h
+│   │       │       ├── com_dtypes.h
+│   │       │       ├── HALcomdef.h
+│   │       │       ├── HALhwio.h
+│   │       │       ├── he_sig_a_mu_dl_info.h
+│   │       │       ├── he_sig_a_mu_ul_info.h
+│   │       │       ├── he_sig_a_su_info.h
+│   │       │       ├── he_sig_b1_mu_info.h
+│   │       │       ├── he_sig_b2_mu_info.h
+│   │       │       ├── he_sig_b2_ofdma_info.h
+│   │       │       ├── ht_sig_info.h
+│   │       │       ├── l_sig_a_info.h
+│   │       │       ├── l_sig_b_info.h
+│   │       │       ├── macrx_abort_request_info.h
+│   │       │       ├── msmhwiobase.h
+│   │       │       ├── msmhwioreg.h
+│   │       │       ├── phyrx_abort_request_info.h
+│   │       │       ├── phyrx_common_user_info.h
+│   │       │       ├── phyrx_he_sig_a_mu_dl.h
+│   │       │       ├── phyrx_he_sig_a_mu_ul.h
+│   │       │       ├── phyrx_he_sig_a_su.h
+│   │       │       ├── phyrx_he_sig_b1_mu.h
+│   │       │       ├── phyrx_he_sig_b2_mu.h
+│   │       │       ├── phyrx_he_sig_b2_ofdma.h
+│   │       │       ├── phyrx_ht_sig.h
+│   │       │       ├── phyrx_location.h
+│   │       │       ├── phyrx_l_sig_a.h
+│   │       │       ├── phyrx_l_sig_b.h
+│   │       │       ├── phyrx_other_receive_info_ru_details.h
+│   │       │       ├── phyrx_pkt_end.h
+│   │       │       ├── phyrx_pkt_end_info.h
+│   │       │       ├── phyrx_rssi_legacy.h
+│   │       │       ├── phyrx_user_info.h
+│   │       │       ├── phyrx_vht_sig_a.h
+│   │       │       ├── phytx_pkt_end.h
+│   │       │       ├── receive_pkt_start_info.h
+│   │       │       ├── receive_rssi_info.h
+│   │       │       ├── receive_user_info.h
+│   │       │       ├── reo_descriptor_threshold_reached_status.h
+│   │       │       ├── reo_destination_ring.h
+│   │       │       ├── reo_destination_ring_with_pn.h
+│   │       │       ├── reo_entrance_ring.h
+│   │       │       ├── reo_flush_cache.h
+│   │       │       ├── reo_flush_cache_status.h
+│   │       │       ├── reo_flush_queue.h
+│   │       │       ├── reo_flush_queue_status.h
+│   │       │       ├── reo_flush_timeout_list.h
+│   │       │       ├── reo_flush_timeout_list_status.h
+│   │       │       ├── reo_get_queue_stats.h
+│   │       │       ├── reo_get_queue_stats_status.h
+│   │       │       ├── reo_unblock_cache.h
+│   │       │       ├── reo_unblock_cache_status.h
+│   │       │       ├── reo_update_rx_reo_queue.h
+│   │       │       ├── reo_update_rx_reo_queue_status.h
+│   │       │       ├── rx_attention.h
+│   │       │       ├── rx_flow_search_entry.h
+│   │       │       ├── rx_location_info.h
+│   │       │       ├── rx_mpdu_desc_info.h
+│   │       │       ├── rx_mpdu_details.h
+│   │       │       ├── rx_mpdu_end.h
+│   │       │       ├── rx_mpdu_info.h
+│   │       │       ├── rx_mpdu_link_ptr.h
+│   │       │       ├── rx_mpdu_start.h
+│   │       │       ├── rx_msdu_desc_info.h
+│   │       │       ├── rx_msdu_details.h
+│   │       │       ├── rx_msdu_end.h
+│   │       │       ├── rx_msdu_ext_desc_info.h
+│   │       │       ├── rx_msdu_link.h
+│   │       │       ├── rx_msdu_start.h
+│   │       │       ├── rxpcu_ppdu_end_info.h
+│   │       │       ├── rxpcu_ppdu_end_layout_info.h
+│   │       │       ├── rx_ppdu_end_user_stats_ext.h
+│   │       │       ├── rx_ppdu_end_user_stats.h
+│   │       │       ├── rx_ppdu_start.h
+│   │       │       ├── rx_ppdu_start_user_info.h
+│   │       │       ├── rxpt_classify_info.h
+│   │       │       ├── rx_reo_queue_1k.h
+│   │       │       ├── rx_reo_queue_ext.h
+│   │       │       ├── rx_reo_queue.h
+│   │       │       ├── rx_rxpcu_classification_overview.h
+│   │       │       ├── rx_timing_info.h
+│   │       │       ├── seq_hwio.h
+│   │       │       ├── tcl_data_cmd.h
+│   │       │       ├── tcl_gse_cmd.h
+│   │       │       ├── tcl_status_ring.h
+│   │       │       ├── tlv_hdr.h
+│   │       │       ├── tlv_tag_def.h
+│   │       │       ├── tx_msdu_extension.h
+│   │       │       ├── tx_rate_stats_info.h
+│   │       │       ├── uniform_descriptor_header.h
+│   │       │       ├── uniform_reo_cmd_header.h
+│   │       │       ├── uniform_reo_status_header.h
+│   │       │       ├── vht_sig_a_info.h
+│   │       │       ├── wbm2sw_completion_ring_rx.h
+│   │       │       ├── wbm2sw_completion_ring_tx.h
+│   │       │       ├── wbm_buffer_ring.h
+│   │       │       ├── wbm_link_descriptor_ring.h
+│   │       │       ├── wbm_release_ring.h
+│   │       │       ├── wbm_release_ring_rx.h
+│   │       │       ├── wbm_release_ring_tx.h
+│   │       │       ├── wcss_seq_hwiobase.h
+│   │       │       ├── wcss_seq_hwioreg_umac.h
+│   │       │       └── wcss_version.h
+│   │       ├── qcn6122
+│   │       │   ├── buffer_addr_info.h
+│   │       │   ├── ce_src_desc.h
+│   │       │   ├── ce_stat_desc.h
+│   │       │   ├── com_dtypes.h
+│   │       │   ├── HALcomdef.h
+│   │       │   ├── HALhwio.h
+│   │       │   ├── he_sig_a_mu_dl_info.h
+│   │       │   ├── he_sig_a_mu_ul_info.h
+│   │       │   ├── he_sig_a_su_info.h
+│   │       │   ├── he_sig_b1_mu_info.h
+│   │       │   ├── he_sig_b2_mu_info.h
+│   │       │   ├── he_sig_b2_ofdma_info.h
+│   │       │   ├── ht_sig_info.h
+│   │       │   ├── l_sig_a_info.h
+│   │       │   ├── l_sig_b_info.h
+│   │       │   ├── macrx_abort_request_info.h
+│   │       │   ├── mac_tcl_reg_seq_hwiobase.h
+│   │       │   ├── mac_tcl_reg_seq_hwioreg.h
+│   │       │   ├── phyrx_abort_request_info.h
+│   │       │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   ├── phyrx_he_sig_a_mu_ul.h
+│   │       │   ├── phyrx_he_sig_a_su.h
+│   │       │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   ├── phyrx_ht_sig.h
+│   │       │   ├── phyrx_l_sig_a.h
+│   │       │   ├── phyrx_l_sig_b.h
+│   │       │   ├── phyrx_pkt_end.h
+│   │       │   ├── phyrx_pkt_end_info.h
+│   │       │   ├── phyrx_rssi_legacy.h
+│   │       │   ├── phyrx_vht_sig_a.h
+│   │       │   ├── receive_rssi_info.h
+│   │       │   ├── receive_user_info.h
+│   │       │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   ├── reo_destination_ring.h
+│   │       │   ├── reo_entrance_ring.h
+│   │       │   ├── reo_flush_cache.h
+│   │       │   ├── reo_flush_cache_status.h
+│   │       │   ├── reo_flush_queue.h
+│   │       │   ├── reo_flush_queue_status.h
+│   │       │   ├── reo_flush_timeout_list.h
+│   │       │   ├── reo_flush_timeout_list_status.h
+│   │       │   ├── reo_get_queue_stats.h
+│   │       │   ├── reo_get_queue_stats_status.h
+│   │       │   ├── reo_reg_seq_hwiobase.h
+│   │       │   ├── reo_reg_seq_hwioreg.h
+│   │       │   ├── reo_unblock_cache.h
+│   │       │   ├── reo_unblock_cache_status.h
+│   │       │   ├── reo_update_rx_reo_queue.h
+│   │       │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   ├── rfa_from_wsi_seq_hwiobase.h
+│   │       │   ├── rx_attention.h
+│   │       │   ├── rx_flow_search_entry.h
+│   │       │   ├── rx_location_info.h
+│   │       │   ├── rx_mpdu_desc_info.h
+│   │       │   ├── rx_mpdu_details.h
+│   │       │   ├── rx_mpdu_end.h
+│   │       │   ├── rx_mpdu_info.h
+│   │       │   ├── rx_mpdu_link_ptr.h
+│   │       │   ├── rx_mpdu_start.h
+│   │       │   ├── rx_msdu_desc_info.h
+│   │       │   ├── rx_msdu_details.h
+│   │       │   ├── rx_msdu_end.h
+│   │       │   ├── rx_msdu_link.h
+│   │       │   ├── rx_msdu_start.h
+│   │       │   ├── rxpcu_ppdu_end_info.h
+│   │       │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   ├── rx_ppdu_end_user_stats.h
+│   │       │   ├── rx_ppdu_start.h
+│   │       │   ├── rx_ppdu_start_user_info.h
+│   │       │   ├── rxpt_classify_info.h
+│   │       │   ├── rx_reo_queue_ext.h
+│   │       │   ├── rx_reo_queue.h
+│   │       │   ├── rx_rxpcu_classification_overview.h
+│   │       │   ├── rx_timing_offset_info.h
+│   │       │   ├── seq_hwio.h
+│   │       │   ├── sw_monitor_ring.h
+│   │       │   ├── sw_xml_headers.h
+│   │       │   ├── tcl_data_cmd.h
+│   │       │   ├── tcl_gse_cmd.h
+│   │       │   ├── tcl_status_ring.h
+│   │       │   ├── tlv_hdr.h
+│   │       │   ├── tlv_tag_def.h
+│   │       │   ├── tx_msdu_extension.h
+│   │       │   ├── tx_rate_stats_info.h
+│   │       │   ├── uniform_descriptor_header.h
+│   │       │   ├── uniform_reo_cmd_header.h
+│   │       │   ├── uniform_reo_status_header.h
+│   │       │   ├── vht_sig_a_info.h
+│   │       │   ├── wbm_buffer_ring.h
+│   │       │   ├── wbm_link_descriptor_ring.h
+│   │       │   ├── wbm_reg_seq_hwiobase.h
+│   │       │   ├── wbm_reg_seq_hwioreg.h
+│   │       │   ├── wbm_release_ring.h
+│   │       │   ├── wcss_seq_hwiobase_ext.h
+│   │       │   ├── wcss_seq_hwiobase.h
+│   │       │   ├── wcss_version.h
+│   │       │   ├── wfss_ce_reg_seq_hwioreg.h
+│   │       │   └── wfss_pmm_base_struct.h
+│   │       ├── qcn6432
+│   │       │   ├── ack_report.h
+│   │       │   ├── buffer_addr_info.h
+│   │       │   ├── ce_src_desc.h
+│   │       │   ├── ce_stat_desc.h
+│   │       │   ├── coex_rx_status.h
+│   │       │   ├── coex_tx_req.h
+│   │       │   ├── coex_tx_status.h
+│   │       │   ├── com_dtypes.h
+│   │       │   ├── eht_sig_usr_mu_mimo_info.h
+│   │       │   ├── eht_sig_usr_ofdma_info.h
+│   │       │   ├── eht_sig_usr_su_info.h
+│   │       │   ├── expected_response.h
+│   │       │   ├── HALcomdef.h
+│   │       │   ├── HALhwio.h
+│   │       │   ├── he_sig_a_mu_dl_info.h
+│   │       │   ├── he_sig_a_mu_ul_info.h
+│   │       │   ├── he_sig_a_su_info.h
+│   │       │   ├── he_sig_b1_mu_info.h
+│   │       │   ├── he_sig_b2_mu_info.h
+│   │       │   ├── he_sig_b2_ofdma_info.h
+│   │       │   ├── ht_sig_info.h
+│   │       │   ├── l_sig_a_info.h
+│   │       │   ├── l_sig_b_info.h
+│   │       │   ├── macrx_abort_request_info.h
+│   │       │   ├── mactx_eht_sig_usr_mu_mimo.h
+│   │       │   ├── mactx_eht_sig_usr_ofdma.h
+│   │       │   ├── mactx_eht_sig_usr_su.h
+│   │       │   ├── mactx_he_sig_a_mu_dl.h
+│   │       │   ├── mactx_he_sig_a_mu_ul.h
+│   │       │   ├── mactx_he_sig_a_su.h
+│   │       │   ├── mactx_he_sig_b1_mu.h
+│   │       │   ├── mactx_he_sig_b2_mu.h
+│   │       │   ├── mactx_he_sig_b2_ofdma.h
+│   │       │   ├── mactx_ht_sig.h
+│   │       │   ├── mactx_l_sig_a.h
+│   │       │   ├── mactx_l_sig_b.h
+│   │       │   ├── mactx_phy_desc.h
+│   │       │   ├── mactx_service.h
+│   │       │   ├── mactx_user_desc_common.h
+│   │       │   ├── mactx_user_desc_per_user.h
+│   │       │   ├── mactx_u_sig_eht_su_mu.h
+│   │       │   ├── mactx_u_sig_eht_tb.h
+│   │       │   ├── mactx_vht_sig_a.h
+│   │       │   ├── mactx_vht_sig_b_mu160.h
+│   │       │   ├── mactx_vht_sig_b_mu20.h
+│   │       │   ├── mactx_vht_sig_b_mu40.h
+│   │       │   ├── mactx_vht_sig_b_mu80.h
+│   │       │   ├── mactx_vht_sig_b_su160.h
+│   │       │   ├── mactx_vht_sig_b_su20.h
+│   │       │   ├── mactx_vht_sig_b_su40.h
+│   │       │   ├── mactx_vht_sig_b_su80.h
+│   │       │   ├── mlo_sta_id_details.h
+│   │       │   ├── mon_buffer_addr.h
+│   │       │   ├── mon_destination_ring.h
+│   │       │   ├── mon_destination_ring_with_drop.h
+│   │       │   ├── mon_drop.h
+│   │       │   ├── mon_ingress_ring.h
+│   │       │   ├── no_ack_report.h
+│   │       │   ├── ofdma_trigger_details.h
+│   │       │   ├── pcu_ppdu_setup_init.h
+│   │       │   ├── pdg_response.h
+│   │       │   ├── pdg_response_rate_setting.h
+│   │       │   ├── pdg_tx_req.h
+│   │       │   ├── phyrx_abort_request_info.h
+│   │       │   ├── phyrx_common_user_info.h
+│   │       │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   ├── phyrx_he_sig_a_mu_ul.h
+│   │       │   ├── phyrx_he_sig_a_su.h
+│   │       │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   ├── phyrx_ht_sig.h
+│   │       │   ├── phyrx_location.h
+│   │       │   ├── phyrx_l_sig_a.h
+│   │       │   ├── phyrx_l_sig_b.h
+│   │       │   ├── phyrx_other_receive_info_ru_details.h
+│   │       │   ├── phyrx_pkt_end.h
+│   │       │   ├── phyrx_pkt_end_info.h
+│   │       │   ├── phyrx_rssi_legacy.h
+│   │       │   ├── phyrx_vht_sig_a.h
+│   │       │   ├── phytx_abort_request_info.h
+│   │       │   ├── phytx_ppdu_header_info_request.h
+│   │       │   ├── received_response_user_15_8.h
+│   │       │   ├── received_response_user_23_16.h
+│   │       │   ├── received_response_user_31_24.h
+│   │       │   ├── received_response_user_36_32.h
+│   │       │   ├── received_response_user_7_0.h
+│   │       │   ├── received_response_user_info.h
+│   │       │   ├── received_trigger_info_details.h
+│   │       │   ├── received_trigger_info.h
+│   │       │   ├── receive_rssi_info.h
+│   │       │   ├── receive_user_info.h
+│   │       │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   ├── reo_destination_ring.h
+│   │       │   ├── reo_entrance_ring.h
+│   │       │   ├── reo_flush_cache.h
+│   │       │   ├── reo_flush_cache_status.h
+│   │       │   ├── reo_flush_queue.h
+│   │       │   ├── reo_flush_queue_status.h
+│   │       │   ├── reo_flush_timeout_list.h
+│   │       │   ├── reo_flush_timeout_list_status.h
+│   │       │   ├── reo_get_queue_stats.h
+│   │       │   ├── reo_get_queue_stats_status.h
+│   │       │   ├── reo_unblock_cache.h
+│   │       │   ├── reo_unblock_cache_status.h
+│   │       │   ├── reo_update_rx_reo_queue.h
+│   │       │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   ├── response_end_status.h
+│   │       │   ├── response_start_status.h
+│   │       │   ├── ru_allocation_160_info.h
+│   │       │   ├── rx_attention.h
+│   │       │   ├── rx_flow_search_entry.h
+│   │       │   ├── rx_frame_1k_bitmap_ack.h
+│   │       │   ├── rx_frame_bitmap_ack.h
+│   │       │   ├── rx_frame_bitmap_req.h
+│   │       │   ├── rx_location_info.h
+│   │       │   ├── rx_mpdu_desc_info.h
+│   │       │   ├── rx_mpdu_details.h
+│   │       │   ├── rx_mpdu_end.h
+│   │       │   ├── rx_mpdu_info.h
+│   │       │   ├── rx_mpdu_link_ptr.h
+│   │       │   ├── rx_mpdu_start.h
+│   │       │   ├── rx_msdu_desc_info.h
+│   │       │   ├── rx_msdu_details.h
+│   │       │   ├── rx_msdu_end.h
+│   │       │   ├── rx_msdu_ext_desc_info.h
+│   │       │   ├── rx_msdu_link.h
+│   │       │   ├── rx_msdu_start.h
+│   │       │   ├── rxpcu_early_rx_indication.h
+│   │       │   ├── rxpcu_ppdu_end_info.h
+│   │       │   ├── rxpcu_ppdu_end_layout_info.h
+│   │       │   ├── rx_ppdu_ack_report.h
+│   │       │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   ├── rx_ppdu_end_user_stats.h
+│   │       │   ├── rx_ppdu_no_ack_report.h
+│   │       │   ├── rx_ppdu_start.h
+│   │       │   ├── rx_ppdu_start_user_info.h
+│   │       │   ├── rx_preamble.h
+│   │       │   ├── rxpt_classify_info.h
+│   │       │   ├── rx_reo_queue_1k.h
+│   │       │   ├── rx_reo_queue_ext.h
+│   │       │   ├── rx_reo_queue.h
+│   │       │   ├── rx_reo_queue_reference.h
+│   │       │   ├── rx_response_required_info.h
+│   │       │   ├── rx_rxpcu_classification_overview.h
+│   │       │   ├── rx_start_param.h
+│   │       │   ├── rx_timing_offset_info.h
+│   │       │   ├── rx_trig_info.h
+│   │       │   ├── seq_hwio.h
+│   │       │   ├── service_info.h
+│   │       │   ├── sw_monitor_ring.h
+│   │       │   ├── tcl_data_cmd.h
+│   │       │   ├── tcl_entrance_from_ppe_ring.h
+│   │       │   ├── tcl_gse_cmd.h
+│   │       │   ├── tcl_status_ring.h
+│   │       │   ├── tlv_hdr.h
+│   │       │   ├── tlv_tag_def.h
+│   │       │   ├── tx_cbf_info.h
+│   │       │   ├── tx_fes_setup.h
+│   │       │   ├── tx_fes_status_1k_ba.h
+│   │       │   ├── tx_fes_status_ack_or_ba.h
+│   │       │   ├── tx_fes_status_end.h
+│   │       │   ├── tx_fes_status_prot.h
+│   │       │   ├── tx_fes_status_start.h
+│   │       │   ├── tx_fes_status_start_ppdu.h
+│   │       │   ├── tx_fes_status_start_prot.h
+│   │       │   ├── tx_fes_status_user_ppdu.h
+│   │       │   ├── tx_fes_status_user_response.h
+│   │       │   ├── tx_flush_req.h
+│   │       │   ├── tx_mpdu_start.h
+│   │       │   ├── tx_msdu_extension.h
+│   │       │   ├── tx_msdu_start.h
+│   │       │   ├── txpcu_buffer_basics.h
+│   │       │   ├── txpcu_buffer_status.h
+│   │       │   ├── txpcu_user_buffer_status.h
+│   │       │   ├── tx_peer_entry.h
+│   │       │   ├── tx_queue_extension.h
+│   │       │   ├── tx_rate_stats_info.h
+│   │       │   ├── tx_raw_or_native_frame_setup.h
+│   │       │   ├── unallocated_ru_160_info.h
+│   │       │   ├── uniform_descriptor_header.h
+│   │       │   ├── uniform_reo_cmd_header.h
+│   │       │   ├── uniform_reo_status_header.h
+│   │       │   ├── u_sig_eht_su_mu_info.h
+│   │       │   ├── u_sig_eht_tb_info.h
+│   │       │   ├── vht_sig_a_info.h
+│   │       │   ├── vht_sig_b_mu160_info.h
+│   │       │   ├── vht_sig_b_mu20_info.h
+│   │       │   ├── vht_sig_b_mu40_info.h
+│   │       │   ├── vht_sig_b_mu80_info.h
+│   │       │   ├── vht_sig_b_su160_info.h
+│   │       │   ├── vht_sig_b_su20_info.h
+│   │       │   ├── vht_sig_b_su40_info.h
+│   │       │   ├── vht_sig_b_su80_info.h
+│   │       │   ├── wbm2sw_completion_ring_rx.h
+│   │       │   ├── wbm2sw_completion_ring_tx.h
+│   │       │   ├── wbm_buffer_ring.h
+│   │       │   ├── wbm_link_descriptor_ring.h
+│   │       │   ├── wbm_release_ring.h
+│   │       │   ├── wbm_release_ring_rx.h
+│   │       │   ├── wbm_release_ring_tx.h
+│   │       │   ├── wcss_seq_hwiobase.h
+│   │       │   ├── wcss_seq_hwioreg_umac.h
+│   │       │   ├── wcss_version.h
+│   │       │   └── wfss_ce_reg_seq_hwioreg.h
+│   │       ├── qcn9000
+│   │       │   ├── buffer_addr_info.h
+│   │       │   ├── ce_src_desc.h
+│   │       │   ├── ce_stat_desc.h
+│   │       │   ├── HALcomdef.h
+│   │       │   ├── HALhwio.h
+│   │       │   ├── he_sig_a_mu_dl_info.h
+│   │       │   ├── he_sig_a_mu_ul_info.h
+│   │       │   ├── he_sig_a_su_info.h
+│   │       │   ├── he_sig_b1_mu_info.h
+│   │       │   ├── he_sig_b2_mu_info.h
+│   │       │   ├── he_sig_b2_ofdma_info.h
+│   │       │   ├── ht_sig_info.h
+│   │       │   ├── l_sig_a_info.h
+│   │       │   ├── l_sig_b_info.h
+│   │       │   ├── macrx_abort_request_info.h
+│   │       │   ├── mac_tcl_reg_seq_hwiobase.h
+│   │       │   ├── mac_tcl_reg_seq_hwioreg.h
+│   │       │   ├── msmhwiobase.h
+│   │       │   ├── phyrx_abort_request_info.h
+│   │       │   ├── phyrx_he_sig_a_mu_dl.h
+│   │       │   ├── phyrx_he_sig_a_mu_ul.h
+│   │       │   ├── phyrx_he_sig_a_su.h
+│   │       │   ├── phyrx_he_sig_b1_mu.h
+│   │       │   ├── phyrx_he_sig_b2_mu.h
+│   │       │   ├── phyrx_he_sig_b2_ofdma.h
+│   │       │   ├── phyrx_ht_sig.h
+│   │       │   ├── phyrx_l_sig_a.h
+│   │       │   ├── phyrx_l_sig_b.h
+│   │       │   ├── phyrx_pkt_end.h
+│   │       │   ├── phyrx_pkt_end_info.h
+│   │       │   ├── phyrx_rssi_legacy.h
+│   │       │   ├── phyrx_vht_sig_a.h
+│   │       │   ├── receive_rssi_info.h
+│   │       │   ├── receive_user_info.h
+│   │       │   ├── reo_descriptor_threshold_reached_status.h
+│   │       │   ├── reo_destination_ring.h
+│   │       │   ├── reo_entrance_ring.h
+│   │       │   ├── reo_flush_cache.h
+│   │       │   ├── reo_flush_cache_status.h
+│   │       │   ├── reo_flush_queue.h
+│   │       │   ├── reo_flush_queue_status.h
+│   │       │   ├── reo_flush_timeout_list.h
+│   │       │   ├── reo_flush_timeout_list_status.h
+│   │       │   ├── reo_get_queue_stats.h
+│   │       │   ├── reo_get_queue_stats_status.h
+│   │       │   ├── reo_reg_seq_hwiobase.h
+│   │       │   ├── reo_reg_seq_hwioreg.h
+│   │       │   ├── reo_unblock_cache.h
+│   │       │   ├── reo_unblock_cache_status.h
+│   │       │   ├── reo_update_rx_reo_queue.h
+│   │       │   ├── reo_update_rx_reo_queue_status.h
+│   │       │   ├── rfa_from_wsi_seq_hwiobase.h
+│   │       │   ├── rx_attention.h
+│   │       │   ├── rx_flow_search_entry.h
+│   │       │   ├── rx_location_info.h
+│   │       │   ├── rx_mpdu_desc_info.h
+│   │       │   ├── rx_mpdu_details.h
+│   │       │   ├── rx_mpdu_end.h
+│   │       │   ├── rx_mpdu_info.h
+│   │       │   ├── rx_mpdu_link_ptr.h
+│   │       │   ├── rx_mpdu_start.h
+│   │       │   ├── rx_msdu_desc_info.h
+│   │       │   ├── rx_msdu_details.h
+│   │       │   ├── rx_msdu_end.h
+│   │       │   ├── rx_msdu_link.h
+│   │       │   ├── rx_msdu_start.h
+│   │       │   ├── rxpcu_ppdu_end_info.h
+│   │       │   ├── rx_ppdu_end_user_stats_ext.h
+│   │       │   ├── rx_ppdu_end_user_stats.h
+│   │       │   ├── rx_ppdu_start.h
+│   │       │   ├── rx_ppdu_start_user_info.h
+│   │       │   ├── rxpt_classify_info.h
+│   │       │   ├── rx_reo_queue_ext.h
+│   │       │   ├── rx_reo_queue.h
+│   │       │   ├── rx_rxpcu_classification_overview.h
+│   │       │   ├── rx_timing_offset_info.h
+│   │       │   ├── seq_hwio.h
+│   │       │   ├── sw_monitor_ring.h
+│   │       │   ├── sw_xml_headers.h
+│   │       │   ├── tcl_data_cmd.h
+│   │       │   ├── tcl_gse_cmd.h
+│   │       │   ├── tcl_status_ring.h
+│   │       │   ├── tlv_hdr.h
+│   │       │   ├── tlv_tag_def.h
+│   │       │   ├── tx_msdu_extension.h
+│   │       │   ├── tx_rate_stats_info.h
+│   │       │   ├── uniform_descriptor_header.h
+│   │       │   ├── uniform_reo_cmd_header.h
+│   │       │   ├── uniform_reo_status_header.h
+│   │       │   ├── vht_sig_a_info.h
+│   │       │   ├── wbm_buffer_ring.h
+│   │       │   ├── wbm_link_descriptor_ring.h
+│   │       │   ├── wbm_reg_seq_hwiobase.h
+│   │       │   ├── wbm_reg_seq_hwioreg.h
+│   │       │   ├── wbm_release_ring.h
+│   │       │   ├── wcss_seq_hwiobase_ext.h
+│   │       │   ├── wcss_seq_hwiobase.h
+│   │       │   ├── wcss_version.h
+│   │       │   ├── wfss_ce_reg_seq_hwioreg.h
+│   │       │   └── wfss_pmm_base_struct.h
+│   │       └── qcn9224
+│   │           ├── v1
+│   │           │   ├── ack_report.h
+│   │           │   ├── buffer_addr_info.h
+│   │           │   ├── ce_src_desc.h
+│   │           │   ├── ce_stat_desc.h
+│   │           │   ├── coex_rx_status.h
+│   │           │   ├── coex_tx_req.h
+│   │           │   ├── coex_tx_status.h
+│   │           │   ├── com_dtypes.h
+│   │           │   ├── eht_sig_usr_mu_mimo_info.h
+│   │           │   ├── eht_sig_usr_ofdma_info.h
+│   │           │   ├── eht_sig_usr_su_info.h
+│   │           │   ├── expected_response.h
+│   │           │   ├── HALcomdef.h
+│   │           │   ├── HALhwio.h
+│   │           │   ├── he_sig_a_mu_dl_info.h
+│   │           │   ├── he_sig_a_mu_ul_info.h
+│   │           │   ├── he_sig_a_su_info.h
+│   │           │   ├── he_sig_b1_mu_info.h
+│   │           │   ├── he_sig_b2_mu_info.h
+│   │           │   ├── he_sig_b2_ofdma_info.h
+│   │           │   ├── ht_sig_info.h
+│   │           │   ├── l_sig_a_info.h
+│   │           │   ├── l_sig_b_info.h
+│   │           │   ├── macrx_abort_request_info.h
+│   │           │   ├── mactx_eht_sig_usr_mu_mimo.h
+│   │           │   ├── mactx_eht_sig_usr_ofdma.h
+│   │           │   ├── mactx_eht_sig_usr_su.h
+│   │           │   ├── mactx_he_sig_a_mu_dl.h
+│   │           │   ├── mactx_he_sig_a_mu_ul.h
+│   │           │   ├── mactx_he_sig_a_su.h
+│   │           │   ├── mactx_he_sig_b1_mu.h
+│   │           │   ├── mactx_he_sig_b2_mu.h
+│   │           │   ├── mactx_he_sig_b2_ofdma.h
+│   │           │   ├── mactx_ht_sig.h
+│   │           │   ├── mactx_l_sig_a.h
+│   │           │   ├── mactx_l_sig_b.h
+│   │           │   ├── mactx_phy_desc.h
+│   │           │   ├── mactx_service.h
+│   │           │   ├── mactx_user_desc_common.h
+│   │           │   ├── mactx_user_desc_per_user.h
+│   │           │   ├── mactx_u_sig_eht_su_mu.h
+│   │           │   ├── mactx_u_sig_eht_tb.h
+│   │           │   ├── mactx_vht_sig_a.h
+│   │           │   ├── mactx_vht_sig_b_mu160.h
+│   │           │   ├── mactx_vht_sig_b_mu20.h
+│   │           │   ├── mactx_vht_sig_b_mu40.h
+│   │           │   ├── mactx_vht_sig_b_mu80.h
+│   │           │   ├── mactx_vht_sig_b_su160.h
+│   │           │   ├── mactx_vht_sig_b_su20.h
+│   │           │   ├── mactx_vht_sig_b_su40.h
+│   │           │   ├── mactx_vht_sig_b_su80.h
+│   │           │   ├── mlo_sta_id_details.h
+│   │           │   ├── mon_buffer_addr.h
+│   │           │   ├── mon_destination_ring.h
+│   │           │   ├── mon_destination_ring_with_drop.h
+│   │           │   ├── mon_drop.h
+│   │           │   ├── mon_ingress_ring.h
+│   │           │   ├── no_ack_report.h
+│   │           │   ├── ofdma_trigger_details.h
+│   │           │   ├── pcu_ppdu_setup_init.h
+│   │           │   ├── pdg_response.h
+│   │           │   ├── pdg_response_rate_setting.h
+│   │           │   ├── pdg_tx_req.h
+│   │           │   ├── phyrx_abort_request_info.h
+│   │           │   ├── phyrx_common_user_info.h
+│   │           │   ├── phyrx_he_sig_a_mu_dl.h
+│   │           │   ├── phyrx_he_sig_a_su.h
+│   │           │   ├── phyrx_he_sig_b1_mu.h
+│   │           │   ├── phyrx_he_sig_b2_mu.h
+│   │           │   ├── phyrx_he_sig_b2_ofdma.h
+│   │           │   ├── phyrx_ht_sig.h
+│   │           │   ├── phyrx_location.h
+│   │           │   ├── phyrx_l_sig_a.h
+│   │           │   ├── phyrx_l_sig_b.h
+│   │           │   ├── phyrx_other_receive_info_evm_details.h
+│   │           │   ├── phyrx_other_receive_info_ru_details.h
+│   │           │   ├── phyrx_pkt_end.h
+│   │           │   ├── phyrx_pkt_end_info.h
+│   │           │   ├── phyrx_rssi_legacy.h
+│   │           │   ├── phyrx_vht_sig_a.h
+│   │           │   ├── phytx_abort_request_info.h
+│   │           │   ├── phytx_ppdu_header_info_request.h
+│   │           │   ├── received_response_user_15_8.h
+│   │           │   ├── received_response_user_23_16.h
+│   │           │   ├── received_response_user_31_24.h
+│   │           │   ├── received_response_user_36_32.h
+│   │           │   ├── received_response_user_7_0.h
+│   │           │   ├── received_response_user_info.h
+│   │           │   ├── received_trigger_info_details.h
+│   │           │   ├── received_trigger_info.h
+│   │           │   ├── receive_rssi_info.h
+│   │           │   ├── receive_user_info.h
+│   │           │   ├── reo_descriptor_threshold_reached_status.h
+│   │           │   ├── reo_destination_ring.h
+│   │           │   ├── reo_entrance_ring.h
+│   │           │   ├── reo_flush_cache.h
+│   │           │   ├── reo_flush_cache_status.h
+│   │           │   ├── reo_flush_queue.h
+│   │           │   ├── reo_flush_queue_status.h
+│   │           │   ├── reo_flush_timeout_list.h
+│   │           │   ├── reo_flush_timeout_list_status.h
+│   │           │   ├── reo_get_queue_stats.h
+│   │           │   ├── reo_get_queue_stats_status.h
+│   │           │   ├── reo_unblock_cache.h
+│   │           │   ├── reo_unblock_cache_status.h
+│   │           │   ├── reo_update_rx_reo_queue.h
+│   │           │   ├── reo_update_rx_reo_queue_status.h
+│   │           │   ├── response_end_status.h
+│   │           │   ├── response_start_status.h
+│   │           │   ├── ru_allocation_160_info.h
+│   │           │   ├── rx_attention.h
+│   │           │   ├── rx_flow_search_entry.h
+│   │           │   ├── rx_frame_1k_bitmap_ack.h
+│   │           │   ├── rx_frame_bitmap_ack.h
+│   │           │   ├── rx_frame_bitmap_req.h
+│   │           │   ├── rx_location_info.h
+│   │           │   ├── rx_mpdu_desc_info.h
+│   │           │   ├── rx_mpdu_details.h
+│   │           │   ├── rx_mpdu_end.h
+│   │           │   ├── rx_mpdu_info.h
+│   │           │   ├── rx_mpdu_link_ptr.h
+│   │           │   ├── rx_mpdu_start.h
+│   │           │   ├── rx_msdu_desc_info.h
+│   │           │   ├── rx_msdu_details.h
+│   │           │   ├── rx_msdu_end.h
+│   │           │   ├── rx_msdu_ext_desc_info.h
+│   │           │   ├── rx_msdu_link.h
+│   │           │   ├── rx_msdu_start.h
+│   │           │   ├── rxpcu_early_rx_indication.h
+│   │           │   ├── rxpcu_ppdu_end_info.h
+│   │           │   ├── rxpcu_ppdu_end_layout_info.h
+│   │           │   ├── rx_ppdu_ack_report.h
+│   │           │   ├── rx_ppdu_end_user_stats_ext.h
+│   │           │   ├── rx_ppdu_end_user_stats.h
+│   │           │   ├── rx_ppdu_no_ack_report.h
+│   │           │   ├── rx_ppdu_start.h
+│   │           │   ├── rx_ppdu_start_user_info.h
+│   │           │   ├── rx_preamble.h
+│   │           │   ├── rxpt_classify_info.h
+│   │           │   ├── rx_reo_queue_1k.h
+│   │           │   ├── rx_reo_queue_ext.h
+│   │           │   ├── rx_reo_queue.h
+│   │           │   ├── rx_reo_queue_reference.h
+│   │           │   ├── rx_response_required_info.h
+│   │           │   ├── rx_rxpcu_classification_overview.h
+│   │           │   ├── rx_start_param.h
+│   │           │   ├── rx_timing_offset_info.h
+│   │           │   ├── rx_trig_info.h
+│   │           │   ├── seq_hwio.h
+│   │           │   ├── service_info.h
+│   │           │   ├── sw_monitor_ring.h
+│   │           │   ├── tcl_data_cmd.h
+│   │           │   ├── tcl_entrance_from_ppe_ring.h
+│   │           │   ├── tcl_gse_cmd.h
+│   │           │   ├── tcl_status_ring.h
+│   │           │   ├── tlv_hdr.h
+│   │           │   ├── tlv_tag_def.h
+│   │           │   ├── tx_cbf_info.h
+│   │           │   ├── tx_fes_setup.h
+│   │           │   ├── tx_fes_status_1k_ba.h
+│   │           │   ├── tx_fes_status_ack_or_ba.h
+│   │           │   ├── tx_fes_status_end.h
+│   │           │   ├── tx_fes_status_prot.h
+│   │           │   ├── tx_fes_status_start.h
+│   │           │   ├── tx_fes_status_start_ppdu.h
+│   │           │   ├── tx_fes_status_start_prot.h
+│   │           │   ├── tx_fes_status_user_ppdu.h
+│   │           │   ├── tx_fes_status_user_response.h
+│   │           │   ├── tx_flush_req.h
+│   │           │   ├── tx_mpdu_start.h
+│   │           │   ├── tx_msdu_extension.h
+│   │           │   ├── tx_msdu_start.h
+│   │           │   ├── txpcu_buffer_basics.h
+│   │           │   ├── txpcu_buffer_status.h
+│   │           │   ├── txpcu_user_buffer_status.h
+│   │           │   ├── tx_peer_entry.h
+│   │           │   ├── tx_queue_extension.h
+│   │           │   ├── tx_rate_stats_info.h
+│   │           │   ├── tx_raw_or_native_frame_setup.h
+│   │           │   ├── unallocated_ru_160_info.h
+│   │           │   ├── uniform_descriptor_header.h
+│   │           │   ├── uniform_reo_cmd_header.h
+│   │           │   ├── uniform_reo_status_header.h
+│   │           │   ├── u_sig_eht_su_mu_info.h
+│   │           │   ├── u_sig_eht_tb_info.h
+│   │           │   ├── vht_sig_a_info.h
+│   │           │   ├── vht_sig_b_mu160_info.h
+│   │           │   ├── vht_sig_b_mu20_info.h
+│   │           │   ├── vht_sig_b_mu40_info.h
+│   │           │   ├── vht_sig_b_mu80_info.h
+│   │           │   ├── vht_sig_b_su160_info.h
+│   │           │   ├── vht_sig_b_su20_info.h
+│   │           │   ├── vht_sig_b_su40_info.h
+│   │           │   ├── vht_sig_b_su80_info.h
+│   │           │   ├── wbm2sw_completion_ring_rx.h
+│   │           │   ├── wbm2sw_completion_ring_tx.h
+│   │           │   ├── wbm_buffer_ring.h
+│   │           │   ├── wbm_link_descriptor_ring.h
+│   │           │   ├── wbm_release_ring.h
+│   │           │   ├── wbm_release_ring_rx.h
+│   │           │   ├── wbm_release_ring_tx.h
+│   │           │   ├── wcss_seq_hwiobase.h
+│   │           │   ├── wcss_seq_hwioreg_umac.h
+│   │           │   ├── wcss_version.h
+│   │           │   └── wfss_ce_reg_seq_hwioreg.h
+│   │           └── v2
+│   │               ├── ack_report.h
+│   │               ├── buffer_addr_info.h
+│   │               ├── ce_src_desc.h
+│   │               ├── ce_stat_desc.h
+│   │               ├── coex_rx_status.h
+│   │               ├── coex_tx_req.h
+│   │               ├── coex_tx_status.h
+│   │               ├── com_dtypes.h
+│   │               ├── eht_sig_usr_mu_mimo_info.h
+│   │               ├── eht_sig_usr_ofdma_info.h
+│   │               ├── eht_sig_usr_su_info.h
+│   │               ├── expected_response.h
+│   │               ├── HALcomdef.h
+│   │               ├── HALhwio.h
+│   │               ├── he_sig_a_mu_dl_info.h
+│   │               ├── he_sig_a_mu_ul_info.h
+│   │               ├── he_sig_a_su_info.h
+│   │               ├── he_sig_b1_mu_info.h
+│   │               ├── he_sig_b2_mu_info.h
+│   │               ├── he_sig_b2_ofdma_info.h
+│   │               ├── ht_sig_info.h
+│   │               ├── l_sig_a_info.h
+│   │               ├── l_sig_b_info.h
+│   │               ├── macrx_abort_request_info.h
+│   │               ├── mactx_eht_sig_usr_mu_mimo.h
+│   │               ├── mactx_eht_sig_usr_ofdma.h
+│   │               ├── mactx_eht_sig_usr_su.h
+│   │               ├── mactx_he_sig_a_mu_dl.h
+│   │               ├── mactx_he_sig_a_mu_ul.h
+│   │               ├── mactx_he_sig_a_su.h
+│   │               ├── mactx_he_sig_b1_mu.h
+│   │               ├── mactx_he_sig_b2_mu.h
+│   │               ├── mactx_he_sig_b2_ofdma.h
+│   │               ├── mactx_ht_sig.h
+│   │               ├── mactx_l_sig_a.h
+│   │               ├── mactx_l_sig_b.h
+│   │               ├── mactx_phy_desc.h
+│   │               ├── mactx_service.h
+│   │               ├── mactx_user_desc_common.h
+│   │               ├── mactx_user_desc_per_user.h
+│   │               ├── mactx_u_sig_eht_su_mu.h
+│   │               ├── mactx_u_sig_eht_tb.h
+│   │               ├── mactx_vht_sig_a.h
+│   │               ├── mactx_vht_sig_b_mu160.h
+│   │               ├── mactx_vht_sig_b_mu20.h
+│   │               ├── mactx_vht_sig_b_mu40.h
+│   │               ├── mactx_vht_sig_b_mu80.h
+│   │               ├── mactx_vht_sig_b_su160.h
+│   │               ├── mactx_vht_sig_b_su20.h
+│   │               ├── mactx_vht_sig_b_su40.h
+│   │               ├── mactx_vht_sig_b_su80.h
+│   │               ├── mlo_sta_id_details.h
+│   │               ├── mon_buffer_addr.h
+│   │               ├── mon_destination_ring.h
+│   │               ├── mon_destination_ring_with_drop.h
+│   │               ├── mon_drop.h
+│   │               ├── mon_ingress_ring.h
+│   │               ├── no_ack_report.h
+│   │               ├── ofdma_trigger_details.h
+│   │               ├── pcu_ppdu_setup_init.h
+│   │               ├── pdg_response.h
+│   │               ├── pdg_response_rate_setting.h
+│   │               ├── pdg_tx_req.h
+│   │               ├── phyrx_abort_request_info.h
+│   │               ├── phyrx_common_user_info.h
+│   │               ├── phyrx_he_sig_a_mu_dl.h
+│   │               ├── phyrx_he_sig_a_su.h
+│   │               ├── phyrx_he_sig_b1_mu.h
+│   │               ├── phyrx_he_sig_b2_mu.h
+│   │               ├── phyrx_he_sig_b2_ofdma.h
+│   │               ├── phyrx_ht_sig.h
+│   │               ├── phyrx_location.h
+│   │               ├── phyrx_l_sig_a.h
+│   │               ├── phyrx_l_sig_b.h
+│   │               ├── phyrx_other_receive_info_all_sigb_details.h
+│   │               ├── phyrx_other_receive_info_evm_details.h
+│   │               ├── phyrx_other_receive_info_ru_details.h
+│   │               ├── phyrx_pkt_end.h
+│   │               ├── phyrx_pkt_end_info.h
+│   │               ├── phyrx_rssi_legacy.h
+│   │               ├── phyrx_vht_sig_a.h
+│   │               ├── phytx_abort_request_info.h
+│   │               ├── phytx_ppdu_header_info_request.h
+│   │               ├── received_response_user_15_8.h
+│   │               ├── received_response_user_23_16.h
+│   │               ├── received_response_user_31_24.h
+│   │               ├── received_response_user_36_32.h
+│   │               ├── received_response_user_7_0.h
+│   │               ├── received_response_user_info.h
+│   │               ├── received_trigger_info_details.h
+│   │               ├── received_trigger_info.h
+│   │               ├── receive_rssi_info.h
+│   │               ├── receive_user_info.h
+│   │               ├── reo_descriptor_threshold_reached_status.h
+│   │               ├── reo_destination_ring.h
+│   │               ├── reo_entrance_ring.h
+│   │               ├── reo_flush_cache.h
+│   │               ├── reo_flush_cache_status.h
+│   │               ├── reo_flush_queue.h
+│   │               ├── reo_flush_queue_status.h
+│   │               ├── reo_flush_timeout_list.h
+│   │               ├── reo_flush_timeout_list_status.h
+│   │               ├── reo_get_queue_stats.h
+│   │               ├── reo_get_queue_stats_status.h
+│   │               ├── reo_unblock_cache.h
+│   │               ├── reo_unblock_cache_status.h
+│   │               ├── reo_update_rx_reo_queue.h
+│   │               ├── reo_update_rx_reo_queue_status.h
+│   │               ├── response_end_status.h
+│   │               ├── response_start_status.h
+│   │               ├── ru_allocation_160_info.h
+│   │               ├── rx_attention.h
+│   │               ├── rx_flow_search_entry.h
+│   │               ├── rx_frame_1k_bitmap_ack.h
+│   │               ├── rx_frame_bitmap_ack.h
+│   │               ├── rx_frame_bitmap_req.h
+│   │               ├── rx_location_info.h
+│   │               ├── rx_mpdu_desc_info.h
+│   │               ├── rx_mpdu_details.h
+│   │               ├── rx_mpdu_end.h
+│   │               ├── rx_mpdu_info.h
+│   │               ├── rx_mpdu_link_ptr.h
+│   │               ├── rx_mpdu_start.h
+│   │               ├── rx_msdu_desc_info.h
+│   │               ├── rx_msdu_details.h
+│   │               ├── rx_msdu_end.h
+│   │               ├── rx_msdu_ext_desc_info.h
+│   │               ├── rx_msdu_link.h
+│   │               ├── rx_msdu_start.h
+│   │               ├── rxpcu_early_rx_indication.h
+│   │               ├── rxpcu_ppdu_end_info.h
+│   │               ├── rxpcu_ppdu_end_layout_info.h
+│   │               ├── rx_ppdu_ack_report.h
+│   │               ├── rx_ppdu_end_user_stats_ext.h
+│   │               ├── rx_ppdu_end_user_stats.h
+│   │               ├── rx_ppdu_no_ack_report.h
+│   │               ├── rx_ppdu_start.h
+│   │               ├── rx_ppdu_start_user_info.h
+│   │               ├── rx_preamble.h
+│   │               ├── rxpt_classify_info.h
+│   │               ├── rx_reo_queue_1k.h
+│   │               ├── rx_reo_queue_ext.h
+│   │               ├── rx_reo_queue.h
+│   │               ├── rx_reo_queue_reference.h
+│   │               ├── rx_response_required_info.h
+│   │               ├── rx_rxpcu_classification_overview.h
+│   │               ├── rx_start_param.h
+│   │               ├── rx_timing_offset_info.h
+│   │               ├── rx_trig_info.h
+│   │               ├── seq_hwio.h
+│   │               ├── service_info.h
+│   │               ├── sw_monitor_ring.h
+│   │               ├── tcl_data_cmd.h
+│   │               ├── tcl_entrance_from_ppe_ring.h
+│   │               ├── tcl_gse_cmd.h
+│   │               ├── tcl_status_ring.h
+│   │               ├── tlv_hdr.h
+│   │               ├── tlv_tag_def.h
+│   │               ├── tx_cbf_info.h
+│   │               ├── tx_fes_setup.h
+│   │               ├── tx_fes_status_1k_ba.h
+│   │               ├── tx_fes_status_ack_or_ba.h
+│   │               ├── tx_fes_status_end.h
+│   │               ├── tx_fes_status_prot.h
+│   │               ├── tx_fes_status_start.h
+│   │               ├── tx_fes_status_start_ppdu.h
+│   │               ├── tx_fes_status_start_prot.h
+│   │               ├── tx_fes_status_user_ppdu.h
+│   │               ├── tx_fes_status_user_response.h
+│   │               ├── tx_flush_req.h
+│   │               ├── tx_mpdu_start.h
+│   │               ├── tx_msdu_extension.h
+│   │               ├── tx_msdu_start.h
+│   │               ├── txpcu_buffer_basics.h
+│   │               ├── txpcu_buffer_status.h
+│   │               ├── txpcu_user_buffer_status.h
+│   │               ├── tx_peer_entry.h
+│   │               ├── tx_queue_extension.h
+│   │               ├── tx_rate_stats_info.h
+│   │               ├── tx_raw_or_native_frame_setup.h
+│   │               ├── unallocated_ru_160_info.h
+│   │               ├── uniform_descriptor_header.h
+│   │               ├── uniform_reo_cmd_header.h
+│   │               ├── uniform_reo_status_header.h
+│   │               ├── u_sig_eht_su_mu_info.h
+│   │               ├── u_sig_eht_tb_info.h
+│   │               ├── vht_sig_a_info.h
+│   │               ├── vht_sig_b_mu160_info.h
+│   │               ├── vht_sig_b_mu20_info.h
+│   │               ├── vht_sig_b_mu40_info.h
+│   │               ├── vht_sig_b_mu80_info.h
+│   │               ├── vht_sig_b_su160_info.h
+│   │               ├── vht_sig_b_su20_info.h
+│   │               ├── vht_sig_b_su40_info.h
+│   │               ├── vht_sig_b_su80_info.h
+│   │               ├── wbm2sw_completion_ring_rx.h
+│   │               ├── wbm2sw_completion_ring_tx.h
+│   │               ├── wbm_buffer_ring.h
+│   │               ├── wbm_link_descriptor_ring.h
+│   │               ├── wbm_release_ring.h
+│   │               ├── wbm_release_ring_rx.h
+│   │               ├── wbm_release_ring_tx.h
+│   │               ├── wcss_seq_hwiobase.h
+│   │               ├── wcss_seq_hwioreg_umac.h
+│   │               ├── wcss_version.h
+│   │               └── wfss_ce_reg_seq_hwioreg.h
+│   ├── global_lmac_if
+│   │   ├── inc
+│   │   │   └── wlan_global_lmac_if_api.h
+│   │   └── src
+│   │       └── wlan_global_lmac_if.c
+│   ├── gpio
+│   │   ├── core
+│   │   │   ├── inc
+│   │   │   │   ├── wlan_gpio_api.h
+│   │   │   │   └── wlan_gpio_priv_api.h
+│   │   │   └── src
+│   │   │       └── wlan_gpio_api.c
+│   │   └── dispatcher
+│   │       ├── inc
+│   │       │   ├── wlan_gpio_tgt_api.h
+│   │       │   └── wlan_gpio_ucfg_api.h
+│   │       └── src
+│   │           ├── wlan_gpio_tgt_api.c
+│   │           └── wlan_gpio_ucfg_api.c
+│   ├── hal
+│   │   └── wifi3.0
+│   │       ├── be
+│   │       │   ├── hal_be_api.h
+│   │       │   ├── hal_be_api_mon.h
+│   │       │   ├── hal_be_generic_api.c
+│   │       │   ├── hal_be_generic_api.h
+│   │       │   ├── hal_be_hw_headers.h
+│   │       │   ├── hal_be_reo.c
+│   │       │   ├── hal_be_reo.h
+│   │       │   ├── hal_be_rx_compact_tlv.h
+│   │       │   ├── hal_be_rx.h
+│   │       │   ├── hal_be_rx_tlv.h
+│   │       │   └── hal_be_tx.h
+│   │       ├── hal_api.h
+│   │       ├── hal_api_mon.h
+│   │       ├── hal_flow.h
+│   │       ├── hal_generic_api.h
+│   │       ├── hal_hw_headers.h
+│   │       ├── hal_internal.h
+│   │       ├── hal_reo.c
+│   │       ├── hal_reo.h
+│   │       ├── hal_rx_flow.c
+│   │       ├── hal_rx_flow.h
+│   │       ├── hal_rx_flow_info.h
+│   │       ├── hal_rx.h
+│   │       ├── hal_rx_hw_defines.h
+│   │       ├── hal_srng.c
+│   │       ├── hal_tx.h
+│   │       ├── hal_tx_hw_defines.h
+│   │       ├── kiwi
+│   │       │   ├── hal_kiwi.c
+│   │       │   ├── hal_kiwi_rx.h
+│   │       │   └── hal_kiwi_tx.h
+│   │       ├── li
+│   │       │   ├── hal_li_api.h
+│   │       │   ├── hal_li_generic_api.c
+│   │       │   ├── hal_li_generic_api.h
+│   │       │   ├── hal_li_hw_headers.h
+│   │       │   ├── hal_li_reo.c
+│   │       │   ├── hal_li_reo.h
+│   │       │   ├── hal_li_rx.h
+│   │       │   └── hal_li_tx.h
+│   │       ├── peach
+│   │       │   ├── hal_peach.c
+│   │       │   ├── hal_peach_rx.h
+│   │       │   └── hal_peach_tx.h
+│   │       ├── qca5018
+│   │       │   ├── hal_5018.c
+│   │       │   ├── hal_5018_rx.h
+│   │       │   └── hal_5018_tx.h
+│   │       ├── qca5332
+│   │       │   ├── hal_5332.c
+│   │       │   ├── hal_5332_rx.h
+│   │       │   └── hal_5332_tx.h
+│   │       ├── qca6290
+│   │       │   ├── hal_6290.c
+│   │       │   ├── hal_6290_rx.h
+│   │       │   └── hal_6290_tx.h
+│   │       ├── qca6390
+│   │       │   ├── hal_6390.c
+│   │       │   ├── hal_6390_rx.h
+│   │       │   └── hal_6390_tx.h
+│   │       ├── qca6490
+│   │       │   ├── hal_6490.c
+│   │       │   ├── hal_6490_rx.h
+│   │       │   └── hal_6490_tx.h
+│   │       ├── qca6750
+│   │       │   ├── hal_6750.c
+│   │       │   ├── hal_6750_rx.h
+│   │       │   └── hal_6750_tx.h
+│   │       ├── qca8074v1
+│   │       │   ├── hal_8074v1.c
+│   │       │   ├── hal_8074v1_rx.h
+│   │       │   └── hal_8074v1_tx.h
+│   │       ├── qca8074v2
+│   │       │   ├── hal_8074v2.c
+│   │       │   ├── hal_8074v2_rx.h
+│   │       │   └── hal_8074v2_tx.h
+│   │       ├── qcn6122
+│   │       │   ├── hal_qcn6122.c
+│   │       │   ├── hal_qcn6122_rx.h
+│   │       │   └── hal_qcn6122_tx.h
+│   │       ├── qcn6432
+│   │       │   ├── hal_6432.c
+│   │       │   ├── hal_6432_rx.h
+│   │       │   └── hal_6432_tx.h
+│   │       ├── qcn9000
+│   │       │   ├── hal_9000.c
+│   │       │   ├── hal_9000_rx.h
+│   │       │   └── hal_9000_tx.h
+│   │       ├── qcn9224
+│   │       │   ├── hal_9224.h
+│   │       │   ├── hal_9224_rx.h
+│   │       │   ├── hal_9224_tx.h
+│   │       │   └── v2
+│   │       │       └── hal_9224v2.c
+│   │       ├── README
+│   │       ├── rh
+│   │       │   ├── hal_rh_api.h
+│   │       │   ├── hal_rh_generic_api.c
+│   │       │   ├── hal_rh_generic_api.h
+│   │       │   ├── hal_rh_rx.h
+│   │       │   └── hal_rh_tx.h
+│   │       ├── wcn6450
+│   │       │   ├── hal_wcn6450.c
+│   │       │   ├── hal_wcn6450_rx.h
+│   │       │   └── hal_wcn6450_tx.h
+│   │       └── wcn7750
+│   │           ├── hal_wcn7750.c
+│   │           ├── hal_wcn7750_rx.h
+│   │           └── hal_wcn7750_tx.h
+│   ├── hif
+│   │   ├── inc
+│   │   │   ├── cfg_hif.h
+│   │   │   ├── hif.h
+│   │   │   ├── hif_unit_test_suspend.h
+│   │   │   ├── hostdef.h
+│   │   │   ├── host_reg_init.h
+│   │   │   ├── reg_struct.h
+│   │   │   ├── regtable.h
+│   │   │   ├── regtable_ipcie.h
+│   │   │   ├── regtable_pcie.h
+│   │   │   ├── targetdef.h
+│   │   │   ├── target_reg_init.h
+│   │   │   └── target_type.h
+│   │   └── src
+│   │       ├── adrastea_reg_def.h
+│   │       ├── ar6004def.c
+│   │       ├── ar6320def.c
+│   │       ├── ar6320def.h
+│   │       ├── ar6320v2def.h
+│   │       ├── ar900Bdef.c
+│   │       ├── ar9888def.c
+│   │       ├── ar9888def.h
+│   │       ├── ath_procfs.c
+│   │       ├── ce
+│   │       │   ├── ce_api.h
+│   │       │   ├── ce_assignment.h
+│   │       │   ├── ce_bmi.c
+│   │       │   ├── ce_bmi.h
+│   │       │   ├── ce_diag.c
+│   │       │   ├── ce_internal.h
+│   │       │   ├── ce_main.c
+│   │       │   ├── ce_main.h
+│   │       │   ├── ce_reg.h
+│   │       │   ├── ce_service.c
+│   │       │   ├── ce_service_legacy.c
+│   │       │   ├── ce_service_srng.c
+│   │       │   ├── ce_tasklet.c
+│   │       │   └── ce_tasklet.h
+│   │       ├── dispatcher
+│   │       │   ├── ahb_api.h
+│   │       │   ├── dummy.c
+│   │       │   ├── dummy.h
+│   │       │   ├── ipci_api.h
+│   │       │   ├── multibus_ahb.c
+│   │       │   ├── multibus.c
+│   │       │   ├── multibus.h
+│   │       │   ├── multibus_ipci.c
+│   │       │   ├── multibus_pci.c
+│   │       │   ├── multibus_sdio.c
+│   │       │   ├── multibus_snoc.c
+│   │       │   ├── multibus_usb.c
+│   │       │   ├── pci_api.h
+│   │       │   ├── sdio_api.h
+│   │       │   ├── snoc_api.h
+│   │       │   └── usb_api.h
+│   │       ├── hif_debug.h
+│   │       ├── hif_exec.c
+│   │       ├── hif_exec.h
+│   │       ├── hif_hw_version.h
+│   │       ├── hif_io32.h
+│   │       ├── hif_irq_affinity.c
+│   │       ├── hif_irq_affinity.h
+│   │       ├── hif_main.c
+│   │       ├── hif_main.h
+│   │       ├── hif_main_legacy.c
+│   │       ├── hif_napi.c
+│   │       ├── hif_napi.h
+│   │       ├── hif_runtime_pm.c
+│   │       ├── hif_runtime_pm.h
+│   │       ├── hif_unit_test_suspend.c
+│   │       ├── hif_unit_test_suspend_i.h
+│   │       ├── ipcie
+│   │       │   ├── hif_io32_ipci.h
+│   │       │   ├── if_ipci.c
+│   │       │   └── if_ipci.h
+│   │       ├── kiwidef.c
+│   │       ├── mp_dev.c
+│   │       ├── mp_dev.h
+│   │       ├── pcie
+│   │       │   ├── hif_io32_pci.h
+│   │       │   ├── if_pci.c
+│   │       │   ├── if_pci.h
+│   │       │   └── if_pci_internal.h
+│   │       ├── qca5018def.c
+│   │       ├── qca5332def.c
+│   │       ├── qca6018def.c
+│   │       ├── qca6290def.c
+│   │       ├── qca6390def.c
+│   │       ├── qca6490def.c
+│   │       ├── qca6750def.c
+│   │       ├── qca8074def.c
+│   │       ├── qca8074v2def.c
+│   │       ├── qca9574def.c
+│   │       ├── qca9888def.c
+│   │       ├── qca9984def.c
+│   │       ├── qcn6122def.c
+│   │       ├── qcn6432def.c
+│   │       ├── qcn9000def.c
+│   │       ├── qcn9160def.c
+│   │       ├── qcn9224def.c
+│   │       ├── regtable.c
+│   │       ├── sdio
+│   │       │   ├── hif_bmi_reg_access.c
+│   │       │   ├── hif_diag_reg_access.c
+│   │       │   ├── hif_sdio.c
+│   │       │   ├── hif_sdio_common.h
+│   │       │   ├── hif_sdio_dev.c
+│   │       │   ├── hif_sdio_dev.h
+│   │       │   ├── hif_sdio_internal.h
+│   │       │   ├── if_sdio.c
+│   │       │   ├── if_sdio.h
+│   │       │   ├── native_sdio
+│   │       │   │   ├── include
+│   │       │   │   │   └── hif_internal.h
+│   │       │   │   └── src
+│   │       │   │       ├── dev_quirks.c
+│   │       │   │       ├── hif.c
+│   │       │   │       └── hif_scatter.c
+│   │       │   ├── regtable_sdio.c
+│   │       │   ├── regtable_sdio.h
+│   │       │   └── transfer
+│   │       │       ├── adma.c
+│   │       │       ├── adma.h
+│   │       │       ├── mailbox.c
+│   │       │       ├── mailbox.h
+│   │       │       ├── transfer.c
+│   │       │       └── transfer.h
+│   │       ├── snoc
+│   │       │   ├── hif_io32_snoc.h
+│   │       │   ├── if_ahb.c
+│   │       │   ├── if_ahb.h
+│   │       │   └── if_snoc.c
+│   │       ├── usb
+│   │       │   ├── hif_usb.c
+│   │       │   ├── hif_usb_internal.h
+│   │       │   ├── if_usb.c
+│   │       │   ├── if_usb.h
+│   │       │   ├── regtable_usb.c
+│   │       │   ├── regtable_usb.h
+│   │       │   └── usbdrv.c
+│   │       ├── wcn6450def.h
+│   │       └── wcn7750def.c
+│   ├── htc
+│   │   ├── dl_list.h
+│   │   ├── htc_api.h
+│   │   ├── htc.c
+│   │   ├── htc_credit_history.c
+│   │   ├── htc_credit_history.h
+│   │   ├── htc_debug.h
+│   │   ├── htc_hang_event.c
+│   │   ├── htc_hang_event.h
+│   │   ├── htc_internal.h
+│   │   ├── htc_packet.h
+│   │   ├── htc_recv.c
+│   │   ├── htc_send.c
+│   │   └── htc_services.c
+│   ├── init_deinit
+│   │   └── dispatcher
+│   │       ├── inc
+│   │       │   └── dispatcher_init_deinit.h
+│   │       └── src
+│   │           └── dispatcher_init_deinit.c
+│   ├── iot_sim
+│   │   ├── core
+│   │   │   ├── iot_sim_cmn_api_i.h
+│   │   │   ├── iot_sim_common.c
+│   │   │   ├── iot_sim_defs_i.h
+│   │   │   ├── iot_sim_module.c
+│   │   │   └── iot_sim_utils.c
+│   │   ├── dispatcher
+│   │   │   ├── inc
+│   │   │   │   ├── wlan_iot_sim_public_structs.h
+│   │   │   │   ├── wlan_iot_sim_tgt_api.h
+│   │   │   │   └── wlan_iot_sim_utils_api.h
+│   │   │   └── src
+│   │   │       ├── wlan_iot_sim_tgt_api.c
+│   │   │       └── wlan_iot_sim_utils_api.c
+│   │   └── Kbuild
+│   ├── ipa
+│   │   ├── core
+│   │   │   ├── inc
+│   │   │   │   ├── wlan_ipa_core.h
+│   │   │   │   ├── wlan_ipa_main.h
+│   │   │   │   └── wlan_ipa_priv.h
+│   │   │   └── src
+│   │   │       ├── wlan_ipa_core.c
+│   │   │       ├── wlan_ipa_main.c
+│   │   │       ├── wlan_ipa_rm.c
+│   │   │       └── wlan_ipa_stats.c
+│   │   └── dispatcher
+│   │       ├── inc
+│   │       │   ├── cfg_ipa.h
+│   │       │   ├── wlan_ipa_obj_mgmt_api.h
+│   │       │   ├── wlan_ipa_public_struct.h
+│   │       │   ├── wlan_ipa_tgt_api.h
+│   │       │   └── wlan_ipa_ucfg_api.h
+│   │       └── src
+│   │           ├── wlan_ipa_obj_mgmt_api.c
+│   │           ├── wlan_ipa_tgt_api.c
+│   │           └── wlan_ipa_ucfg_api.c
+│   ├── os_if
+│   │   └── linux
+│   │       ├── afc
+│   │       │   ├── inc
+│   │       │   │   └── wlan_cfg80211_afc.h
+│   │       │   └── src
+│   │       │       └── wlan_cfg80211_afc.c
+│   │       ├── cp_stats
+│   │       │   ├── inc
+│   │       │   │   └── wlan_cfg80211_ic_cp_stats.h
+│   │       │   └── src
+│   │       │       └── wlan_cfg80211_ic_cp_stats.c
+│   │       ├── crypto
+│   │       │   ├── inc
+│   │       │   │   ├── wlan_cfg80211_crypto.h
+│   │       │   │   └── wlan_nl_to_crypto_params.h
+│   │       │   └── src
+│   │       │       ├── wlan_cfg80211_crypto.c
+│   │       │       └── wlan_nl_to_crypto_params.c
+│   │       ├── ftm
+│   │       │   ├── inc
+│   │       │   │   ├── wlan_cfg80211_ftm.h
+│   │       │   │   └── wlan_ioctl_ftm.h
+│   │       │   └── src
+│   │       │       ├── wlan_cfg80211_ftm.c
+│   │       │       └── wlan_ioctl_ftm.c
+│   │       ├── gpio
+│   │       │   ├── inc
+│   │       │   │   └── wlan_cfg80211_gpio.h
+│   │       │   └── src
+│   │       │       └── wlan_cfg80211_gpio.c
+│   │       ├── mlme
+│   │       │   ├── inc
+│   │       │   │   ├── osif_cm_req.h
+│   │       │   │   ├── osif_cm_util.h
+│   │       │   │   ├── osif_vdev_mgr_util.h
+│   │       │   │   └── wlan_cfg80211_vdev_mlme.h
+│   │       │   └── src
+│   │       │       ├── osif_cm_connect_rsp.c
+│   │       │       ├── osif_cm_disconnect_rsp.c
+│   │       │       ├── osif_cm_req.c
+│   │       │       ├── osif_cm_roam_rsp.c
+│   │       │       ├── osif_cm_rsp.h
+│   │       │       ├── osif_cm_util.c
+│   │       │       ├── osif_vdev_mgr_util.c
+│   │       │       └── wlan_cfg80211_vdev_mlme.c
+│   │       ├── qca_vendor.h
+│   │       ├── scan
+│   │       │   ├── inc
+│   │       │   │   └── wlan_cfg80211_scan.h
+│   │       │   └── src
+│   │       │       └── wlan_cfg80211_scan.c
+│   │       ├── spectral
+│   │       │   ├── inc
+│   │       │   │   ├── os_if_spectral_netlink.h
+│   │       │   │   └── wlan_cfg80211_spectral.h
+│   │       │   └── src
+│   │       │       ├── os_if_spectral_netlink.c
+│   │       │       └── wlan_cfg80211_spectral.c
+│   │       ├── twt
+│   │       │   ├── inc
+│   │       │   │   ├── osif_twt_req.h
+│   │       │   │   ├── osif_twt_rsp.h
+│   │       │   │   └── osif_twt_util.h
+│   │       │   └── src
+│   │       │       ├── osif_twt_req.c
+│   │       │       └── osif_twt_rsp.c
+│   │       ├── wifi_pos
+│   │       │   ├── inc
+│   │       │   │   ├── os_if_wifi_pos.h
+│   │       │   │   ├── os_if_wifi_pos_utils.h
+│   │       │   │   └── wlan_cfg80211_wifi_pos.h
+│   │       │   └── src
+│   │       │       ├── os_if_wifi_pos.c
+│   │       │       ├── os_if_wifi_pos_utils.c
+│   │       │       └── wlan_cfg80211_wifi_pos.c
+│   │       ├── wlan_cfg80211.c
+│   │       ├── wlan_cfg80211.h
+│   │       ├── wlan_osif_features.h
+│   │       ├── wlan_osif_priv.h
+│   │       ├── wlan_osif_request_manager.c
+│   │       └── wlan_osif_request_manager.h
+│   ├── qal
+│   │   ├── inc
+│   │   │   ├── qal_bridge.h
+│   │   │   ├── qal_devcfg.h
+│   │   │   ├── qal_devnode.h
+│   │   │   └── qal_vbus_dev.h
+│   │   └── linux
+│   │       └── src
+│   │           ├── i_qal_bridge.h
+│   │           ├── i_qal_devcfg.h
+│   │           ├── i_qal_devnode.h
+│   │           └── i_qal_vbus_dev.h
+│   ├── qdf
+│   │   ├── inc
+│   │   │   ├── i_qdf_nbuf_api_m.h
+│   │   │   ├── i_qdf_nbuf_api_w.h
+│   │   │   ├── osdep.h
+│   │   │   ├── qdf_atomic.h
+│   │   │   ├── qdf_cpuhp.h
+│   │   │   ├── qdf_crypto.h
+│   │   │   ├── qdf_debug_domain.h
+│   │   │   ├── qdf_debugfs.h
+│   │   │   ├── qdf_defer.h
+│   │   │   ├── qdf_delayed_work.h
+│   │   │   ├── qdf_dev.h
+│   │   │   ├── qdf_event.h
+│   │   │   ├── qdf_file.h
+│   │   │   ├── qdf_flex_mem.h
+│   │   │   ├── qdf_hang_event_notifier.h
+│   │   │   ├── qdf_hashtable.h
+│   │   │   ├── qdf_hrtimer.h
+│   │   │   ├── qdf_idr.h
+│   │   │   ├── qdf_ipa.h
+│   │   │   ├── qdf_ipa_wdi3.h
+│   │   │   ├── qdf_irq.h
+│   │   │   ├── qdf_list.h
+│   │   │   ├── qdf_lock.h
+│   │   │   ├── qdf_lro.h
+│   │   │   ├── qdf_mc_timer.h
+│   │   │   ├── qdf_mem.h
+│   │   │   ├── qdf_module.h
+│   │   │   ├── qdf_nbuf_frag.h
+│   │   │   ├── qdf_nbuf.h
+│   │   │   ├── qdf_net_if.h
+│   │   │   ├── qdf_net_stats.h
+│   │   │   ├── qdf_net_types.h
+│   │   │   ├── qdf_notifier.h
+│   │   │   ├── qdf_parse.h
+│   │   │   ├── qdf_perf.h
+│   │   │   ├── qdf_periodic_work.h
+│   │   │   ├── qdf_pkt_add_timestamp.h
+│   │   │   ├── qdf_platform.h
+│   │   │   ├── qdf_ptr_hash.h
+│   │   │   ├── qdf_slist.h
+│   │   │   ├── qdf_ssr_driver_dump.h
+│   │   │   ├── qdf_status.h
+│   │   │   ├── qdf_streamfs.h
+│   │   │   ├── qdf_str.h
+│   │   │   ├── qdf_talloc.h
+│   │   │   ├── qdf_threads.h
+│   │   │   ├── qdf_time.h
+│   │   │   ├── qdf_timer.h
+│   │   │   ├── qdf_trace.h
+│   │   │   ├── qdf_tracepoint.h
+│   │   │   ├── qdf_tracker.h
+│   │   │   ├── qdf_types.h
+│   │   │   ├── qdf_util.h
+│   │   │   └── qdf_vfs.h
+│   │   ├── Kbuild
+│   │   ├── linux
+│   │   │   └── src
+│   │   │       ├── i_osdep.h
+│   │   │       ├── i_qdf_atomic.h
+│   │   │       ├── i_qdf_cpuhp.h
+│   │   │       ├── i_qdf_debugfs.h
+│   │   │       ├── i_qdf_defer.h
+│   │   │       ├── i_qdf_delayed_work.h
+│   │   │       ├── i_qdf_dev.h
+│   │   │       ├── i_qdf_event.h
+│   │   │       ├── i_qdf_hashtable.h
+│   │   │       ├── i_qdf_hrtimer.h
+│   │   │       ├── i_qdf_idr.h
+│   │   │       ├── i_qdf_ipa.h
+│   │   │       ├── i_qdf_ipa_wdi3.h
+│   │   │       ├── i_qdf_irq.h
+│   │   │       ├── i_qdf_list.h
+│   │   │       ├── i_qdf_lock.h
+│   │   │       ├── i_qdf_lro.h
+│   │   │       ├── i_qdf_mc_timer.h
+│   │   │       ├── i_qdf_mem.h
+│   │   │       ├── i_qdf_module.h
+│   │   │       ├── i_qdf_nbuf_frag.h
+│   │   │       ├── i_qdf_nbuf.h
+│   │   │       ├── i_qdf_nbuf_m.h
+│   │   │       ├── i_qdf_nbuf_w.h
+│   │   │       ├── i_qdf_net_if.h
+│   │   │       ├── i_qdf_net_stats.h
+│   │   │       ├── i_qdf_net_types.h
+│   │   │       ├── i_qdf_notifier.h
+│   │   │       ├── i_qdf_perf.h
+│   │   │       ├── i_qdf_periodic_work.h
+│   │   │       ├── i_qdf_ptr_hash.h
+│   │   │       ├── i_qdf_ssr_driver_dump.h
+│   │   │       ├── i_qdf_streamfs.h
+│   │   │       ├── i_qdf_str.h
+│   │   │       ├── i_qdf_talloc.h
+│   │   │       ├── i_qdf_threads.h
+│   │   │       ├── i_qdf_time.h
+│   │   │       ├── i_qdf_timer.h
+│   │   │       ├── i_qdf_trace.h
+│   │   │       ├── i_qdf_tracepoint.h
+│   │   │       ├── i_qdf_types.h
+│   │   │       ├── i_qdf_util.h
+│   │   │       ├── i_qdf_vfs.h
+│   │   │       ├── qdf_cpuhp.c
+│   │   │       ├── qdf_crypto.c
+│   │   │       ├── qdf_debugfs.c
+│   │   │       ├── qdf_defer.c
+│   │   │       ├── qdf_delayed_work.c
+│   │   │       ├── qdf_dev.c
+│   │   │       ├── qdf_event.c
+│   │   │       ├── qdf_file.c
+│   │   │       ├── qdf_func_tracker.c
+│   │   │       ├── qdf_func_tracker.h
+│   │   │       ├── qdf_hrtimer.c
+│   │   │       ├── qdf_idr.c
+│   │   │       ├── qdf_ipa.c
+│   │   │       ├── qdf_list.c
+│   │   │       ├── qdf_lock.c
+│   │   │       ├── qdf_lro.c
+│   │   │       ├── qdf_mc_timer.c
+│   │   │       ├── qdf_mem.c
+│   │   │       ├── qdf_module.c
+│   │   │       ├── qdf_nbuf.c
+│   │   │       ├── qdf_nbuf_frag.c
+│   │   │       ├── qdf_net_if.c
+│   │   │       ├── qdf_perf.c
+│   │   │       ├── qdf_periodic_work.c
+│   │   │       ├── qdf_pkt_add_timestamp.c
+│   │   │       ├── qdf_ssr_driver_dump.c
+│   │   │       ├── qdf_status.c
+│   │   │       ├── qdf_streamfs.c
+│   │   │       ├── qdf_threads.c
+│   │   │       ├── qdf_time.c
+│   │   │       ├── qdf_trace.c
+│   │   │       ├── qdf_tracepoint.c
+│   │   │       ├── qdf_tracepoint_defs.h
+│   │   │       └── qdf_vfs.c
+│   │   ├── src
+│   │   │   ├── qdf_cpuhp.c
+│   │   │   ├── qdf_debug_domain.c
+│   │   │   ├── qdf_flex_mem.c
+│   │   │   ├── qdf_hang_event_notifier.c
+│   │   │   ├── qdf_notifier.c
+│   │   │   ├── qdf_parse.c
+│   │   │   ├── qdf_platform.c
+│   │   │   ├── qdf_str.c
+│   │   │   ├── qdf_talloc.c
+│   │   │   ├── qdf_tracker.c
+│   │   │   └── qdf_types.c
+│   │   └── test
+│   │       ├── qdf_delayed_work_test.c
+│   │       ├── qdf_delayed_work_test.h
+│   │       ├── qdf_hashtable_test.c
+│   │       ├── qdf_hashtable_test.h
+│   │       ├── qdf_periodic_work_test.c
+│   │       ├── qdf_periodic_work_test.h
+│   │       ├── qdf_ptr_hash_test.c
+│   │       ├── qdf_ptr_hash_test.h
+│   │       ├── qdf_slist_test.c
+│   │       ├── qdf_slist_test.h
+│   │       ├── qdf_talloc_test.c
+│   │       ├── qdf_talloc_test.h
+│   │       ├── qdf_tracker_test.c
+│   │       ├── qdf_tracker_test.h
+│   │       ├── qdf_types_test.c
+│   │       └── qdf_types_test.h
+│   ├── README.txt
+│   ├── scheduler
+│   │   ├── inc
+│   │   │   ├── scheduler_api.h
+│   │   │   └── scheduler_core.h
+│   │   └── src
+│   │       ├── scheduler_api.c
+│   │       └── scheduler_core.c
+│   ├── spectral
+│   │   ├── core
+│   │   │   ├── spectral_cmn_api_i.h
+│   │   │   ├── spectral_common.c
+│   │   │   ├── spectral_defs_i.h
+│   │   │   ├── spectral_module.c
+│   │   │   ├── spectral_offload.c
+│   │   │   └── spectral_ol_api_i.h
+│   │   ├── dispatcher
+│   │   │   ├── inc
+│   │   │   │   ├── cfg_spectral.h
+│   │   │   │   ├── spectral_ioctl.h
+│   │   │   │   ├── wlan_spectral_public_structs.h
+│   │   │   │   ├── wlan_spectral_tgt_api.h
+│   │   │   │   ├── wlan_spectral_ucfg_api.h
+│   │   │   │   └── wlan_spectral_utils_api.h
+│   │   │   └── src
+│   │   │       ├── wlan_spectral_tgt_api.c
+│   │   │       ├── wlan_spectral_ucfg_api.c
+│   │   │       └── wlan_spectral_utils_api.c
+│   │   └── Kbuild
+│   ├── target_if
+│   │   ├── cfr
+│   │   │   ├── inc
+│   │   │   │   ├── target_if_cfr_6490.h
+│   │   │   │   ├── target_if_cfr_adrastea.h
+│   │   │   │   ├── target_if_cfr_dbr.h
+│   │   │   │   ├── target_if_cfr_enh.h
+│   │   │   │   └── target_if_cfr.h
+│   │   │   └── src
+│   │   │       ├── target_if_cfr_6490.c
+│   │   │       ├── target_if_cfr_adrastea.c
+│   │   │       ├── target_if_cfr.c
+│   │   │       ├── target_if_cfr_dbr.c
+│   │   │       └── target_if_cfr_enh.c
+│   │   ├── core
+│   │   │   ├── inc
+│   │   │   │   └── target_if.h
+│   │   │   └── src
+│   │   │       └── target_if_main.c
+│   │   ├── cp_stats
+│   │   │   ├── inc
+│   │   │   │   └── target_if_cp_stats.h
+│   │   │   └── src
+│   │   │       └── target_if_cp_stats.c
+│   │   ├── crypto
+│   │   │   ├── inc
+│   │   │   │   └── target_if_crypto.h
+│   │   │   └── src
+│   │   │       └── target_if_crypto.c
+│   │   ├── dcs
+│   │   │   ├── inc
+│   │   │   │   └── target_if_dcs.h
+│   │   │   └── src
+│   │   │       └── target_if_dcs.c
+│   │   ├── dfs
+│   │   │   ├── inc
+│   │   │   │   ├── target_if_dfs_full_offload.h
+│   │   │   │   ├── target_if_dfs.h
+│   │   │   │   └── target_if_dfs_partial_offload.h
+│   │   │   └── src
+│   │   │       ├── target_if_dfs.c
+│   │   │       ├── target_if_dfs_full_offload.c
+│   │   │       └── target_if_dfs_partial_offload.c
+│   │   ├── direct_buf_rx
+│   │   │   ├── inc
+│   │   │   │   └── target_if_direct_buf_rx_api.h
+│   │   │   └── src
+│   │   │       ├── target_if_direct_buf_rx_api.c
+│   │   │       ├── target_if_direct_buf_rx_main.c
+│   │   │       └── target_if_direct_buf_rx_main.h
+│   │   ├── dispatcher
+│   │   │   └── inc
+│   │   │       └── target_if_pub.h
+│   │   ├── dp
+│   │   │   ├── inc
+│   │   │   │   └── target_if_dp.h
+│   │   │   └── src
+│   │   │       └── target_if_dp.c
+│   │   ├── ftm
+│   │   │   ├── inc
+│   │   │   │   └── target_if_ftm.h
+│   │   │   └── src
+│   │   │       └── target_if_ftm.c
+│   │   ├── global_shmem
+│   │   │   └── inc
+│   │   │       └── target_if_global_shmem.h
+│   │   ├── gpio
+│   │   │   ├── target_if_gpio.c
+│   │   │   └── target_if_gpio.h
+│   │   ├── green_ap
+│   │   │   ├── inc
+│   │   │   │   └── target_if_green_ap.h
+│   │   │   └── src
+│   │   │       └── target_if_green_ap.c
+│   │   ├── init_deinit
+│   │   │   ├── inc
+│   │   │   │   ├── init_cmd_api.h
+│   │   │   │   ├── init_deinit_lmac.h
+│   │   │   │   ├── init_event_handler.h
+│   │   │   │   ├── mlo_global_h_shmem_arena_api.h
+│   │   │   │   ├── mlo_global_h_shmem_arena.h
+│   │   │   │   ├── service_ready_param.h
+│   │   │   │   └── service_ready_util.h
+│   │   │   └── src
+│   │   │       ├── init_cmd_api.c
+│   │   │       ├── init_deinit_lmac.c
+│   │   │       ├── init_event_handler.c
+│   │   │       ├── mlo_global_h_shmem_arena_api.c
+│   │   │       ├── mlo_global_h_shmem_arena.c
+│   │   │       └── service_ready_util.c
+│   │   ├── iot_sim
+│   │   │   ├── target_if_iot_sim.c
+│   │   │   └── target_if_iot_sim.h
+│   │   ├── ipa
+│   │   │   ├── inc
+│   │   │   │   └── target_if_ipa.h
+│   │   │   └── src
+│   │   │       └── target_if_ipa.c
+│   │   ├── mgmt_txrx
+│   │   │   ├── inc
+│   │   │   │   ├── target_if_mgmt_txrx.h
+│   │   │   │   └── target_if_mgmt_txrx_rx_reo.h
+│   │   │   └── src
+│   │   │       ├── target_if_mgmt_txrx.c
+│   │   │       └── target_if_mgmt_txrx_rx_reo.c
+│   │   ├── mlme
+│   │   │   ├── psoc
+│   │   │   │   ├── inc
+│   │   │   │   │   ├── target_if_psoc_timer_tx_ops.h
+│   │   │   │   │   └── target_if_psoc_wake_lock.h
+│   │   │   │   └── src
+│   │   │   │       ├── target_if_psoc_timer_tx_ops.c
+│   │   │   │       └── target_if_psoc_wake_lock.c
+│   │   │   └── vdev_mgr
+│   │   │       ├── inc
+│   │   │       │   ├── target_if_vdev_mgr_rx_ops.h
+│   │   │       │   └── target_if_vdev_mgr_tx_ops.h
+│   │   │       └── src
+│   │   │           ├── target_if_vdev_mgr_rx_ops.c
+│   │   │           └── target_if_vdev_mgr_tx_ops.c
+│   │   ├── mlo_mgr
+│   │   │   ├── inc
+│   │   │   │   └── target_if_mlo_mgr.h
+│   │   │   └── src
+│   │   │       └── target_if_mlo_mgr.c
+│   │   ├── regulatory
+│   │   │   ├── inc
+│   │   │   │   ├── target_if_reg_11d.h
+│   │   │   │   ├── target_if_reg.h
+│   │   │   │   └── target_if_reg_lte.h
+│   │   │   └── src
+│   │   │       ├── target_if_reg_11d.c
+│   │   │       ├── target_if_reg.c
+│   │   │       └── target_if_reg_lte.c
+│   │   ├── scan
+│   │   │   ├── inc
+│   │   │   │   └── target_if_scan.h
+│   │   │   └── src
+│   │   │       └── target_if_scan.c
+│   │   ├── son
+│   │   │   ├── inc
+│   │   │   │   └── target_if_son.h
+│   │   │   └── src
+│   │   │       └── target_if_son.c
+│   │   ├── spatial_reuse
+│   │   │   ├── inc
+│   │   │   │   └── target_if_spatial_reuse.h
+│   │   │   └── src
+│   │   │       └── target_if_spatial_reuse.c
+│   │   ├── spectral
+│   │   │   ├── target_if_spectral.c
+│   │   │   ├── target_if_spectral.h
+│   │   │   ├── target_if_spectral_netlink.c
+│   │   │   ├── target_if_spectral_phyerr.c
+│   │   │   ├── target_if_spectral_sim.c
+│   │   │   ├── target_if_spectral_sim.h
+│   │   │   └── target_if_spectral_sim_int.h
+│   │   ├── twt
+│   │   │   ├── inc
+│   │   │   │   ├── target_if_ext_twt.h
+│   │   │   │   ├── target_if_twt_cmd.h
+│   │   │   │   ├── target_if_twt_evt.h
+│   │   │   │   └── target_if_twt.h
+│   │   │   └── src
+│   │   │       ├── target_if_twt.c
+│   │   │       ├── target_if_twt_cmd.c
+│   │   │       └── target_if_twt_evt.c
+│   │   ├── wifi_pos
+│   │   │   ├── inc
+│   │   │   │   ├── target_if_wifi_pos.h
+│   │   │   │   ├── target_if_wifi_pos_rx_ops.h
+│   │   │   │   └── target_if_wifi_pos_tx_ops.h
+│   │   │   └── src
+│   │   │       ├── target_if_wifi_pos.c
+│   │   │       ├── target_if_wifi_pos_rx_ops.c
+│   │   │       └── target_if_wifi_pos_tx_ops.c
+│   │   └── wifi_radar
+│   │       ├── inc
+│   │       │   └── target_if_wifi_radar.h
+│   │       └── src
+│   │           └── target_if_wifi_radar.c
+│   ├── umac
+│   │   ├── afc
+│   │   │   ├── core
+│   │   │   │   ├── inc
+│   │   │   │   │   └── wlan_afc_main.h
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_afc_main.c
+│   │   │   │       └── wlan_afc_priv.h
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   └── wlan_afc_ucfg_api.h
+│   │   │       └── src
+│   │   │           └── wlan_afc_ucfg_api.c
+│   │   ├── cfr
+│   │   │   ├── core
+│   │   │   │   ├── inc
+│   │   │   │   │   └── cfr_defs_i.h
+│   │   │   │   └── src
+│   │   │   │       └── cfr_common.c
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── cfr_cfg.h
+│   │   │       │   ├── wlan_cfr_public_structs.h
+│   │   │       │   ├── wlan_cfr_tgt_api.h
+│   │   │       │   ├── wlan_cfr_ucfg_api.h
+│   │   │       │   └── wlan_cfr_utils_api.h
+│   │   │       └── src
+│   │   │           ├── wlan_cfr_tgt_api.c
+│   │   │           ├── wlan_cfr_ucfg_api.c
+│   │   │           └── wlan_cfr_utils_api.c
+│   │   ├── cmn_services
+│   │   │   ├── cmn_defs
+│   │   │   │   └── inc
+│   │   │   │       └── wlan_cmn_ieee80211.h
+│   │   │   ├── crypto
+│   │   │   │   ├── inc
+│   │   │   │   │   ├── wlan_crypto_global_api.h
+│   │   │   │   │   ├── wlan_crypto_global_def.h
+│   │   │   │   │   └── wlan_crypto_main.h
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_crypto_def_i.h
+│   │   │   │       ├── wlan_crypto_global_api.c
+│   │   │   │       ├── wlan_crypto_main.c
+│   │   │   │       ├── wlan_crypto_main_i.h
+│   │   │   │       ├── wlan_crypto_obj_mgr.c
+│   │   │   │       ├── wlan_crypto_obj_mgr_i.h
+│   │   │   │       ├── wlan_crypto_param_handling.c
+│   │   │   │       ├── wlan_crypto_param_handling_i.h
+│   │   │   │       └── wlan_crypto_ucfg_api.c
+│   │   │   ├── inc
+│   │   │   │   └── wlan_cmn.h
+│   │   │   ├── interface_mgr
+│   │   │   │   ├── inc
+│   │   │   │   │   ├── wlan_if_mgr_ap.h
+│   │   │   │   │   ├── wlan_if_mgr_api.h
+│   │   │   │   │   ├── wlan_if_mgr_main.h
+│   │   │   │   │   ├── wlan_if_mgr_nan.h
+│   │   │   │   │   ├── wlan_if_mgr_public_struct.h
+│   │   │   │   │   ├── wlan_if_mgr_sta.h
+│   │   │   │   │   └── wlan_if_mgr_ucfg_api.h
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_if_mgr_core.c
+│   │   │   │       └── wlan_if_mgr_main.c
+│   │   │   ├── mgmt_txrx
+│   │   │   │   ├── core
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── wlan_mgmt_txrx_main.c
+│   │   │   │   │       ├── wlan_mgmt_txrx_main_i.h
+│   │   │   │   │       ├── wlan_mgmt_txrx_rx_reo.c
+│   │   │   │   │       └── wlan_mgmt_txrx_rx_reo_i.h
+│   │   │   │   └── dispatcher
+│   │   │   │       ├── inc
+│   │   │   │       │   ├── cfg_mgmt_rx_reo.h
+│   │   │   │       │   ├── cfg_mgmt_txrx.h
+│   │   │   │       │   ├── wlan_mgmt_txrx_rx_reo_public_structs.h
+│   │   │   │       │   ├── wlan_mgmt_txrx_rx_reo_tgt_api.h
+│   │   │   │       │   ├── wlan_mgmt_txrx_rx_reo_ucfg_api.h
+│   │   │   │       │   ├── wlan_mgmt_txrx_rx_reo_utils_api.h
+│   │   │   │       │   ├── wlan_mgmt_txrx_tgt_api.h
+│   │   │   │       │   └── wlan_mgmt_txrx_utils_api.h
+│   │   │   │       └── src
+│   │   │   │           ├── wlan_mgmt_txrx_rx_reo_tgt_api.c
+│   │   │   │           ├── wlan_mgmt_txrx_rx_reo_ucfg_api.c
+│   │   │   │           ├── wlan_mgmt_txrx_rx_reo_utils_api.c
+│   │   │   │           ├── wlan_mgmt_txrx_tgt_api.c
+│   │   │   │           └── wlan_mgmt_txrx_utils_api.c
+│   │   │   ├── obj_mgr
+│   │   │   │   ├── inc
+│   │   │   │   │   ├── wlan_objmgr_cmn.h
+│   │   │   │   │   ├── wlan_objmgr_debug.h
+│   │   │   │   │   ├── wlan_objmgr_global_obj.h
+│   │   │   │   │   ├── wlan_objmgr_pdev_obj.h
+│   │   │   │   │   ├── wlan_objmgr_peer_obj.h
+│   │   │   │   │   ├── wlan_objmgr_psoc_obj.h
+│   │   │   │   │   └── wlan_objmgr_vdev_obj.h
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_objmgr_debug.c
+│   │   │   │       ├── wlan_objmgr_global_obj.c
+│   │   │   │       ├── wlan_objmgr_global_obj_i.h
+│   │   │   │       ├── wlan_objmgr_pdev_obj.c
+│   │   │   │       ├── wlan_objmgr_pdev_obj_i.h
+│   │   │   │       ├── wlan_objmgr_peer_obj.c
+│   │   │   │       ├── wlan_objmgr_psoc_obj.c
+│   │   │   │       ├── wlan_objmgr_psoc_obj_i.h
+│   │   │   │       ├── wlan_objmgr_vdev_obj.c
+│   │   │   │       └── wlan_objmgr_vdev_obj_i.h
+│   │   │   ├── regulatory
+│   │   │   │   └── inc
+│   │   │   │       └── wlan_reg_afc.h
+│   │   │   ├── serialization
+│   │   │   │   ├── inc
+│   │   │   │   │   ├── wlan_serialization_api.h
+│   │   │   │   │   └── wlan_serialization_legacy_api.h
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_serialization_api.c
+│   │   │   │       ├── wlan_serialization_debug.c
+│   │   │   │       ├── wlan_serialization_debug_i.h
+│   │   │   │       ├── wlan_serialization_internal.c
+│   │   │   │       ├── wlan_serialization_internal_i.h
+│   │   │   │       ├── wlan_serialization_legacy_api.c
+│   │   │   │       ├── wlan_serialization_main.c
+│   │   │   │       ├── wlan_serialization_main_i.h
+│   │   │   │       ├── wlan_serialization_non_scan.c
+│   │   │   │       ├── wlan_serialization_non_scan_i.h
+│   │   │   │       ├── wlan_serialization_queue.c
+│   │   │   │       ├── wlan_serialization_queue_i.h
+│   │   │   │       ├── wlan_serialization_rules.c
+│   │   │   │       ├── wlan_serialization_rules_i.h
+│   │   │   │       ├── wlan_serialization_scan.c
+│   │   │   │       ├── wlan_serialization_scan_i.h
+│   │   │   │       ├── wlan_serialization_utf.c
+│   │   │   │       ├── wlan_serialization_utf_i.h
+│   │   │   │       ├── wlan_serialization_utils.c
+│   │   │   │       └── wlan_serialization_utils_i.h
+│   │   │   ├── sm_engine
+│   │   │   │   ├── inc
+│   │   │   │   │   ├── wlan_sm_engine_dbg.h
+│   │   │   │   │   └── wlan_sm_engine.h
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_sm_engine.c
+│   │   │   │       └── wlan_sm_engine_dbg.c
+│   │   │   └── utils
+│   │   │       ├── inc
+│   │   │       │   └── wlan_utility.h
+│   │   │       └── src
+│   │   │           └── wlan_utility.c
+│   │   ├── cp_stats
+│   │   │   ├── core
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_cp_stats_chipset_stats.c
+│   │   │   │       ├── wlan_cp_stats_cmn_api_i.h
+│   │   │   │       ├── wlan_cp_stats_cmn_defs.h
+│   │   │   │       ├── wlan_cp_stats_comp_handler.c
+│   │   │   │       ├── wlan_cp_stats_comp_handler.h
+│   │   │   │       ├── wlan_cp_stats_defs.h
+│   │   │   │       ├── wlan_cp_stats_obj_mgr_handler.c
+│   │   │   │       ├── wlan_cp_stats_obj_mgr_handler.h
+│   │   │   │       ├── wlan_cp_stats_ol_api.c
+│   │   │   │       └── wlan_cp_stats_ol_api.h
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── cfg_cp_stats.h
+│   │   │       │   ├── wlan_cp_stats_chan_info_api.h
+│   │   │       │   ├── wlan_cp_stats_chan_info_defs.h
+│   │   │       │   ├── wlan_cp_stats_chipset_stats_events.h
+│   │   │       │   ├── wlan_cp_stats_chipset_stats.h
+│   │   │       │   ├── wlan_cp_stats_public_structs.h
+│   │   │       │   ├── wlan_cp_stats_tgt_api.h
+│   │   │       │   ├── wlan_cp_stats_ucfg_api.h
+│   │   │       │   └── wlan_cp_stats_utils_api.h
+│   │   │       └── src
+│   │   │           ├── wlan_cp_stats_chan_info_api.c
+│   │   │           ├── wlan_cp_stats_ucfg_api.c
+│   │   │           └── wlan_cp_stats_utils_api.c
+│   │   ├── dcs
+│   │   │   ├── core
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_dcs.c
+│   │   │   │       └── wlan_dcs.h
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── cfg_dcs.h
+│   │   │       │   ├── wlan_dcs_init_deinit_api.h
+│   │   │       │   ├── wlan_dcs_public_structs.h
+│   │   │       │   ├── wlan_dcs_tgt_api.h
+│   │   │       │   └── wlan_dcs_ucfg_api.h
+│   │   │       └── src
+│   │   │           ├── wlan_dcs_init_deinit_api.c
+│   │   │           ├── wlan_dcs_tgt_api.c
+│   │   │           └── wlan_dcs_ucfg_api.c
+│   │   ├── dfs
+│   │   │   ├── core
+│   │   │   │   └── src
+│   │   │   │       ├── dfs_channel.h
+│   │   │   │       ├── dfs_confirm_radar.h
+│   │   │   │       ├── dfs_filter_init.h
+│   │   │   │       ├── dfs.h
+│   │   │   │       ├── dfs_internal.h
+│   │   │   │       ├── dfs_ioctl_private.h
+│   │   │   │       ├── dfs_partial_offload_radar.h
+│   │   │   │       ├── dfs_phyerr_tlv.h
+│   │   │   │       ├── dfs_process_radar_found_ind.h
+│   │   │   │       ├── dfs_random_chan_sel.h
+│   │   │   │       ├── dfs_structs.h
+│   │   │   │       ├── dfs_zero_cac.h
+│   │   │   │       ├── filtering
+│   │   │   │       │   ├── dfs_bindetects.c
+│   │   │   │       │   ├── dfs_debug.c
+│   │   │   │       │   ├── dfs_fcc_bin5.c
+│   │   │   │       │   ├── dfs_init.c
+│   │   │   │       │   ├── dfs_misc.c
+│   │   │   │       │   ├── dfs_partial_offload_radar.c
+│   │   │   │       │   ├── dfs_phyerr_tlv.c
+│   │   │   │       │   ├── dfs_process_phyerr.c
+│   │   │   │       │   ├── dfs_process_radarevent.c
+│   │   │   │       │   ├── dfs_radar.c
+│   │   │   │       │   └── dfs_staggered.c
+│   │   │   │       └── misc
+│   │   │   │           ├── dfs.c
+│   │   │   │           ├── dfs_cac.c
+│   │   │   │           ├── dfs_filter_init.c
+│   │   │   │           ├── dfs_nol.c
+│   │   │   │           ├── dfs_process_radar_found_ind.c
+│   │   │   │           └── dfs_random_chan_sel.c
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── wlan_dfs_init_deinit_api.h
+│   │   │       │   ├── wlan_dfs_ioctl.h
+│   │   │       │   ├── wlan_dfs_lmac_api.h
+│   │   │       │   ├── wlan_dfs_mlme_api.h
+│   │   │       │   ├── wlan_dfs_public_struct.h
+│   │   │       │   ├── wlan_dfs_tgt_api.h
+│   │   │       │   ├── wlan_dfs_ucfg_api.h
+│   │   │       │   └── wlan_dfs_utils_api.h
+│   │   │       └── src
+│   │   │           ├── wlan_dfs_init_deinit_api.c
+│   │   │           ├── wlan_dfs_lmac_api.c
+│   │   │           ├── wlan_dfs_mlme_api.c
+│   │   │           ├── wlan_dfs_tgt_api.c
+│   │   │           ├── wlan_dfs_ucfg_api.c
+│   │   │           └── wlan_dfs_utils_api.c
+│   │   ├── global_umac_dispatcher
+│   │   │   └── lmac_if
+│   │   │       ├── inc
+│   │   │       │   ├── wlan_lmac_if_api.h
+│   │   │       │   └── wlan_lmac_if_def.h
+│   │   │       └── src
+│   │   │           └── wlan_lmac_if.c
+│   │   ├── green_ap
+│   │   │   ├── core
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_green_ap_main.c
+│   │   │   │       └── wlan_green_ap_main_i.h
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── cfg_green_ap_params.h
+│   │   │       │   ├── wlan_green_ap_api.h
+│   │   │       │   └── wlan_green_ap_ucfg_api.h
+│   │   │       └── src
+│   │   │           ├── wlan_green_ap_api.c
+│   │   │           └── wlan_green_ap_ucfg_api.c
+│   │   ├── mlme
+│   │   │   ├── connection_mgr
+│   │   │   │   ├── core
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── wlan_cm_bss_scoring.c
+│   │   │   │   │       ├── wlan_cm_connect.c
+│   │   │   │   │       ├── wlan_cm_connect_scan.c
+│   │   │   │   │       ├── wlan_cm_disconnect.c
+│   │   │   │   │       ├── wlan_cm_host_roam.c
+│   │   │   │   │       ├── wlan_cm_main_api.h
+│   │   │   │   │       ├── wlan_cm_main.c
+│   │   │   │   │       ├── wlan_cm_main.h
+│   │   │   │   │       ├── wlan_cm_roam.h
+│   │   │   │   │       ├── wlan_cm_roam_sm.c
+│   │   │   │   │       ├── wlan_cm_roam_sm.h
+│   │   │   │   │       ├── wlan_cm_roam_util.c
+│   │   │   │   │       ├── wlan_cm_sm.c
+│   │   │   │   │       ├── wlan_cm_sm.h
+│   │   │   │   │       └── wlan_cm_util.c
+│   │   │   │   ├── dispatcher
+│   │   │   │   │   ├── inc
+│   │   │   │   │   │   ├── cfg_mlme_cm.h
+│   │   │   │   │   │   ├── cfg_mlme_score_params.h
+│   │   │   │   │   │   ├── wlan_cm_api.h
+│   │   │   │   │   │   ├── wlan_cm_bss_score_param.h
+│   │   │   │   │   │   ├── wlan_cm_public_struct.h
+│   │   │   │   │   │   └── wlan_cm_ucfg_api.h
+│   │   │   │   │   └── src
+│   │   │   │   │       ├── wlan_cm_api.c
+│   │   │   │   │       └── wlan_cm_ucfg_api.c
+│   │   │   │   └── utf
+│   │   │   │       ├── inc
+│   │   │   │       │   └── wlan_cm_utf.h
+│   │   │   │       └── src
+│   │   │   │           ├── wlan_cm_utf_main.c
+│   │   │   │           └── wlan_cm_utf_scan.c
+│   │   │   ├── include
+│   │   │   │   ├── cfg_cmn_mlme.h
+│   │   │   │   ├── wlan_mlme_cmn.h
+│   │   │   │   ├── wlan_pdev_mlme.h
+│   │   │   │   ├── wlan_psoc_mlme.h
+│   │   │   │   └── wlan_vdev_mlme.h
+│   │   │   ├── mlme_objmgr
+│   │   │   │   └── dispatcher
+│   │   │   │       ├── inc
+│   │   │   │       │   ├── wlan_mlme_dbg.h
+│   │   │   │       │   ├── wlan_pdev_mlme_main.h
+│   │   │   │       │   ├── wlan_psoc_mlme_main.h
+│   │   │   │       │   └── wlan_vdev_mlme_main.h
+│   │   │   │       └── src
+│   │   │   │           ├── wlan_cmn_mlme_main.c
+│   │   │   │           ├── wlan_pdev_mlme_main.c
+│   │   │   │           ├── wlan_psoc_mlme_main.c
+│   │   │   │           └── wlan_vdev_mlme_main.c
+│   │   │   ├── mlme_utils
+│   │   │   │   ├── wlan_vdev_mlme_ser_if.c
+│   │   │   │   └── wlan_vdev_mlme_ser_if.h
+│   │   │   ├── pdev_mgr
+│   │   │   │   └── dispatcher
+│   │   │   │       ├── inc
+│   │   │   │       │   └── wlan_pdev_mlme_api.h
+│   │   │   │       └── src
+│   │   │   │           └── wlan_pdev_mlme_api.c
+│   │   │   ├── psoc_mgr
+│   │   │   │   └── dispatcher
+│   │   │   │       ├── inc
+│   │   │   │       │   ├── wlan_psoc_mlme_api.h
+│   │   │   │       │   └── wlan_psoc_mlme_ucfg_api.h
+│   │   │   │       └── src
+│   │   │   │           ├── wlan_psoc_mlme_api.c
+│   │   │   │           └── wlan_psoc_mlme_ucfg_api.c
+│   │   │   └── vdev_mgr
+│   │   │       ├── core
+│   │   │       │   └── src
+│   │   │       │       ├── vdev_mgr_ops.c
+│   │   │       │       ├── vdev_mgr_ops.h
+│   │   │       │       ├── vdev_mlme_sm.c
+│   │   │       │       └── vdev_mlme_sm.h
+│   │   │       └── dispatcher
+│   │   │           ├── inc
+│   │   │           │   ├── wlan_vdev_mgr_api.h
+│   │   │           │   ├── wlan_vdev_mgr_tgt_if_rx_api.h
+│   │   │           │   ├── wlan_vdev_mgr_tgt_if_rx_defs.h
+│   │   │           │   ├── wlan_vdev_mgr_tgt_if_tx_api.h
+│   │   │           │   ├── wlan_vdev_mgr_tgt_if_tx_defs.h
+│   │   │           │   ├── wlan_vdev_mgr_ucfg_api.h
+│   │   │           │   ├── wlan_vdev_mgr_utils_api.h
+│   │   │           │   └── wlan_vdev_mlme_api.h
+│   │   │           └── src
+│   │   │               ├── wlan_vdev_mgr_api.c
+│   │   │               ├── wlan_vdev_mgr_tgt_if_rx_api.c
+│   │   │               ├── wlan_vdev_mgr_tgt_if_tx_api.c
+│   │   │               ├── wlan_vdev_mgr_ucfg_api.c
+│   │   │               ├── wlan_vdev_mgr_utils_api.c
+│   │   │               └── wlan_vdev_mlme_api.c
+│   │   ├── mlo_mgr
+│   │   │   ├── inc
+│   │   │   │   ├── utils_mlo.h
+│   │   │   │   ├── wlan_mlo_epcs.h
+│   │   │   │   ├── wlan_mlo_mgr_ap.h
+│   │   │   │   ├── wlan_mlo_mgr_cmn.h
+│   │   │   │   ├── wlan_mlo_mgr_link_switch.h
+│   │   │   │   ├── wlan_mlo_mgr_main.h
+│   │   │   │   ├── wlan_mlo_mgr_msgq.h
+│   │   │   │   ├── wlan_mlo_mgr_op.h
+│   │   │   │   ├── wlan_mlo_mgr_peer.h
+│   │   │   │   ├── wlan_mlo_mgr_public_api.h
+│   │   │   │   ├── wlan_mlo_mgr_public_structs.h
+│   │   │   │   ├── wlan_mlo_mgr_setup.h
+│   │   │   │   ├── wlan_mlo_mgr_sta.h
+│   │   │   │   └── wlan_mlo_t2lm.h
+│   │   │   └── src
+│   │   │       ├── utils_mlo.c
+│   │   │       ├── wlan_mlo_epcs.c
+│   │   │       ├── wlan_mlo_mgr_aid.c
+│   │   │       ├── wlan_mlo_mgr_ap.c
+│   │   │       ├── wlan_mlo_mgr_cmn.c
+│   │   │       ├── wlan_mlo_mgr_link_switch.c
+│   │   │       ├── wlan_mlo_mgr_main.c
+│   │   │       ├── wlan_mlo_mgr_msgq.c
+│   │   │       ├── wlan_mlo_mgr_op.c
+│   │   │       ├── wlan_mlo_mgr_peer.c
+│   │   │       ├── wlan_mlo_mgr_peer_list.c
+│   │   │       ├── wlan_mlo_mgr_primary_umac.c
+│   │   │       ├── wlan_mlo_mgr_setup.c
+│   │   │       ├── wlan_mlo_mgr_sta.c
+│   │   │       └── wlan_mlo_t2lm.c
+│   │   ├── regulatory
+│   │   │   ├── core
+│   │   │   │   └── src
+│   │   │   │       ├── reg_build_chan_list.c
+│   │   │   │       ├── reg_build_chan_list.h
+│   │   │   │       ├── reg_callbacks.c
+│   │   │   │       ├── reg_callbacks.h
+│   │   │   │       ├── reg_db.c
+│   │   │   │       ├── reg_db.h
+│   │   │   │       ├── reg_db_parser.c
+│   │   │   │       ├── reg_db_parser.h
+│   │   │   │       ├── reg_host_11d.c
+│   │   │   │       ├── reg_host_11d.h
+│   │   │   │       ├── reg_lte.c
+│   │   │   │       ├── reg_lte.h
+│   │   │   │       ├── reg_offload_11d_scan.c
+│   │   │   │       ├── reg_offload_11d_scan.h
+│   │   │   │       ├── reg_opclass.c
+│   │   │   │       ├── reg_opclass.h
+│   │   │   │       ├── reg_priv_objs.c
+│   │   │   │       ├── reg_priv_objs.h
+│   │   │   │       ├── reg_services_common.c
+│   │   │   │       ├── reg_services_common.h
+│   │   │   │       ├── reg_utils.c
+│   │   │   │       └── reg_utils.h
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── reg_services_public_struct.h
+│   │   │       │   ├── wlan_reg_services_api.h
+│   │   │       │   ├── wlan_reg_tgt_api.h
+│   │   │       │   └── wlan_reg_ucfg_api.h
+│   │   │       └── src
+│   │   │           ├── wlan_reg_services_api.c
+│   │   │           ├── wlan_reg_tgt_api.c
+│   │   │           └── wlan_reg_ucfg_api.c
+│   │   ├── scan
+│   │   │   ├── core
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_scan_11d.c
+│   │   │   │       ├── wlan_scan_11d.h
+│   │   │   │       ├── wlan_scan_cache_db.c
+│   │   │   │       ├── wlan_scan_cache_db.h
+│   │   │   │       ├── wlan_scan_cache_db_i.h
+│   │   │   │       ├── wlan_scan_filter.c
+│   │   │   │       ├── wlan_scan_main.c
+│   │   │   │       ├── wlan_scan_main.h
+│   │   │   │       ├── wlan_scan_manager_6ghz.c
+│   │   │   │       ├── wlan_scan_manager_6ghz.h
+│   │   │   │       ├── wlan_scan_manager.c
+│   │   │   │       └── wlan_scan_manager.h
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── cfg_extscan.h
+│   │   │       │   ├── cfg_scan.h
+│   │   │       │   ├── wlan_extscan_api.h
+│   │   │       │   ├── wlan_extscan_ucfg_api.h
+│   │   │       │   ├── wlan_scan_api.h
+│   │   │       │   ├── wlan_scan_public_structs.h
+│   │   │       │   ├── wlan_scan_tgt_api.h
+│   │   │       │   ├── wlan_scan_ucfg_api.h
+│   │   │       │   └── wlan_scan_utils_api.h
+│   │   │       └── src
+│   │   │           ├── wlan_extscan_api.c
+│   │   │           ├── wlan_scan_api.c
+│   │   │           ├── wlan_scan_tgt_api.c
+│   │   │           ├── wlan_scan_ucfg_api.c
+│   │   │           └── wlan_scan_utils_api.c
+│   │   ├── thermal
+│   │   │   └── dispatcher
+│   │   │       └── inc
+│   │   │           └── wlan_thermal_public_struct.h
+│   │   ├── twt
+│   │   │   ├── core
+│   │   │   │   └── src
+│   │   │   │       ├── wlan_twt_common.c
+│   │   │   │       ├── wlan_twt_common.h
+│   │   │   │       ├── wlan_twt_objmgr.c
+│   │   │   │       ├── wlan_twt_objmgr_handler.h
+│   │   │   │       └── wlan_twt_priv.h
+│   │   │   └── dispatcher
+│   │   │       ├── inc
+│   │   │       │   ├── wlan_twt_api.h
+│   │   │       │   ├── wlan_twt_public_structs.h
+│   │   │       │   ├── wlan_twt_tgt_if_ext_rx_ops.h
+│   │   │       │   ├── wlan_twt_tgt_if_rx_api.h
+│   │   │       │   ├── wlan_twt_tgt_if_tx_api.h
+│   │   │       │   ├── wlan_twt_ucfg_api.h
+│   │   │       │   └── wlan_twt_ucfg_ext_cfg.h
+│   │   │       └── src
+│   │   │           ├── wlan_twt_api.c
+│   │   │           ├── wlan_twt_tgt_if_rx_api.c
+│   │   │           ├── wlan_twt_tgt_if_tx_api.c
+│   │   │           └── wlan_twt_ucfg_api.c
+│   │   ├── wifi_pos
+│   │   │   ├── inc
+│   │   │   │   ├── wifi_pos_api.h
+│   │   │   │   ├── wifi_pos_pasn_api.h
+│   │   │   │   ├── wifi_pos_public_struct.h
+│   │   │   │   ├── wifi_pos_ucfg_i.h
+│   │   │   │   ├── wifi_pos_utils_i.h
+│   │   │   │   └── wifi_pos_utils_pub.h
+│   │   │   └── src
+│   │   │       ├── wifi_pos_api.c
+│   │   │       ├── wifi_pos_main.c
+│   │   │       ├── wifi_pos_main_i.h
+│   │   │       ├── wifi_pos_oem_interface_i.h
+│   │   │       ├── wifi_pos_pasn_api.c
+│   │   │       ├── wifi_pos_ucfg.c
+│   │   │       └── wifi_pos_utils.c
+│   │   └── wifi_radar
+│   │       ├── core
+│   │       │   ├── inc
+│   │       │   │   └── wifi_radar_defs_i.h
+│   │       │   └── src
+│   │       │       └── wifi_radar_common.c
+│   │       └── dispatcher
+│   │           ├── inc
+│   │           │   ├── wifi_radar_cfg.h
+│   │           │   ├── wlan_wifi_radar_public_structs.h
+│   │           │   ├── wlan_wifi_radar_tgt_api.h
+│   │           │   ├── wlan_wifi_radar_ucfg_api.h
+│   │           │   └── wlan_wifi_radar_utils_api.h
+│   │           └── src
+│   │               ├── wlan_wifi_radar_tgt_api.c
+│   │               ├── wlan_wifi_radar_ucfg_api.c
+│   │               └── wlan_wifi_radar_utils_api.c
+│   ├── utils
+│   │   ├── epping
+│   │   │   ├── inc
+│   │   │   │   ├── epping_internal.h
+│   │   │   │   └── epping_main.h
+│   │   │   └── src
+│   │   │       ├── epping_helper.c
+│   │   │       ├── epping_main.c
+│   │   │       ├── epping_rx.c
+│   │   │       ├── epping_tx.c
+│   │   │       └── epping_txrx.c
+│   │   ├── fwlog
+│   │   │   ├── dbglog_host.c
+│   │   │   ├── dbglog_host.h
+│   │   │   ├── fw_dbglog_api.c
+│   │   │   └── inc
+│   │   │       ├── fw_dbglog_api.h
+│   │   │       └── fw_dbglog_priv.h
+│   │   ├── host_diag_log
+│   │   │   ├── inc
+│   │   │   │   ├── host_diag_core_event.h
+│   │   │   │   ├── host_diag_core_log.h
+│   │   │   │   ├── host_diag_event_defs.h
+│   │   │   │   └── log_codes.h
+│   │   │   └── src
+│   │   │       ├── host_diag_log.c
+│   │   │       ├── i_host_diag_core_event.h
+│   │   │       └── i_host_diag_core_log.h
+│   │   ├── logging
+│   │   │   ├── inc
+│   │   │   │   ├── wlan_logging_sock_svc.h
+│   │   │   │   └── wlan_roam_debug.h
+│   │   │   └── src
+│   │   │       ├── wlan_logging_sock_svc.c
+│   │   │       └── wlan_roam_debug.c
+│   │   ├── nlink
+│   │   │   ├── inc
+│   │   │   │   ├── wlan_nlink_common.h
+│   │   │   │   └── wlan_nlink_srv.h
+│   │   │   └── src
+│   │   │       └── wlan_nlink_srv.c
+│   │   ├── pktlog
+│   │   │   ├── include
+│   │   │   │   ├── pktlog_ac_api.h
+│   │   │   │   ├── pktlog_ac.h
+│   │   │   │   ├── pktlog_ac_i.h
+│   │   │   │   ├── pktlog.h
+│   │   │   │   ├── pktlog_wifi2.h
+│   │   │   │   └── pktlog_wifi3.h
+│   │   │   ├── linux_ac.c
+│   │   │   ├── pktlog_ac.c
+│   │   │   ├── pktlog_internal.c
+│   │   │   ├── pktlog_wifi2.c
+│   │   │   └── pktlog_wifi3.c
+│   │   ├── ptt
+│   │   │   ├── inc
+│   │   │   │   └── wlan_ptt_sock_svc.h
+│   │   │   └── src
+│   │   │       └── wlan_ptt_sock_svc.c
+│   │   ├── qld
+│   │   │   ├── inc
+│   │   │   │   ├── qld_api.h
+│   │   │   │   └── qld_priv.h
+│   │   │   └── src
+│   │   │       └── qld.c
+│   │   └── sys
+│   │       └── queue.h
+│   ├── VERSION.txt
+│   ├── wbuff
+│   │   ├── inc
+│   │   │   └── wbuff.h
+│   │   └── src
+│   │       ├── i_wbuff.h
+│   │       └── wbuff.c
+│   ├── wlan_cfg
+│   │   ├── cfg_dp.h
+│   │   ├── wlan_cfg.c
+│   │   ├── wlan_cfg.h
+│   │   └── wlan_init_cfg.h
+│   └── wmi
+│       ├── inc
+│       │   ├── wmi_filtered_logging.h
+│       │   ├── wmi_hang_event.h
+│       │   ├── wmi_unified_11be_api.h
+│       │   ├── wmi_unified_11be_param.h
+│       │   ├── wmi_unified_11be_setup_api.h
+│       │   ├── wmi_unified_11be_tlv.h
+│       │   ├── wmi_unified_action_oui_tlv.h
+│       │   ├── wmi_unified_apf_tlv.h
+│       │   ├── wmi_unified_api.h
+│       │   ├── wmi_unified_bcn_api.h
+│       │   ├── wmi_unified_cfr_api.h
+│       │   ├── wmi_unified_cfr_param.h
+│       │   ├── wmi_unified_concurrency_api.h
+│       │   ├── wmi_unified_cp_stats_api.h
+│       │   ├── wmi_unified_crypto_api.h
+│       │   ├── wmi_unified_dbr_api.h
+│       │   ├── wmi_unified_dbr_param.h
+│       │   ├── wmi_unified_dcs_api.h
+│       │   ├── wmi_unified_dfs_api.h
+│       │   ├── wmi_unified_extscan_api.h
+│       │   ├── wmi_unified_fwol_api.h
+│       │   ├── wmi_unified_gpio_api.h
+│       │   ├── wmi_unified_interop_issues_ap_api.h
+│       │   ├── wmi_unified_nan_api.h
+│       │   ├── wmi_unified_ocb_api.h
+│       │   ├── wmi_unified_p2p_api.h
+│       │   ├── wmi_unified_param.h
+│       │   ├── wmi_unified_pmo_api.h
+│       │   ├── wmi_unified_priv.h
+│       │   ├── wmi_unified_reg_api.h
+│       │   ├── wmi_unified_sta_api.h
+│       │   ├── wmi_unified_sta_param.h
+│       │   ├── wmi_unified_twt_api.h
+│       │   ├── wmi_unified_twt_param.h
+│       │   ├── wmi_unified_vdev_api.h
+│       │   ├── wmi_unified_vdev_tlv.h
+│       │   ├── wmi_unified_wds_api.h
+│       │   ├── wmi_unified_wds_param.h
+│       │   ├── wmi_unified_wifi_radar_api.h
+│       │   ├── wmi_unified_wifi_radar_param.h
+│       │   └── wmi_version_allowlist.h
+│       └── src
+│           ├── wmi_filtered_logging.c
+│           ├── wmi_hang_event.c
+│           ├── wmi_tlv_helper.c
+│           ├── wmi_tlv_platform.c
+│           ├── wmi_unified_11be_api.c
+│           ├── wmi_unified_11be_setup_api.c
+│           ├── wmi_unified_11be_tlv.c
+│           ├── wmi_unified_action_oui_tlv.c
+│           ├── wmi_unified_apf_tlv.c
+│           ├── wmi_unified_api.c
+│           ├── wmi_unified_bcn_api.c
+│           ├── wmi_unified_bcn_tlv.c
+│           ├── wmi_unified.c
+│           ├── wmi_unified_cfr_api.c
+│           ├── wmi_unified_cfr_tlv.c
+│           ├── wmi_unified_concurrency_api.c
+│           ├── wmi_unified_concurrency_tlv.c
+│           ├── wmi_unified_cp_stats_api.c
+│           ├── wmi_unified_cp_stats_tlv.c
+│           ├── wmi_unified_crypto_api.c
+│           ├── wmi_unified_dbr_api.c
+│           ├── wmi_unified_dbr_tlv.c
+│           ├── wmi_unified_dcs_api.c
+│           ├── wmi_unified_dcs_tlv.c
+│           ├── wmi_unified_dfs_api.c
+│           ├── wmi_unified_extscan_api.c
+│           ├── wmi_unified_extscan_tlv.c
+│           ├── wmi_unified_fwol_api.c
+│           ├── wmi_unified_fwol_tlv.c
+│           ├── wmi_unified_gpio_api.c
+│           ├── wmi_unified_gpio_tlv.c
+│           ├── wmi_unified_interop_issues_ap_api.c
+│           ├── wmi_unified_interop_issues_ap_tlv.c
+│           ├── wmi_unified_nan_api.c
+│           ├── wmi_unified_nan_tlv.c
+│           ├── wmi_unified_ocb_api.c
+│           ├── wmi_unified_ocb_tlv.c
+│           ├── wmi_unified_ocb_ut.c
+│           ├── wmi_unified_p2p_api.c
+│           ├── wmi_unified_p2p_tlv.c
+│           ├── wmi_unified_pmo_api.c
+│           ├── wmi_unified_pmo_tlv.c
+│           ├── wmi_unified_reg_api.c
+│           ├── wmi_unified_sta_api.c
+│           ├── wmi_unified_sta_tlv.c
+│           ├── wmi_unified_tlv.c
+│           ├── wmi_unified_twt_api.c
+│           ├── wmi_unified_twt_tlv.c
+│           ├── wmi_unified_vdev_api.c
+│           ├── wmi_unified_vdev_tlv.c
+│           ├── wmi_unified_wds_api.c
+│           ├── wmi_unified_wds_tlv.c
+│           ├── wmi_unified_wifi_radar_api.c
+│           └── wmi_unified_wifi_radar_tlv.c
+├── component_dev
+│   ├── configs
+│   │   ├── hif
+│   │   │   └── ap_hif.config
+│   │   ├── umac
+│   │   │   ├── cmn_services
+│   │   │   │   └── mgmt_txrx
+│   │   │   │       └── ap_mgmt_txrx.config
+│   │   │   └── scan
+│   │   │       └── ap_scan.config
+│   │   └── wlan_cfg
+│   │       └── ap_wlan_cfg.config
+│   ├── crypto
+│   │   ├── inc
+│   │   │   ├── wlan_crypto_aes_ctr_i.h
+│   │   │   ├── wlan_crypto_aes.h
+│   │   │   ├── wlan_crypto_aes_i.h
+│   │   │   ├── wlan_crypto_aes_siv_i.h
+│   │   │   ├── wlan_crypto_fils_api.h
+│   │   │   └── wlan_crypto_fils_def.h
+│   │   └── src
+│   │       ├── wlan_crypto_aes_ccm.c
+│   │       ├── wlan_crypto_aes_ctr.c
+│   │       ├── wlan_crypto_aes_gcm.c
+│   │       ├── wlan_crypto_aes_internal.c
+│   │       ├── wlan_crypto_aes_internal_dec.c
+│   │       ├── wlan_crypto_aes_internal_enc.c
+│   │       ├── wlan_crypto_aes_omac1.c
+│   │       ├── wlan_crypto_aes_siv.c
+│   │       ├── wlan_crypto_ccmp.c
+│   │       ├── wlan_crypto_ccmp_sw.c
+│   │       ├── wlan_crypto_crc32.c
+│   │       ├── wlan_crypto_fils.c
+│   │       ├── wlan_crypto_gcmp_sw.c
+│   │       ├── wlan_crypto_none.c
+│   │       ├── wlan_crypto_tkip.c
+│   │       ├── wlan_crypto_tkip_sw.c
+│   │       ├── wlan_crypto_wapi.c
+│   │       ├── wlan_crypto_wep.c
+│   │       └── wlan_crypto_wep_sw.c
+│   ├── direct_attach
+│   │   └── spectral
+│   │       └── core
+│   │           ├── spectral_da_api_i.h
+│   │           └── spectral_direct_attach.c
+│   ├── dp
+│   │   ├── inc
+│   │   │   ├── cdp_txrx_extd_struct.h
+│   │   │   ├── dp_lite_mon_pub.h
+│   │   │   ├── dp_rate_stats.h
+│   │   │   └── dp_rate_stats_pub.h
+│   │   ├── src
+│   │   │   └── dp_rate_stats.c
+│   │   └── wifi3.0
+│   │       ├── be
+│   │       │   ├── dp_ppeds.c
+│   │       │   └── dp_ppeds.h
+│   │       ├── dp_dpdk.c
+│   │       ├── dp_dpdk.h
+│   │       ├── dp_htt_logger.c
+│   │       ├── dp_htt_logger.h
+│   │       ├── dp_mesh_latency.c
+│   │       ├── dp_mesh_latency.h
+│   │       ├── dp_mscs.c
+│   │       ├── dp_mscs.h
+│   │       ├── dp_rx_fst.c
+│   │       ├── dp_rx_tag.c
+│   │       ├── dp_rx_tag.h
+│   │       ├── dp_sawf.c
+│   │       ├── dp_sawf.h
+│   │       ├── dp_sawf_htt.c
+│   │       ├── dp_sawf_htt.h
+│   │       ├── dp_scs.c
+│   │       ├── dp_scs.h
+│   │       ├── dp_txrx_me.c
+│   │       ├── dp_txrx_me.h
+│   │       └── monitor
+│   │           ├── inc
+│   │           │   ├── dp_full_mon.h
+│   │           │   ├── dp_lite_mon.h
+│   │           │   ├── dp_mon_ol.h
+│   │           │   ├── dp_rx_mon_feature.h
+│   │           │   └── dp_tx_capture.h
+│   │           ├── Kbuild
+│   │           ├── linux
+│   │           │   └── dp_mon_module.c
+│   │           └── src
+│   │               ├── dp_full_mon.c
+│   │               ├── dp_lite_mon.c
+│   │               ├── dp_mon_ol.c
+│   │               ├── dp_rx_mon_feature.c
+│   │               └── dp_tx_capture.c
+│   ├── dp_wrap
+│   │   ├── inc
+│   │   │   ├── dp_wrap.h
+│   │   │   └── dp_wrap_struct.h
+│   │   └── src
+│   │       ├── dp_wrap.c
+│   │       └── dp_wrap_mat.c
+│   ├── extap
+│   │   ├── inc
+│   │   │   ├── dp_extap.h
+│   │   │   └── dp_extap_mitbl.h
+│   │   └── src
+│   │       ├── dp_extap.c
+│   │       └── dp_extap_mitbl.c
+│   ├── Makefile
+│   ├── os_if
+│   │   └── linux
+│   │       ├── dp
+│   │       │   ├── inc
+│   │       │   │   └── dp_mon_utils.h
+│   │       │   └── src
+│   │       │       ├── dp_mon_cfg80211.c
+│   │       │       ├── dp_mon_osif.c
+│   │       │       └── dp_mon_utils.c
+│   │       ├── sawf
+│   │       │   ├── inc
+│   │       │   │   └── wlan_cfg80211_sawf.h
+│   │       │   └── src
+│   │       │       └── wlan_cfg80211_sawf.c
+│   │       └── spectral
+│   │           ├── inc
+│   │           │   └── os_if_spectral_streamfs.h
+│   │           └── src
+│   │               └── os_if_spectral_streamfs.c
+│   ├── qal
+│   │   ├── inc
+│   │   │   ├── qal_bond.h
+│   │   │   └── qal_notifier.h
+│   │   └── linux
+│   │       └── src
+│   │           ├── qal_bond.c
+│   │           ├── qal_bridge.c
+│   │           ├── qal_devcfg.c
+│   │           ├── qal_devnode.c
+│   │           ├── qal_notifier.c
+│   │           └── qal_vbus_dev.c
+│   ├── qca_fse
+│   │   ├── qca_fse.c
+│   │   └── qca_fse_if.h
+│   ├── qca_mesh_latency
+│   │   ├── inc
+│   │   │   └── qca_mesh_latency_if.h
+│   │   └── src
+│   │       └── qca_mesh_latency.c
+│   ├── qca_mscs
+│   │   ├── inc
+│   │   │   ├── qca_mscs.h
+│   │   │   └── qca_mscs_if.h
+│   │   └── src
+│   │       └── qca_mscs.c
+│   ├── qca_multi_link
+│   │   ├── inc
+│   │   │   ├── qca_multi_link.h
+│   │   │   └── qca_multi_link_tbl.h
+│   │   └── src
+│   │       ├── qca_multi_link.c
+│   │       └── qca_multi_link_tbl.c
+│   ├── qca_sawf
+│   │   ├── qca_sawf.c
+│   │   └── qca_sawf_if.h
+│   ├── qca_scs
+│   │   ├── inc
+│   │   │   ├── qca_scs_api_if.h
+│   │   │   └── qca_scs_if.h
+│   │   └── src
+│   │       └── qca_scs.c
+│   ├── qca_wifi_metadata_info
+│   │   ├── qca_wifi_metadata_info.c
+│   │   ├── qca_wifi_metadata_info_if.h
+│   │   └── qca_wifi_mlo_metadata_info
+│   │       ├── qca_wifi_mlo_metadata_info.c
+│   │       ├── qca_wifi_mlo_metadata_info.h
+│   │       └── qca_wifi_mlo_metadata_info_if.h
+│   ├── spectral
+│   │   └── dispatcher
+│   │       └── inc
+│   │           └── cfg_spectral_streamfs.h
+│   ├── target_if
+│   │   ├── dp
+│   │   │   ├── inc
+│   │   │   │   └── target_if_dp_mon.h
+│   │   │   └── src
+│   │   │       └── target_if_dp_mon.c
+│   │   └── sawf
+│   │       ├── inc
+│   │       │   └── target_if_sawf.h
+│   │       └── src
+│   │           └── target_if_sawf.c
+│   ├── telemetry
+│   │   ├── inc
+│   │   │   ├── wlan_stats_define.h
+│   │   │   └── wlan_stats.h
+│   │   └── src
+│   │       └── wlan_stats.c
+│   ├── tools
+│   │   └── linux
+│   │       ├── cfg80211_ven_cmd.h
+│   │       ├── cfr_test_app.c
+│   │       ├── lite_mon
+│   │       │   ├── lite_mon.c
+│   │       │   └── lite_mon.h
+│   │       ├── peerstats.c
+│   │       ├── scs
+│   │       │   ├── scs_api.c
+│   │       │   ├── scs_api.h
+│   │       │   └── scs_tool.c
+│   │       ├── telemetry
+│   │       │   ├── stats_lib.c
+│   │       │   ├── stats_lib.h
+│   │       │   └── stats_tool.c
+│   │       └── wifi_radar_test_app.c
+│   └── umac
+│       ├── cp_stats
+│       │   └── dispatcher
+│       │       ├── inc
+│       │       │   ├── wlan_cp_stats_ext_type.h
+│       │       │   ├── wlan_cp_stats_ic_acs_api.h
+│       │       │   ├── wlan_cp_stats_ic_acs_defs.h
+│       │       │   ├── wlan_cp_stats_ic_atf_defs.h
+│       │       │   ├── wlan_cp_stats_ic_dcs_defs.h
+│       │       │   ├── wlan_cp_stats_ic_defs.h
+│       │       │   ├── wlan_cp_stats_ic_tgt_api.h
+│       │       │   ├── wlan_cp_stats_ic_ucfg_api.h
+│       │       │   └── wlan_cp_stats_ic_utils_api.h
+│       │       └── src
+│       │           ├── wlan_cp_stats_ic_acs_api.c
+│       │           ├── wlan_cp_stats_ic_dcs_api.c
+│       │           ├── wlan_cp_stats_ic_tgt_api.c
+│       │           └── wlan_cp_stats_ic_ucfg_api.c
+│       ├── dfs
+│       │   ├── core
+│       │   │   └── src
+│       │   │       ├── dfs_misc.h
+│       │   │       ├── dfs_precac_forest.h
+│       │   │       ├── filtering
+│       │   │       │   ├── dfs_ar.c
+│       │   │       │   └── dfs_synthetic_pulse_detection.c
+│       │   │       └── misc
+│       │   │           ├── dfs_agile_sm.c
+│       │   │           ├── dfs_bangradar.c
+│       │   │           ├── dfs_misc.c
+│       │   │           ├── dfs_precac_list.c
+│       │   │           ├── dfs_rcsa.c
+│       │   │           └── dfs_zero_cac.c
+│       │   └── dispatcher
+│       │       ├── inc
+│       │       │   └── dfs_postnol_ucfg.h
+│       │       └── src
+│       │           └── dfs_postnol_ucfg.c
+│       ├── mbss
+│       │   ├── core
+│       │   │   ├── inc
+│       │   │   │   ├── mbss_ap.h
+│       │   │   │   ├── mbss_dbg.h
+│       │   │   │   ├── mbss_events.h
+│       │   │   │   ├── mbss.h
+│       │   │   │   ├── mbssid_utils.h
+│       │   │   │   ├── mbss_scan.h
+│       │   │   │   ├── mbss_sta.h
+│       │   │   │   └── mbss_utils.h
+│       │   │   └── src
+│       │   │       ├── mbss_ap.c
+│       │   │       ├── mbss.c
+│       │   │       ├── mbss_dbg.c
+│       │   │       ├── mbss_events.c
+│       │   │       ├── mbssid_utils.c
+│       │   │       ├── mbss_scan.c
+│       │   │       ├── mbss_sta.c
+│       │   │       └── mbss_utils.c
+│       │   └── dispatcher
+│       │       ├── inc
+│       │       │   ├── wlan_mbss.h
+│       │       │   └── wlan_mbssid_utils.h
+│       │       └── src
+│       │           ├── wlan_mbss.c
+│       │           └── wlan_mbssid_utils.c
+│       ├── mlme
+│       │   ├── conn_mgr
+│       │   │   ├── core
+│       │   │   │   └── src
+│       │   │   │       ├── wlan_cm_blm_main.c
+│       │   │   │       └── wlan_cm_blm_main.h
+│       │   │   └── dispatcher
+│       │   │       └── inc
+│       │   │           └── wlan_cm_blm.h
+│       │   ├── inc
+│       │   │   └── wlan_ext_mlme_obj_types.h
+│       │   └── vdev_mgr
+│       │       └── core
+│       │           ├── inc
+│       │           │   └── vdev_mlme_sm_actions.h
+│       │           └── src
+│       │               └── vdev_mlme_sm_actions.c
+│       ├── regulatory
+│       │   ├── core
+│       │   │   ├── reg_channel.c
+│       │   │   └── reg_channel.h
+│       │   └── dispatcher
+│       │       ├── inc
+│       │       │   └── wlan_reg_channel_api.h
+│       │       └── src
+│       │           └── wlan_reg_channel_api.c
+│       ├── repeater
+│       │   ├── core
+│       │   │   ├── inc
+│       │   │   │   └── wlan_repeater_internal.h
+│       │   │   └── src
+│       │   │       └── wlan_repeater_main.c
+│       │   └── dispatcher
+│       │       ├── inc
+│       │       │   ├── wlan_repeater_api.h
+│       │       │   └── wlan_repeater_types.h
+│       │       └── src
+│       │           └── wlan_repeater_api.c
+│       ├── rnr
+│       │   ├── inc
+│       │   │   └── wlan_rnr.h
+│       │   └── src
+│       │       └── wlan_rnr.c
+│       ├── sawf
+│       │   ├── inc
+│       │   │   └── wlan_sawf.h
+│       │   └── src
+│       │       └── wlan_sawf.c
+│       ├── telemetry_agent
+│       │   └── dispatcher
+│       │       ├── inc
+│       │       │   └── wlan_telemetry_agent.h
+│       │       └── src
+│       │           └── wlan_telemetry_agent.c
+│       └── twt
+│           ├── core
+│           │   └── src
+│           │       ├── wlan_twt_cfg.h
+│           │       ├── wlan_twt_main.c
+│           │       └── wlan_twt_main.h
+│           └── dispatcher
+│               ├── inc
+│               │   ├── wlan_twt_ext_defs.h
+│               │   ├── wlan_twt_ext_type.h
+│               │   └── wlan_twt_ucfg.h
+│               └── src
+│                   ├── tgt_if_api.c
+│                   └── wlan_twt_ucfg.c
+└── telemetry_agent
+    ├── inc
+    │   ├── telemetry_agent_app_if.h
+    │   ├── telemetry_agent.h
+    │   ├── telemetry_agent_sawf.h
+    │   └── telemetry_agent_wifi_driver_if.h
+    ├── Makefile
+    └── src
+        ├── telemetry_agent.c
+        └── telemetry_agent_sawf.c

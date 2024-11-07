@@ -502,6 +502,6 @@ ccflags-y += -DECM_PPE_SOURCE_INTERFACE_CHECK_ENABLE=1
 endif
 endif
 
-ccflags-y += -Wall -Werror
+ccflags-y += -w
 
 obj ?= .

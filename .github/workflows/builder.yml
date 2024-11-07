@@ -54,7 +54,7 @@ jobs:
       run: |
         git config --global user.email "you@example.com"
         git config --global user.name "Your Name"
-        source qca/configs/qsdk/setup-environment -t ipq53xx -a 32 -p ${{matrix.target}} -d y -i Debug && make -j$(nproc) V=s
+        echo "n\n" | source qca/configs/qsdk/setup-environment -t ipq53xx -a 32 -p ${{matrix.target}} -d n && make -j$(nproc) V=s
     
     - name: Pack image for ${{ matrix.target }}
       id: build_image
